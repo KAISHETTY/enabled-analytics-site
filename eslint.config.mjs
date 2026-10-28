@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Downloaded third-party HTML/JS from the design research, not our code.
+    ".research/**",
   ]),
 ]);
 

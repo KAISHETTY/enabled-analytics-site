@@ -1,36 +1,81 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Enabled Analytics Website
 
-## Getting Started
+Multi-page marketing site for Enabled Analytics, built with Next.js 16 (App Router), TypeScript, Tailwind CSS v4, shadcn/ui, Framer Motion and lucide-react. It uses a light theme only.
 
-First, run the development server:
+## Run locally
+
+Requires Node.js 20.9+.
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev          # http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Production build:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build
+npm start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Checks:
 
-## Learn More
+```bash
+npx tsc --noEmit
+npm run lint
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Environment variables
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Copy `.env.example` to `.env.local`. All variables are optional.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+| Variable | Purpose |
+|---|---|
+| `NEXT_PUBLIC_SITE_URL` | Canonical URL for metadata, sitemap and JSON-LD (default `https://www.enabledanalytics.com`) |
+| `FORMS_WEBHOOK_URL` | Receives contact, quote and job-application submissions as JSON (Zapier, Make, Slack, CRM). Without it, submissions are logged on the server. |
+| `NEWSLETTER_WEBHOOK_URL` | Newsletter signups (falls back to `FORMS_WEBHOOK_URL`) |
+| `NEXT_PUBLIC_GA_ID` | GA4 measurement ID. It loads only after the visitor accepts cookies. |
+| `NEXT_PUBLIC_SF_EMBEDDED_ORG_ID` | Salesforce org ID (15/18 chars) of your Embedded Messaging deployment |
+| `NEXT_PUBLIC_SF_EMBEDDED_DEPLOYMENT` | Embedded Service deployment API name (e.g. `EA_Agentforce_Web`) |
+| `NEXT_PUBLIC_SF_EMBEDDED_SITE_URL` | The deployment's Experience/ESW site URL (`https://….my.site.com/ESW…`) |
+| `NEXT_PUBLIC_SF_EMBEDDED_SCRT2_URL` | The SCRT2 URL (`https://….my.salesforce-scrt.com`) |
 
-## Deploy on Vercel
+With all four Embedded Messaging variables set, the "Ask EA" assistant is replaced by your Salesforce **Agentforce Service Agent** (Messaging for In-App and Web). Without them, the built-in assistant answers from site content and books meetings through `/api/contact`.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Editing content
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **All copy:** `content/site-content.json` (company info, services, team, testimonials, FAQs, careers, privacy).
+- **Blog posts:** `content/blog/<slug>.mdx` with an `export const meta = {…}` block. Register a new post in `lib/blog.ts` **and** add its slug to `proxy.ts`.
+- **Images:** `public/images/…`
+- **Placeholders** that still need real content are listed in `MISSING_CONTENT.md` and render as dashed amber "Content needed" boxes.
+
+## Project map
+
+```
+app/                 routes (each page.tsx), api/ form handlers, sitemap, robots, OG image
+components/ea/       design-system components (see /styleguide)
+components/forms/    contact, quote wizard, newsletter, apply
+components/layout/   header, footer, search, cookie consent, floating contact
+components/ui/       shadcn/ui primitives (dark variants stripped)
+content/             site-content.json + MDX posts
+lib/                 content accessors, schemas, nav config, analytics
+proxy.ts             returns real 404s for unknown dynamic slugs
+```
+
+## Deploy to Netlify
+
+1. In Netlify, choose **Add new site → Import an existing project → GitHub**, then pick this repository.
+2. The build settings come from `netlify.toml`: `npm run build`, publish `.next`, Node 22. Netlify's Next.js runtime is applied automatically.
+3. Under **Site configuration → Environment variables**, add `NEXT_PUBLIC_SITE_URL` (your Netlify or custom domain) plus any optional variables above, then redeploy.
+4. Under **Domain management**, add `enabledanalytics.com` and follow the DNS steps.
+
+## Deploy to Vercel
+
+1. Push this folder to a GitHub, GitLab or Bitbucket repository.
+2. In Vercel, choose **Add New → Project** and import the repository. The framework preset is detected as **Next.js**, so leave the build settings at their defaults.
+3. Under **Settings → Environment Variables**, add `NEXT_PUBLIC_SITE_URL` (your production domain) plus any of the optional variables above.
+4. Click **Deploy**.
+5. Under **Settings → Domains**, add `enabledanalytics.com` and `www.enabledanalytics.com`, then update DNS at your registrar as Vercel instructs. The old Wix URLs are already 308-redirected (`next.config.ts`).
+6. After launch, submit `https://www.enabledanalytics.com/sitemap.xml` in Google Search Console.
+
+CLI alternative: `npm i -g vercel && vercel` (preview), then `vercel --prod`.

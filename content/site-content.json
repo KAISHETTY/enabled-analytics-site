@@ -1,0 +1,1817 @@
+{
+  "_source": "All copy extracted from https://www.enabledanalytics.com/ on 2026-10-27. Obvious typos fixed (see NOTES.md). Do not add facts that are not on the original site. Updated 2026-10-28 from the client: Salesforce Summit Partner, 500+ certifications, Lisa Malmanger and Kim Escobar added to the Executive Team.",
+  "company": {
+    "name": "Enabled Analytics",
+    "shortName": "EA",
+    "url": "https://www.enabledanalytics.com",
+    "tagline": "Complete Suite of Salesforce Solutions in One Place",
+    "description": "Enabled Analytics is a hub of talented Salesforce experts dedicated to empowering your business. We deliver exceptional Salesforce Cloud services to help you achieve your goals.",
+    "email": "info@enabledanalytics.com",
+    "phone": "214 402 3125",
+    "phoneHref": "+12144023125",
+    "offices": [
+      {
+        "label": "Lewisville, USA",
+        "address": "209 State Highway 121 Bypass, Suite # 36, Lewisville, TX 75067",
+        "country": "US"
+      },
+      {
+        "label": "Hyderabad, India",
+        "address": "16th Floor, Vamsiram Suvarnadurga Tech Park, Nanakramguda Rd, Madhava Reddy Colony, Nanakramguda, Hyderabad, Telangana 500032",
+        "country": "IN"
+      },
+      {
+        "label": "Singapore",
+        "address": "Level 42, Suntec Tower Three, 8 Temasek Boulevard, Singapore 038988",
+        "country": "SG"
+      }
+    ],
+    "contactPageAddress": "9th floor, Dallas Centre, Raidurg Village, Serilingampalle (M), Hyderabad, Telangana 500032",
+    "globalPresence": "We are spread across three continents with offices in Dallas, USA, Dubai, UAE & Hyderabad, India.",
+    "socials": [
+      {
+        "platform": "LinkedIn",
+        "url": "https://www.linkedin.com/company/enabled-analytics/about/"
+      }
+    ],
+    "copyright": "Enabled Analytics - all rights reserved."
+  },
+  "announcements": [
+    {
+      "title": "Ventas Consulting is now part of Enabled Analytics",
+      "text": "Enabled Analytics Expands Global Reach with Strategic Merger of Ventas Consulting",
+      "href": "https://www.prnewswire.com/in/news-releases/enabled-analytics-expands-global-reach-with-strategic-merger-of-ventas-consulting-302421029.html",
+      "external": true
+    },
+    {
+      "title": "Complete Suite of Salesforce Solutions in One Place",
+      "text": "Helping customers at every touchpoint, process, and data",
+      "href": "/contact"
+    },
+    {
+      "title": "Enabled Analytics launches a Discover Cloud Product",
+      "text": "With our prebuilt data analytics scorecards",
+      "href": "/products"
+    }
+  ],
+  "home": {
+    "hero": {
+      "eyebrow": "Salesforce Consulting Partner",
+      "title": "Complete Suite of Salesforce Solutions in One Place",
+      "lead": "Helping customers at every touchpoint, process, and data.",
+      "primaryCta": {
+        "label": "Get Started",
+        "href": "/contact"
+      },
+      "secondaryCta": {
+        "label": "Explore Discover Cloud",
+        "href": "/products"
+      }
+    },
+    "intro": {
+      "title": "Outperform Every Time With the Right Partner",
+      "body": "Boost productivity, deliver personalized experiences, enhance revenue and do so much more with Enabled Analytics. Armed with top-drawer Salesforce professionals, we provide unparalleled service offerings and outstanding solutions for various Salesforce Clouds. With Enabled Analytics, you can measure the results and your success with our pre-built scorecards. Whether you are a small business shooting for success or a large corporation striving for customer satisfaction, we can help leverage the benefits of Salesforce today!",
+      "images": [
+        "/images/home/about-1.jpg",
+        "/images/home/about-2.jpg"
+      ]
+    },
+    "stats": [
+      {
+        "value": 4.9,
+        "decimals": 1,
+        "suffix": "",
+        "label": "CSAT Score"
+      },
+      {
+        "value": 100,
+        "suffix": "+",
+        "label": "Global Clients"
+      },
+      {
+        "value": 500,
+        "suffix": "+",
+        "label": "Salesforce Certifications"
+      },
+      {
+        "value": 150,
+        "suffix": "+",
+        "label": "Projects"
+      }
+    ],
+    "segments": {
+      "title": "Win Effortlessly in Every Segment With the Right Teams",
+      "lead": "Take the lead with our carefully chosen strategies and professionals in every area of your operations"
+    },
+    "benefits": {
+      "title": "One Salesforce Partner, Numerous Benefits",
+      "lead": "Enabled Analytics does the heavy lifting while you enjoy professional service",
+      "items": [
+        {
+          "icon": "users",
+          "title": "Hand-Picked Talent",
+          "text": "Get access to hand-picked premium talent for your Salesforce project."
+        },
+        {
+          "icon": "rocket",
+          "title": "Improved Time to Market",
+          "text": "Slash costs and save time with our accelerators that help you enter the market quickly."
+        },
+        {
+          "icon": "award",
+          "title": "Centre of Excellence",
+          "text": "Dodge technical debts effectively and stay ahead with the newest features and design patterns."
+        },
+        {
+          "icon": "route",
+          "title": "Proven Methodology",
+          "text": "Drive value through informed decisions and get the most out of connected collaborations."
+        },
+        {
+          "icon": "layers",
+          "title": "Flexible Engagement Models",
+          "text": "Leverage our engagement models that include fixed price as well as time & material."
+        },
+        {
+          "icon": "globe",
+          "title": "Global Presence",
+          "text": "We are spread across three continents with offices in Dallas, USA, Dubai, UAE & Hyderabad, India."
+        }
+      ]
+    },
+    "offerings": {
+      "title": "Level up With Enabled Analytics",
+      "lead": "Leverage World-class Salesforce Solutions & Services",
+      "items": [
+        {
+          "title": "Service Offerings",
+          "image": "/images/home/service-offerings.jpg",
+          "items": [
+            "Salesforce Consulting",
+            "Salesforce Implementation",
+            "Operational Support & Maintenance"
+          ]
+        },
+        {
+          "title": "Advisory Services",
+          "image": "/images/home/advisory-services.jpg",
+          "items": [
+            "Optimization Strategy"
+          ]
+        },
+        {
+          "title": "Adoption Services",
+          "image": "/images/home/adoption-services.jpg",
+          "items": [
+            "Accelerators",
+            "Score Cards",
+            "Performance & Scale frameworks"
+          ]
+        },
+        {
+          "title": "Data Services",
+          "image": "/images/home/data-services.jpg",
+          "items": [
+            "Mulesoft",
+            "Data Migrations",
+            "Any pattern Salesforce Integration"
+          ]
+        }
+      ]
+    },
+    "shapeCycle": {
+      "title": "Streamline Your Operations with Our Shape Cycle",
+      "lead": "Our three-step Shape Cycle is crafted to help you uncover unexplored opportunities",
+      "steps": [
+        {
+          "title": "Comprehend",
+          "text": "Get connected with our Salesforce consultants to discuss your pain points, explore possible solutions, and find the perfect fit."
+        },
+        {
+          "title": "Implement",
+          "text": "Overcome challenges and achieve business goals with our proven implementation methodology."
+        },
+        {
+          "title": "Realize",
+          "text": "Discover untapped revenue sources and maximize your return on investment."
+        }
+      ]
+    },
+    "clientsTitle": "Our clients",
+    "testimonialsTitle": "What our clients say about us",
+    "cta": {
+      "title": "Significantly accelerate your user adoption and maximize your Salesforce return on investment.",
+      "button": {
+        "label": "Get Started",
+        "href": "/contact"
+      }
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "About Us",
+      "lead": "Thinking about Salesforce? Think Enabled Analytics."
+    },
+    "story": {
+      "title": "Thinking about Salesforce? Think Enabled Analytics.",
+      "body": [
+        "With a mission of helping businesses thrive by harnessing the power of Salesforce, and a vision of delivering world-class services and implementations, Enabled Analytics was formed.",
+        "Our methodologies allow EA clients to achieve faster time to value and increased ROI from their Salesforce investments, helping businesses succeed in a highly competitive space.",
+        "Enabled Analytics is a hub of talented Salesforce experts dedicated to empowering your business. Our team consists of carefully selected professionals who undergo rigorous screening processes. We deliver exceptional Salesforce Cloud services to help you achieve your goals."
+      ],
+      "image": "/images/about/about-1.jpg"
+    },
+    "stats": [
+      {
+        "value": 4.9,
+        "decimals": 1,
+        "suffix": "",
+        "label": "CSAT Score"
+      },
+      {
+        "value": 100,
+        "suffix": "+",
+        "label": "Global Clients"
+      },
+      {
+        "value": 500,
+        "suffix": "+",
+        "label": "Salesforce Certifications"
+      },
+      {
+        "value": 150,
+        "suffix": "",
+        "label": "Projects"
+      }
+    ],
+    "culture": {
+      "title": "Culture",
+      "body": [
+        "At Enabled Analytics, we are committed to finding exceptional talent, and once they're on board, we support their growth and pursuit of excellence.",
+        "Enabled Analytics encourages exploration, experimentation, and skill enhancement, empowering each professional to become the best version of themselves, both professionally and personally."
+      ],
+      "image": "/images/about/culture.jpg"
+    },
+    "fourEs": {
+      "title": "The Four E’s of Excellence",
+      "lead": "Experience, Expertise, Empowerment, and Excellence—our unique approach encompasses all four, enabling us to deliver exceptional solutions and outstanding services",
+      "items": [
+        {
+          "index": "E1",
+          "title": "Experience",
+          "text": "Our certified and experienced team members bring high-value suggestions to the table that allow you to identify and remove bottlenecks."
+        },
+        {
+          "index": "E2",
+          "title": "Expertise",
+          "text": "With experience comes expertise. Our research and pre-built solutions help you accelerate processes and enjoy benefits from day one."
+        },
+        {
+          "index": "E3",
+          "title": "Empowerment",
+          "text": "We equip your team with the tools and knowledge they need to succeed, fostering a culture of continuous improvement and innovation."
+        },
+        {
+          "index": "E4",
+          "title": "Evolution",
+          "text": "We follow the deployment with continuous Evolution of your implemented solution, to address the changing needs of the organization."
+        }
+      ],
+      "closing": "When these elements come together, they form a comprehensive strategy that drives success. Our innovative solutions are crafted to tackle your unique business challenges, tailored precisely to your needs, and delivered by a team of dedicated professionals committed to excellence at every step"
+    }
+  },
+  "team": {
+    "title": "Leadership",
+    "groups": [
+      {
+        "title": "Co-Founders",
+        "members": [
+          {
+            "name": "Raghu Chittimalla",
+            "role": "Chief Executive Officer",
+            "image": "/images/team/raghu-chittimalla.jpg"
+          },
+          {
+            "name": "Ashok K. Chitiprolu",
+            "role": "Managing Partner",
+            "image": "/images/team/ashok-chitiprolu.png"
+          },
+          {
+            "name": "Sandeep Korlapati",
+            "role": "Chief Technology Officer",
+            "image": "/images/team/sandeep-korlapati.jpg"
+          },
+          {
+            "name": "Richard Gonzales",
+            "role": "Chief Revenue Officer",
+            "image": "/images/team/richard-gonzales.png"
+          }
+        ]
+      },
+      {
+        "title": "Executive Team",
+        "members": [
+          {
+            "name": "Michael Malone",
+            "role": "SVP of Sales and Operations",
+            "image": "/images/team/michael-malone.png"
+          },
+          {
+            "name": "Parthasarathy TMK",
+            "role": "SVP Delivery",
+            "image": "/images/team/parthasarathy-tmk.jpg"
+          },
+          {
+            "name": "Karthik Muthusamy",
+            "role": "Vice President of Technology",
+            "image": "/images/team/karthik-muthusamy.jpg"
+          },
+          {
+            "name": "Lawrence Tijerina",
+            "role": "VP of Solution Architecture",
+            "image": "/images/team/lawrence-tijerina.png"
+          },
+          {
+            "name": "Lisa Malmanger",
+            "role": "Sr. Principal Consultant",
+            "image": "/images/team/lisa-malmanger.jpg"
+          },
+          {
+            "name": "Kim Escobar",
+            "role": "Salesforce Principal Consultant",
+            "image": "/images/team/kim-escobar.jpg"
+          }
+        ]
+      }
+    ]
+  },
+  "product": {
+    "name": "Discover Cloud",
+    "hero": {
+      "title": "Discover Cloud",
+      "lead": "Enabled Analytics launches a Discover Cloud Product — with our prebuilt data analytics scorecards."
+    },
+    "why": {
+      "title": "Why Choose Discover Cloud?",
+      "items": [
+        {
+          "title": "Reduce debugging cycles",
+          "text": "Streamline your development process by quickly identifying and resolving performance issues."
+        },
+        {
+          "title": "Lower Costs",
+          "text": "Avoid the high costs associated with recurring rework and inefficiencies."
+        },
+        {
+          "title": "Empower Your Teams",
+          "text": "Equip your engineers with the tools they need to deliver top-tier code and drive business success."
+        }
+      ]
+    },
+    "overview": {
+      "title": "Discover Cloud Empowers Your Engineering Teams",
+      "body": [
+        "Discover Cloud is a powerful solution designed to measure, benchmark, and sustain the highest quality code in your applications. It enables your teams to establish meaningful benchmarks that assess performance at every stage, ensuring that only top-tier code moves forward.",
+        "Beyond identifying the parameters responsible for breaches, Discover Cloud provides actionable insights to help your teams effectively address and resolve specific issues. Additionally, Discover Cloud features an automated Scheduler for testing both single and bulk transactions, allowing you to evaluate the responsiveness, robustness, and scalability of your application.",
+        "Stay ahead of the curve with Discover Cloud's subscription feature, keeping your teams informed and up-to-date."
+      ]
+    },
+    "modules": [
+      {
+        "index": "E1",
+        "title": "Perf Tracking",
+        "text": "Establish benchmarks and measure performance."
+      },
+      {
+        "index": "E2",
+        "title": "Log Insights",
+        "text": "Deep dive into non-performant code that leads to breaches."
+      },
+      {
+        "index": "E3",
+        "title": "Scheduler",
+        "text": "Automated tests at desired intervals for both, Single transactions and Bulk transactions."
+      },
+      {
+        "index": "E4",
+        "title": "Subscribe",
+        "text": "Get insights on met and breached NFR matrix."
+      },
+      {
+        "index": "E5",
+        "title": "Bulk",
+        "text": "Conduct Bulk data testing and uncover your app's responsiveness, robustness and scalability."
+      }
+    ],
+    "advantages": {
+      "title": "Elevate Your Code’s Efficiency with Discover Cloud",
+      "lead": "Discover Cloud can help you reshape your business by offering you numerous advantages that include:",
+      "items": [
+        "High-quality Deliverables",
+        "Time & Cost Savings",
+        "Continuous Improvement & Optimization",
+        "Better Releases & Informed Decision Making",
+        "Improved Applications",
+        "Better Customer Experiences",
+        "Multiplied Conversions & Increased Retention",
+        "Better Samples, Accuracy, Revenue & Maximised ROI"
+      ]
+    },
+    "results": {
+      "title": "What Our Customers Have Achieved with Us",
+      "lead": "Drive continuous improvement and informed decision making while attaining finest customer experience with Enabled Analytics.",
+      "stats": [
+        {
+          "value": 35,
+          "suffix": "%",
+          "label": "Better Customer Experience"
+        },
+        {
+          "value": 38,
+          "suffix": "%",
+          "label": "Reduced Opex Cost"
+        },
+        {
+          "value": 26,
+          "suffix": "%",
+          "label": "Increase in Productivity Gains"
+        },
+        {
+          "value": 36,
+          "suffix": "%",
+          "label": "Uplift in Maintainability and Agility"
+        }
+      ]
+    }
+  },
+  "practiceAreasIntro": "Enabled Analytics leverages a dedicated team of in-house experts to ensure extensive and specialized support across our diverse customer base. Our approach, both cost-effective and efficient, is designed to facilitate scalable development and drive operational excellence.",
+  "services": [
+    {
+      "slug": "coe-teams",
+      "category": "solution",
+      "title": "CoE Teams",
+      "icon": "users",
+      "tagline": "Wouldn’t it be great to hit the bull’s eye the very first time?",
+      "summary": "Expert steering committees fluent in Salesforce, equipped to ensure successful implementations and ongoing excellence.",
+      "image": "/images/services/coe-setup.jpg",
+      "overview": {
+        "title": "Enabled Analytics' Center of Excellence (CoE) Teams: Your Salesforce Success Partners",
+        "body": [
+          "The CoE teams at Enabled Analytics are expert steering committees fluent in Salesforce, equipped to ensure successful implementations and ongoing excellence. Comprised of seasoned solution, technical, and design architects with decades of expertise, our CoE teams bring together diverse skills, knowledge, assets, and tools to deliver tailored and effective solutions for your organization.",
+          "Whether you're dealing with a well-established Salesforce org or starting fresh, our CoE teams offer invaluable guidance and support from day one. We conduct comprehensive org assessments, develop customized strategies and roadmaps, provide ongoing support and training, and leverage industry best practices to drive efficiency, productivity, and ROI for your Salesforce investments."
+        ]
+      },
+      "benefits": {
+        "title": "Additional benefits",
+        "lead": "The CoE teams ensure success of your implementation project and come with additional benefits",
+        "items": [
+          {
+            "title": "Asset Library & Frameworks for Increased Reusability"
+          },
+          {
+            "title": "Aligned Business and IT Goals"
+          },
+          {
+            "title": "Informed Decision Making"
+          },
+          {
+            "title": "Quality & Governance"
+          },
+          {
+            "title": "Effective Collaboration"
+          },
+          {
+            "title": "Scalability & Consistency"
+          },
+          {
+            "title": "Optimization & Better Compliance"
+          },
+          {
+            "title": "Cost Savings & On-time Delivery"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "coe-enablement",
+      "category": "solution",
+      "title": "CoE Enablement",
+      "icon": "sparkles",
+      "tagline": "Accelerate your business, achieve goals ahead of deadlines, and increase ROI on your Salesforce investment.",
+      "summary": "Think tanks that bring decades of industry knowledge, advanced tools, and pre-built assets to complete tasks swiftly and efficiently.",
+      "image": "/images/services/coe-evaluation.jpg",
+      "intro": [
+        "What if you could accelerate your business, achieve goals ahead of deadlines, and increase ROI on your Salesforce investment, all while shortening the time between your Salesforce evaluation and successful delivery of your new system? This is possible with our Center of Excellence (CoE) teams."
+      ],
+      "overview": {
+        "title": "Unleashing the Power of CoE Teams",
+        "body": [
+          "Our CoE teams are think tanks designed to help you seamlessly overcome any challenge. They bring decades of industry knowledge, advanced tools, and pre-built assets to complete tasks swiftly and efficiently."
+        ]
+      },
+      "process": {
+        "title": "Flexible Process, Tailored for Your Success",
+        "lead": "Whether you are dealing with a messed-up org or a well-oiled org. Whether you are facing governance issues or technical challenges. Our CoE teams can help you overcome any hurdle effortlessly. Here’s how we do it:",
+        "steps": [
+          {
+            "title": "Evaluation",
+            "image": "/images/services/coe-evaluation.jpg",
+            "text": "The first step is an in-depth evaluation. We discuss your bottlenecks, requirements, and goals. Once our teams have a clear understanding, we proceed to the engagement models."
+          },
+          {
+            "title": "Engagement Models",
+            "image": "/images/services/coe-engagement-models.jpg",
+            "text": "While most companies prefer a Hybrid Agile approach, we can tailor our approach based on the evaluation, selecting the best engagement model to suit your needs"
+          },
+          {
+            "title": "Prioritization",
+            "image": "/images/services/coe-prioritization.jpg",
+            "text": "Next, we set priorities for our think tanks, focusing on recurring issues such as governance, assets, or architecture. This ensures clear deliverables and a focused action plan."
+          },
+          {
+            "title": "Set-up",
+            "image": "/images/services/coe-setup.jpg",
+            "text": "We begin by deploying a small team to address your initial bottlenecks. As your operations and challenges become clearer, we scale the team as needed to ensure optimal support."
+          },
+          {
+            "title": "Maturity",
+            "image": "/images/services/coe-maturity.jpg",
+            "text": "In this phase, our CoE teams start solving your problems through iterative processes. By deploying best practices, the right tools, assets, and frameworks, we offer quick and effective resolutions, helping you achieve more in less time."
+          },
+          {
+            "title": "Exiting the Process",
+            "image": "/images/services/coe-exit.jpg",
+            "text": "Our engagement can continue as long as needed, working in iterations to continually optimize your processes. Alternatively, when our work is complete, we ensure a seamless exit. We conduct knowledge transfer sessions, hand over frameworks, and align with mutual planning to ensure a smooth transition."
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Advantage of working with our Experts",
+        "items": [
+          {
+            "title": "Quicker Adoption"
+          },
+          {
+            "title": "Operational Efficiency"
+          },
+          {
+            "title": "Governance"
+          },
+          {
+            "title": "Decades of Experience"
+          },
+          {
+            "title": "Effective Collaboration"
+          },
+          {
+            "title": "Scalable Teams"
+          },
+          {
+            "title": "Innovation"
+          },
+          {
+            "title": "Cost & Time Savings"
+          },
+          {
+            "title": "Asset Libraries"
+          },
+          {
+            "title": "Frameworks"
+          }
+        ]
+      },
+      "closing": {
+        "title": "Achieve Accelerated Success with Enabled Analytics CoE Teams",
+        "body": "Partnering with Enabled Analytics accelerates your projects, helps you to meet goals ahead of schedule, and increases ROI from your Salesforce Investment—all while avoiding common pitfalls. Let our think tanks drive your success with their unparalleled expertise and innovative solutions. Contact us today to learn more."
+      }
+    },
+    {
+      "slug": "org-assessment",
+      "category": "solution",
+      "title": "Org Assessment",
+      "icon": "stethoscope",
+      "tagline": "Unlock Your Salesforce Org's Full Potential with a Comprehensive Performance Assessment.",
+      "summary": "Our expert “mechanics” have the tools and experience to get your Salesforce Org running like new.",
+      "image": "/images/services/org-assessment-1.jpg",
+      "intro": [
+        "Over time, even the best Salesforce implementations can encounter performance issues due to factors like technical debt, outdated workflows, empty fields, large Data Volumes and the accumulation of undocumented changes over time. These issues can lead to slow page loads, incomplete records, and inefficient workflows."
+      ],
+      "overview": {
+        "title": "The Good News is that our expert “mechanics” have the tools and experience to get your Salesforce Org running like new.",
+        "body": [
+          "Our Org Assessment engagement helps you streamline and optimize your org effortlessly."
+        ]
+      },
+      "process": {
+        "title": "How the Org Assessment works",
+        "steps": [
+          {
+            "title": "Initial Assessment",
+            "image": "/images/services/org-assessment-1.jpg",
+            "text": "A quick health check is all it takes to get on the right track. Our expert teams assess your complete implementation, technical debts, and deployed technologies to identify gaps and areas for improvement"
+          },
+          {
+            "title": "The Three Angles",
+            "image": "/images/services/org-assessment-2.jpg",
+            "text": "We take your enterprise architecture, data architecture, and business vision into account, and create effective strategies to help you achieve your goals."
+          },
+          {
+            "title": "Possible Resolutions",
+            "image": "/images/services/org-assessment-3.jpg",
+            "text": "Based on the initial assessment, we propose effective resolutions. You have the flexibility to adopt all or select a few that best suit your needs."
+          },
+          {
+            "title": "Execution Plan",
+            "image": "/images/services/org-assessment-4.jpg",
+            "text": "We create a comprehensive roadmap, discussing scope and configuration. To ensure seamless business operations, we implement the lift and shift in phases."
+          },
+          {
+            "title": "Testing Deployment and Training",
+            "text": "Once the solution is ready, we conduct thorough testing before deployment. We then train your team to ensure a smooth transition and ongoing success."
+          }
+        ]
+      },
+      "benefits": {
+        "title": "What You Achieve with Org Assessment",
+        "items": [
+          {
+            "title": "Capex & Opex Cost Saving"
+          },
+          {
+            "title": "Data Unification"
+          },
+          {
+            "title": "Maximized Scalability & Reusability"
+          },
+          {
+            "title": "Elevated Customer Experience"
+          },
+          {
+            "title": "Increased ROI"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "data-analytics",
+      "category": "solution",
+      "title": "Data Analytics",
+      "icon": "chart",
+      "tagline": "Are your Analytics Tools keeping pace with your business?",
+      "summary": "Salesforce Data Cloud provides real-time data analytics, harmonizing data from across all enterprise systems.",
+      "image": "/images/services/data-analytics.jpg",
+      "intro": [
+        "Many businesses seeking real-time intelligence are facing a harsh reality – Their analytic tools simply aren’t keeping pace. Critical reports being requested by Executives require time-consuming spreadsheet exercises that take days or even weeks to complete.",
+        "As a result, crucial financial and operations decisions are being based on outdated data and key stakeholders remain unaware of problems until days or weeks after they occur, impacting revenue, customer satisfaction, and causing avoidable operational issues."
+      ],
+      "benefits": {
+        "title": "Advantages of Data Analytics",
+        "lead": "Salesforce’s Data Cloud provides real time Data Analytics allowing Enterprise to seamlessly Harmonize Data from across all Enterprise systems enabling:",
+        "items": [
+          {
+            "title": "Data Driven Decision Making"
+          },
+          {
+            "title": "Better Problem Solving"
+          },
+          {
+            "title": "Data-based Resources, Processes & Structures"
+          },
+          {
+            "title": "Risk Identification"
+          },
+          {
+            "title": "Data-based Forecasts"
+          },
+          {
+            "title": "Enhanced Customer Experiences"
+          },
+          {
+            "title": "Improved Operating Efficiency"
+          },
+          {
+            "title": "Unlocking Revenue Streams"
+          },
+          {
+            "title": "Alteration of Best Practices"
+          },
+          {
+            "title": "More Value & Increased ROI"
+          }
+        ]
+      },
+      "closing": {
+        "title": "Enabled Analytics Data Cloud practice is ready to help!",
+        "body": "Contact us today to schedule time with our data experts."
+      }
+    },
+    {
+      "slug": "sales-cloud",
+      "category": "practice",
+      "title": "Sales Cloud",
+      "icon": "trending",
+      "tagline": "Sell like the Fortune 500 with Enabled Analytics. Boost your sales performance & maximize productivity while multiplying your revenue.",
+      "summary": "Increase your sales faster than ever with the market-leading CRM software with continuous backing.",
+      "image": "/images/services/sales-cloud.jpg",
+      "stats": [
+        {
+          "value": 40,
+          "suffix": "%",
+          "label": "Increase in Sales Productivity"
+        },
+        {
+          "value": 38,
+          "suffix": "%",
+          "label": "Faster implementation"
+        },
+        {
+          "value": 30,
+          "suffix": "%",
+          "label": "Increase in Sales Revenue"
+        },
+        {
+          "value": 25,
+          "suffix": "%",
+          "label": "Increase in conversion rate"
+        }
+      ],
+      "overview": {
+        "title": "Transform more prospects into long-term customers",
+        "body": [
+          "A configured and well-implemented Sales Cloud empowers executives to sell smarter by providing them an efficient and effective AI-powered sales platform. The Sales Cloud is crafted to increase productivity and overall success of executives at the same time, as it provides a complete 360 degree view of customers, from start to finish. By adding personalization to your sales approach, you can effectively transform your potential customers into long-term clients seamlessly."
+        ]
+      },
+      "features": {
+        "title": "Best-in-class Features Designed to Empower Your Key Players",
+        "items": [
+          "Sales Management Tools",
+          "Lead Conversion Process",
+          "Comprehensive Dashboards",
+          "Price & Product Logs",
+          "Automated Workflows",
+          "AI-Powered Analytics",
+          "Task Management Tools",
+          "Contact Books",
+          "Automated Calling & Logs",
+          "Process Automation",
+          "Data Analytics"
+        ]
+      },
+      "approach": [
+        {
+          "title": "Leverage Our Custom Sales Cloud Implementation Services",
+          "text": "At Enabled Analytics, we understand that every business is different, and so are the requirements. Hence, to ensure you get the most out of your investment, we provide you custom sales cloud implementation services that enable you to improve the overall performance, and provide better user experience while accelerating sales."
+        },
+        {
+          "title": "Get Ahead Faster with Our Starter Packs and Accelerators",
+          "text": "You can get it right the first time with the help of our CoE teams, without starting from scratch. Our integration frameworks, pre-built data models, data migration templates, and apex utilities provide you with a solid foundation to build upon and enable you to accelerate the process. Our flagship assets and accelerators are designed specifically to reduce the time of deployment. Get your implementations done at 3X speed and at up to 60% lower costs while staying ahead seamlessly."
+        },
+        {
+          "title": "Our Flexible Engagement Models Designed to Cater to Your Needs",
+          "text": "Get the right talent, the right teams with years of expertise. Partner up with us for your implementations or hire our experts. Scale up and down as per your implementation teams and stay ahead without any fuss."
+        }
+      ],
+      "benefits": {
+        "title": "Achieve More with Our Sales Cloud Practice",
+        "items": [
+          {
+            "title": "Sell Smarter",
+            "text": "We implement the Sales cloud in a manner that helps executives at every stage as a digital coach. This enables them to meet their monthly goals effectively and consistently."
+          },
+          {
+            "title": "Accelerate Productivity",
+            "text": "When Sales executives start making use of the app, they can record improvements in productivity. This brings massive improvements in the results as well as the data quality, which then provides better forecasts that fuel data-driven decisions."
+          },
+          {
+            "title": "Close More Deals",
+            "text": "Enabled Analytics also offers sales coaching, sales management, sales enablement, pipeline management, sales campaign, sales data and much more. Our unique and holistic approach ensures every executive is a top performing sales executive."
+          },
+          {
+            "title": "Eliminate Manual Tasks",
+            "text": "Slash your spendings and digging around time in various spreadsheets and streamline processes while running your business seamlessly."
+          }
+        ]
+      }
+    },
+    {
+      "slug": "service-cloud",
+      "category": "practice",
+      "title": "Service Cloud",
+      "icon": "headset",
+      "tagline": "Empower your customer support, automate operations, and offer quick resolutions. Keep your customers happy with Enabled Analytics Service Cloud implementation that helps you drive success.",
+      "summary": "Build loyalty with every interaction using complete customer support software.",
+      "image": "/images/services/service-cloud.jpg",
+      "stats": [
+        {
+          "value": 47,
+          "suffix": "%",
+          "label": "Increase customer retention"
+        },
+        {
+          "value": 3,
+          "suffix": "X",
+          "label": "Faster implementations"
+        },
+        {
+          "value": 48,
+          "suffix": "%",
+          "label": "Increase in agent productivity"
+        },
+        {
+          "value": 35,
+          "suffix": "%",
+          "label": "Quicker resolutions"
+        }
+      ],
+      "overview": {
+        "title": "Exceed the Expectations of your Most Demanding Customers",
+        "body": [
+          "Service cloud is known for empowering organizations to manage customer data and insights better on various channels such as phone, chat, email and more. For any business, customer service is the key to success in the highly competitive market. And to help you thrive in the evolving customer service space, Enabled Analytics can help you get the right teams that can help you achieve your customer service goals."
+        ]
+      },
+      "features": {
+        "title": "Top-notch Features That Help You Achieve More",
+        "items": [
+          "Omni Channel",
+          "Knowledge Base",
+          "Case Management",
+          "Process & Routine",
+          "Service Console",
+          "Field Service",
+          "Automation",
+          "App Builder",
+          "Einstein Bots",
+          "Service Analytics"
+        ]
+      },
+      "approach": [
+        {
+          "title": "Deliver Unique Customer Experiences with Our Custom Service Cloud Implementation",
+          "text": "Every customer is unique. And hence, at Enabled Analytics, we empower you to deliver unique as well as personalized customer experiences with our custom service cloud implementation services. Our implementation services not only enable you to provide quicker resolutions but also help you build lasting relationships with your customers. Enhance the productivity of your agents while maintaining a complete comprehensive view of your customers with our custom service cloud implementation."
+        },
+        {
+          "title": "Unlock Outstanding Customer Experience Quicker with Our Starter Packs and Accelerators",
+          "text": "Get ahead in no time with our CoE teams, starter packs and accelerators. Our pre-built data models, apex utilities, data migration templates and integration frameworks are crafted to help you build strong foundations. The best part? You don't have to start from scratch! Our accelerators and flagship assets are tailored to help you deploy at 3X speed and with 60% lower costs."
+        },
+        {
+          "title": "One Step Closer to Success with Right teams",
+          "text": "Hiring or partnering up with the right teams gets you ahead in no time. Our flexible engagement models are designed to help you achieve your goals without breaking a sweat. Get access to world-class teams, knowledge, best-practices and top-notch strategies and get closer to your win easily."
+        }
+      ],
+      "benefits": {
+        "title": "Achieve More with Our Service Cloud Practice",
+        "items": [
+          {
+            "title": "Support Customers",
+            "text": "Make use of omnichannel marketing platforms and deliver solutions that are custom tailored."
+          },
+          {
+            "title": "Improve Support with AI",
+            "text": "Build and manage any kind of email campaign. Use other data and CRM for personalization in order to drive engagement. Effectively automate marketing, reach out to your customers with messages that resonate and scale your capabilities"
+          },
+          {
+            "title": "View All Details At A Glance",
+            "text": "Create one on one customer journeys across mobile, social ads, email, and web. Connect various experiences across service, sales, marketing, and every possible customer touchpoint."
+          },
+          {
+            "title": "Take Service Cloud Even Further",
+            "text": "Slash your spendings and digging around time in various spreadsheets and streamline processes while running your business seamlessly."
+          }
+        ]
+      }
+    },
+    {
+      "slug": "marketing-cloud",
+      "category": "practice",
+      "title": "Marketing Cloud",
+      "icon": "megaphone",
+      "tagline": "Create personalized customer journeys & get a unified customer view. Engage your customers 10X better & maximize your Marketing ROI with Enabled Analytics.",
+      "summary": "Work with EA to unite your marketing strategy with sales and services.",
+      "image": "/images/services/marketing-cloud.jpg",
+      "stats": [
+        {
+          "value": 30,
+          "suffix": "%",
+          "label": "Increase in leads"
+        },
+        {
+          "value": 60,
+          "suffix": "%",
+          "label": "Cost savings with accelerators"
+        },
+        {
+          "value": 35,
+          "suffix": "%",
+          "label": "Better conversions"
+        }
+      ],
+      "overview": {
+        "title": "Leverage the Multi-faceted Marketing Platform with Enabled Analytics",
+        "body": [
+          "Marketing Cloud empowers marketers to reach their potential customers through the ideal channels at the right time, and at the appropriate stage of relationship. Our best-in-class marketing cloud implementation allows businesses to engage their customers better, establish brand authority, enhance brand awareness and recognition while generating leads and multiplying conversions effectively."
+        ]
+      },
+      "features": {
+        "title": "Best-in-class Features Designed to Empower Your Key Players",
+        "items": [
+          "Customer Journey Creator",
+          "Social Studio",
+          "Email Studio",
+          "Target Audience Studio",
+          "Advertising Studio",
+          "Interaction Studio",
+          "Data Studio",
+          "Mobile Studio",
+          "Communication Management Studio",
+          "Marketing Automation Tools"
+        ]
+      },
+      "approach": [
+        {
+          "title": "Meet Your Business Needs with Our Custom Marketing Implementation Services",
+          "text": "Need custom marketing implementation services for your specific business requirements? Enabled Analytics can help you achieve your goals by enabling you to meet your marketing implementation needs. Our certified teams of top-drawer professionals create complete roadmaps that incorporate your marketing goals and needs, to help you achieve success."
+        },
+        {
+          "title": "Launch in No Time with Our Starter Packs and Accelerators",
+          "text": "With Enabled Analytics, not only you get access to top-notch CoE teams, but also you get access to our starter packs and accelerators. These eliminate the need of starting from scratch by giving you access to integration frameworks, data migration templates, pre-built data models, apex utilities and much more. Leverage our flagship assets and accelerators, lay strong foundations, get started in no time while reducing costs by 60% and increasing implementation speed by 3X."
+        },
+        {
+          "title": "Right Teams for All Your Requirements",
+          "text": "Hire or partner up. Scale up or scale down on your terms. Get the unmatched professionals by your side that bring years of knowledge and expertise to climb up the success ladder."
+        }
+      ],
+      "benefits": {
+        "title": "Achieve More with Our Marketing Cloud Practice",
+        "items": [
+          {
+            "title": "Understand, Engage and Personalize",
+            "text": "Make use of the omnichannel to your advantage and render custom-tailored solutions to the customers over the channels they prefer."
+          },
+          {
+            "title": "Cross Channel Journey",
+            "text": "Create better customer journeys by using email, social ads, mobile and web. Connect customer experiences across service, sales, marketing and every possible touchpoint."
+          },
+          {
+            "title": "Align Sales & Marketing",
+            "text": "Build and manage any kind of email campaign. Leverage data and CRM of personalization to boost engagement. Automate effectively your marketing and enhance your capabilities to reach customers with messaging."
+          },
+          {
+            "title": "Personal Email Marketing",
+            "text": "Engage your customers better with personal email marketing, skyrocket engagement, enhance your brand awareness and recognition while maximizing your marketing ROI."
+          }
+        ]
+      }
+    },
+    {
+      "slug": "account-engagement",
+      "category": "practice",
+      "title": "Account Engagement",
+      "icon": "mail",
+      "tagline": "Get the Account Engagement specialists by your side. Achieve superior marketing results and outshine your competitors effortlessly. Leverage the expertise of Enabled Analytics and accelerate your business growth.",
+      "summary": "Generate more leads with emails, marketing automation and more.",
+      "image": "/images/services/account-engagement.jpg",
+      "stats": [
+        {
+          "value": 30,
+          "suffix": "%",
+          "label": "Increased Productivity"
+        },
+        {
+          "value": 3,
+          "suffix": "X",
+          "label": "Faster implementation"
+        },
+        {
+          "value": 28,
+          "suffix": "%",
+          "label": "Increased Conversion Rate"
+        },
+        {
+          "value": 34,
+          "suffix": "%",
+          "label": "Increased Revenue"
+        }
+      ],
+      "overview": {
+        "title": "Power up Your Business with Account Engagement",
+        "body": [
+          "Empower your marketing and sales teams by providing them with everything they need and enhance acquisition, increase conversions, render a one-of-a-kind, personalized customer experience, and increase customer retention while maintaining consistency. Harness the power of automation, email templates, optimized campaigns and start multiplying customer success stories of your business today!"
+        ]
+      },
+      "features": {
+        "title": "Leverage Account Engagement's Features to Full-extent with Enabled Analytics",
+        "items": [
+          "Email Marketing",
+          "Landing Pages & Forms",
+          "Search Tracking & Optimizations",
+          "Journey Builder",
+          "Personalization",
+          "Lead Management & Attribution"
+        ]
+      },
+      "approach": [
+        {
+          "title": "Meet Your Business Goals With Our Custom Account Engagement Implementation Services",
+          "text": "Align the Pardot implementation with your specific business goals with our custom implementation services. Leverage our effective roadmaps, strategies, best practices, certified teams and get it right the first time. Enhance the performance and productivity of your teams and turbo-charge your business today!"
+        },
+        {
+          "title": "Deploy Quicker with Our Starter Packs and Accelerators",
+          "text": "Deploy quicker at 3X speed, at 60% lower costs. Our starter packs and accelerators can help you succeed in the competitive market in no time. Leverage our integration frameworks, apex utilities, data migration templates, pre-built data models, flagship assets, accelerators and much more to meet your business goals. Apart from these, you get the expertise of our CoE teams, that enable you to get the implementations done smoothly, without any fuss."
+        },
+        {
+          "title": "World-class Teams, Just a Few Clicks Away",
+          "text": "Make use of our super flexible engagement models that are designed to meet your business requirements. Hire from us or simply partner up with us. Get the best-in-class talent for your implementations and get it right in the very first shot."
+        }
+      ],
+      "benefits": {
+        "title": "Additional Benefits of working with EA on your Account Engagement Implementation",
+        "items": [
+          {
+            "title": "Build Memorable Experiences",
+            "text": "Design beautiful landing pages with out-the-box functionalities. See how customers engage with your emails at every stage of your campaign."
+          },
+          {
+            "title": "Increased Alignment",
+            "text": "Enhance alignment across marketing, services, sales while reaching out to the right customers and multiplying your sales."
+          },
+          {
+            "title": "Performance in Real-Time",
+            "text": "Get access to the right tools, get valuable insights, and measure the success of your campaigns. Understand how your customers resonate and move through your sales funnel from click to close."
+          },
+          {
+            "title": "Make Integration Easy",
+            "text": "Connect your CRM with Marketing Cloud Account Engagement, and help your sales and marketing teams work together seamlessly. Integrate diverse tools such as Zoom that brings data from various virtual events. Gain visibility into advertising spending with Google Ads Integration."
+          }
+        ]
+      }
+    },
+    {
+      "slug": "experience-cloud",
+      "category": "practice",
+      "title": "Experience Cloud",
+      "icon": "sparkles",
+      "tagline": "Elevate customer experiences with beautifully crafted digital interactions by leveraging our Experience Cloud implementation. Our decades of expertise enables you to achieve your goals while amplifying success.",
+      "summary": "EA ensures that the collaboration tools connect customers, partners, and employees directly.",
+      "image": "/images/services/experience-cloud.jpg",
+      "stats": [
+        {
+          "value": 20,
+          "suffix": "%",
+          "label": "Increased Revenue"
+        },
+        {
+          "value": 3,
+          "suffix": "X",
+          "label": "Faster Implementations"
+        },
+        {
+          "value": 34,
+          "suffix": "%",
+          "label": "Reduced Implementation Cost"
+        }
+      ],
+      "overview": {
+        "title": "Unparalleled Customer Experiences with Enabled Analytics",
+        "body": [
+          "Get valuable insights about how your customers perceive and interact with your brand, make data driven decisions and enhance customer experiences seamlessly with personalization. Our experience cloud implementation allows you to build highly engaging digital channels, online communities, forums while enabling you to extend your business. Enable your partners to carry out tasks seamlessly while leveraging experience cloud and turbo-charge your business today!"
+        ]
+      },
+      "features": {
+        "title": "Key Features That Enable You to Deliver the Best",
+        "items": [
+          "Business Integration",
+          "Personalization",
+          "Customization & Branding",
+          "Effective Collaborations",
+          "Autogenerated Topic Pages",
+          "Group Creations",
+          "Engagement Levels",
+          "Ecommerce",
+          "Experience Management",
+          "Employee Collaboration",
+          "Knowledge Base",
+          "Case Escalation"
+        ]
+      },
+      "approach": [
+        {
+          "title": "Engage Your Customers with Our Custom Experience Cloud Implementation",
+          "text": "Deliver powerful first impressions with our custom implementation, at lightning fast speed. You get your implementation in place, without starting from scratch. Harness the power of our flagship assets, accelerators, apex utilities, pre-built data models, integration frameworks and data migration templates and accelerate deployment by 3X."
+        },
+        {
+          "title": "Enhance Customer Interactions Quicker with Our Starter Packs and Accelerators",
+          "text": "Get the expertise and decades of experience of our CoE teams, paired with our accelerators and starter packs and deploy your implementations at 60% reduced costs, with 3X more speed. Our starter packs, accelerators and flagship assets are crafted to help lay strong foundations, without the need of starting from ground up. Leverage our pre-built data models, data migration templates, apex utilities and integration framework and slash the time between the starting point and your success."
+        },
+        {
+          "title": "Get Right Teams for Effortless Win",
+          "text": "Win seamlessly by pairing with the right teams and talent. Get access to handpicked, curated talent that brings years of expertise, best practices, knowledge and much more. Leverage our engagement models and scale up and scale down teams as per your requirements."
+        }
+      ],
+      "benefits": {
+        "title": "More Upsides of Our Experience Cloud Practice",
+        "items": [
+          {
+            "title": "Deploy Quickly",
+            "text": "Point-and-click builders, components, and out-of-the-box vertical applications"
+          },
+          {
+            "title": "Unlock Business Processes and Data",
+            "text": "Digitize end-to-end business processes so customers take action"
+          },
+          {
+            "title": "Connect the Customer Journey",
+            "text": "Break down silos and connect systems, data, applications, and content."
+          },
+          {
+            "title": "Maximize your Return on Experience",
+            "text": "Go to market fast with personalized digital experiences that are streamlined across channels."
+          }
+        ]
+      }
+    },
+    {
+      "slug": "cpq",
+      "category": "practice",
+      "title": "CPQ",
+      "icon": "calculator",
+      "tagline": "Simplify configuration and create price quotes with precision by leveraging CPQ. Harness the power of Salesforce CPQ, Vlocity CPQ, and Apttus CPQ to maximize your success with Enabled Analytics.",
+      "summary": "Revenue Cloud is a comprehensive platform designed to automate and optimize the entire revenue lifecycle, encompassing processes such as product catalog.",
+      "image": "/images/services/cpq.png",
+      "stats": [
+        {
+          "value": 33,
+          "suffix": "%",
+          "label": "Increased Quote Productivity"
+        },
+        {
+          "value": 3,
+          "suffix": "X",
+          "label": "Faster Implementations"
+        },
+        {
+          "value": 13,
+          "suffix": "%",
+          "label": "Reduced Quote Revisions"
+        },
+        {
+          "value": 60,
+          "suffix": "%",
+          "label": "Cost Savings"
+        }
+      ],
+      "overview": {
+        "title": "Make your Quote-to-cash Process Faster than Ever!",
+        "body": [
+          "Get organized and streamline your sales management process, generate quick yet accurate quotes and operate everything on a single platform. Surpass common sales hurdles effectively, speed up revenue generation, maximize ROI with AI-powered software and stay ahead effortlessly."
+        ]
+      },
+      "features": {
+        "title": "Leverage CPQ’s Features to Full-extent with Enabled Analytics",
+        "items": [
+          "Visual Product Configurations",
+          "Advanced Rules Engine",
+          "Cloud-Based",
+          "Mobile-Friendly CPQ Solution",
+          "Automated Quoting and Pricing",
+          "Integration into ERP/CRM Systems",
+          "Guided Selling",
+          "Reporting Management"
+        ]
+      },
+      "approach": [
+        {
+          "title": "Custom CPQ Implementation Services for Unique Business Needs",
+          "text": "Your needs might differ, your goals may be different. Hence, to cater to your ever-changing needs, we arm you with our custom CPQ implementation services that help you get the most out of your investment. Meet all your distinctive needs and focus on your business goals while our teams lay the roadmap for your success."
+        },
+        {
+          "title": "60% Lower Costs, 3X Speed",
+          "text": "Get the industry experts by your side and launch in less time, at lesser cost. Our CoE teams not only bring decades of experience and effective strategies, but also bring data migration templates, pre-built data models, integration frameworks, apex utilities, and much more. These eliminate the need of starting from ground up and enable you to get started effortlessly. Now you can get ahead of the competition in no time and deploy your implementations at lightning speed."
+        },
+        {
+          "title": "Flexible Engagement Models That Offer Commendable Talent",
+          "text": "Need to pair with the right teams? Or need extra hands for your ongoing or new implementations? Get access to top-notch teams and increase and decrease team members on demand. Or, simply partner with us and get access to curated talent."
+        }
+      ],
+      "benefits": {
+        "title": "Get More Done with CPQ",
+        "items": [
+          {
+            "title": "Improved Quoting",
+            "text": "CPQ automates the quoting process, ensuring accuracy and consistency, while reducing errors and speeding up quote generation"
+          },
+          {
+            "title": "Speed up Sales Cycles",
+            "text": "By automating key sales processes, CPQ shortens the sales cycle, enabling your team to close deals faster and improve overall efficiency."
+          },
+          {
+            "title": "Increased Product Offerings",
+            "text": "CPQ allows your sales team to easily configure and offer a wider range of products and services, tailored to customer needs without compromising pricing control."
+          },
+          {
+            "title": "Eliminate Manual Tasks",
+            "text": "CPQ automates repetitive tasks like product configuration and pricing, freeing your sales team to focus on higher-value activities and reducing the risk of errors."
+          }
+        ]
+      }
+    },
+    {
+      "slug": "field-service",
+      "category": "practice",
+      "title": "Salesforce Field Service",
+      "icon": "truck",
+      "tagline": "Gain total visibility of your Field Mobile Workers and empower your Dispatchers while elevating customer Satisfaction targets effortlessly.",
+      "summary": "A comprehensive view of workforce management — streamlining scheduling, dispatching, and tracking of field operations.",
+      "image": "/images/services/field-service.jpg",
+      "stats": [
+        {
+          "value": 48,
+          "suffix": "%",
+          "label": "Quicker Case Resolution"
+        },
+        {
+          "value": 3,
+          "suffix": "X",
+          "label": "Faster Implementations"
+        },
+        {
+          "value": 47,
+          "suffix": "%",
+          "label": "Enhanced Agent Productivity"
+        },
+        {
+          "value": 45,
+          "suffix": "%",
+          "label": "Better Customer Satisfaction"
+        }
+      ],
+      "overview": {
+        "title": "Help Your Field Service Agents Do More",
+        "body": [
+          "Multiply agent output, make effective data-driven decisions, leverage personal preferences while skyrocketing customer satisfaction and maximizing ROI with Field Service Lightning. Put the right agents in the right places at the right times and enjoy better customer experiences with better communication and enhanced satisfaction."
+        ]
+      },
+      "features": {
+        "title": "Features that Facilitate Effective Operations",
+        "items": [
+          "Work Order Administration",
+          "Appointment Scheduling",
+          "Inventory Management",
+          "Field Service Analytics",
+          "Mobile Access",
+          "Real-Time Communication"
+        ]
+      },
+      "approach": [
+        {
+          "title": "Custom Field Service Solutions",
+          "text": "Looking for custom field service implementation services to meet your unique business requirements? Enabled Analytics can help you meet your requirements and achieve your goals with our custom field service implementation services. Our teams of certified professionals assist you at every step and lay solid foundations to help you achieve success."
+        },
+        {
+          "title": "Appointment Assistant",
+          "text": "Salesforce Appointment Assistant is a tool that enhances customer experience by providing real-time updates and visibility into scheduled field service appointments. This add-on allows customers to receive real-time updates and track their service appointments, enhancing communication and customer satisfaction."
+        },
+        {
+          "title": "Virtual Remote Assistant",
+          "text": "Virtual Remote Assistant is a powerful tool that enhances remote support capabilities by enabling technicians to use live video feeds for direct communication with customers or collaboration with other engineers on complex issues. This feature accelerates problem resolution, improving efficiency and customer satisfaction by allowing real-time troubleshooting and guidance."
+        }
+      ],
+      "benefits": {
+        "title": "Multiply The Benefits of Field Service with Enabled Analytics",
+        "items": [
+          {
+            "title": "Enhance Field Service Operations",
+            "text": "Increase productivity with automated scheduling and optimization. Dispatch the right mobile worker for the right job, so you can exceed customer expectations."
+          },
+          {
+            "title": "Improve First-Time Fix Rates",
+            "text": "Send the technician with the right skills, tools and parts the first time. EA will help you tweak your settings to ensure optimal first-time resolution reducing costs and improving customer satisfaction"
+          },
+          {
+            "title": "Empower your Mobile Workers",
+            "text": "Streamline information with an intuitive offline-first mobile application. Include job details, assets, and step-by-step guidance to help your mobile workers build trust."
+          },
+          {
+            "title": "Elevate Customer Experiences",
+            "text": "Boost customer satisfaction by allowing customers to plan their day. Provide proactive updates on their assigned mobile worker’s arrival time."
+          }
+        ]
+      }
+    }
+  ],
+  "industries": {
+    "title": "Win Effortlessly in Every Segment With the Right Teams",
+    "lead": "Take the lead with our carefully chosen strategies and professionals in every area of your operations",
+    "items": [
+      {
+        "title": "Retail & Consumer Goods",
+        "icon": "shopping"
+      },
+      {
+        "title": "Financial Services & Banking",
+        "icon": "landmark"
+      },
+      {
+        "title": "Healthcare & Pharmaceuticals",
+        "icon": "heart",
+        "image": "/images/industries/healthcare-pharmaceuticals.jpg"
+      },
+      {
+        "title": "Technology & IT Services",
+        "icon": "cpu",
+        "image": "/images/industries/technology-it-services.jpg"
+      },
+      {
+        "title": "Logistics & Supply Chain",
+        "icon": "truck"
+      }
+    ]
+  },
+  "clients": [
+    {
+      "name": "ULSE",
+      "logo": "/images/clients/ulse.png"
+    },
+    {
+      "name": "Lennox",
+      "logo": "/images/clients/lennox.png"
+    },
+    {
+      "name": "Texas Veterans Commission",
+      "logo": "/images/clients/texas-veterans-commission.png"
+    },
+    {
+      "name": "Frost",
+      "logo": "/images/clients/frost.jpg"
+    },
+    {
+      "name": "Tessco",
+      "logo": "/images/clients/tessco.png"
+    },
+    {
+      "name": "Meriplex",
+      "logo": "/images/clients/meriplex.png"
+    },
+    {
+      "name": "NEC",
+      "logo": "/images/clients/nec.png"
+    },
+    {
+      "name": "TearLab",
+      "logo": "/images/clients/tearlab.jpg"
+    },
+    {
+      "name": "Skywire",
+      "logo": "/images/clients/skywire.png"
+    },
+    {
+      "name": "Vari",
+      "logo": "/images/clients/vari.png"
+    },
+    {
+      "name": "Trion",
+      "logo": "/images/clients/trion.png"
+    },
+    {
+      "name": "Propump",
+      "logo": "/images/clients/propump.png"
+    },
+    {
+      "name": "Elemeta",
+      "logo": "/images/clients/elemeta.png"
+    },
+    {
+      "name": "Planate",
+      "logo": "/images/clients/planate.png"
+    },
+    {
+      "name": "ARA",
+      "logo": "/images/clients/ara.png"
+    },
+    {
+      "name": "CNG",
+      "logo": "/images/clients/cng.png"
+    },
+    {
+      "name": "NIC",
+      "logo": "/images/clients/nic.png"
+    },
+    {
+      "name": "HHS",
+      "logo": "/images/clients/hhs.png"
+    },
+    {
+      "name": "AISD",
+      "logo": "/images/clients/aisd.png"
+    },
+    {
+      "name": "CSCF",
+      "logo": "/images/clients/cscf.png"
+    },
+    {
+      "name": "Mandtt",
+      "logo": "/images/clients/mandtt.png"
+    },
+    {
+      "name": "MJI",
+      "logo": "/images/clients/mji.png"
+    },
+    {
+      "name": "GWTT",
+      "logo": "/images/clients/gwtt.png"
+    }
+  ],
+  "testimonials": [
+    {
+      "id": "communications-svp",
+      "role": "SVP Customer Success",
+      "industry": "Communications",
+      "quote": [
+        "Enabled Analytics has strong capability and exposure for Salesforce, we are delighted to work with them and also would like to consider them for future expansions and enhancement plan."
+      ]
+    },
+    {
+      "id": "communications-it-director",
+      "role": "IT Director",
+      "industry": "Communications",
+      "quote": [
+        "Enabled Analytics provided us the valuable input to improve our sales ecosystem, now our Team is more comfortable in tracking and taking actions for the Leads & Lags, Revenue Projection, Pipeline Conversion. We would like to consider Enabled Analytics for future expansions and enhancement plan."
+      ]
+    },
+    {
+      "id": "professional-services-svp",
+      "role": "SVP Customer Success",
+      "industry": "Professional Services",
+      "quote": [
+        "We truly appreciate the Enabled Analytics team for their priceless help in our success. Their dedication and expertise in Salesforce have been instrumental in achieving our goals."
+      ]
+    },
+    {
+      "id": "professional-services-cto",
+      "role": "CTO",
+      "industry": "Professional Services",
+      "quote": [
+        "Enabled Analytics, in conjunction with Salesforce, has played a pivotal role in the successful completion of our project, empowering us with its versatile features, user-friendly interface, and unparalleled support. Its contribution not only streamlined our operations but also elevated our performance and customer satisfaction levels. We extend our heartfelt gratitude to the Enabled Analytics team for their invaluable contribution to our success."
+      ]
+    },
+    {
+      "id": "consumer-goods-cto",
+      "role": "CTO",
+      "industry": "Consumer Goods",
+      "quote": [
+        "The team is very professional and knows the product very well. We are very pleased to work with the team."
+      ]
+    },
+    {
+      "id": "consumer-goods-sales-director",
+      "role": "Sales Director",
+      "industry": "Consumer Goods",
+      "quote": [
+        "Solid partner, extensive platform experience has helped us deliver successfully and consistently."
+      ]
+    },
+    {
+      "id": "manufacturing-it-director",
+      "role": "IT Director",
+      "industry": "Manufacturing",
+      "quote": [
+        "I am thrilled to write a glowing review for our Salesforce partner \"Enabled Analytics\" who recently completed a project for our organization. From start to finish, they exceeded our expectations in every way possible. Their commitment to delivering high-quality work on time, their expert guidance, and their impeccable risk management strategies have made a lasting impact on our company.",
+        "Right from the project's initiation, it was clear that we were in good hands. EA demonstrated a deep understanding of our unique needs and requirements, and they took the time to fully comprehend our business processes. Their attention to detail during the planning phase was truly remarkable, helping to identify potential pitfalls and challenges that could have derailed the project."
+      ]
+    },
+    {
+      "id": "professional-services-marketing-director",
+      "role": "Marketing Director",
+      "industry": "Professional Services",
+      "quote": [
+        "Enabled Analytics is an excellent partner in developing Salesforce solutions. Very thorough with outlining the project from beginning to end."
+      ]
+    },
+    {
+      "id": "professional-services-cs-director",
+      "role": "Customer Success Director",
+      "industry": "Professional Services",
+      "quote": [
+        "Excellent job by partner and knowledge of Salesforce team was good, which helped to complete the project on-time or some of the tasks earlier than expected. Overall, EXCELLENT JOB."
+      ]
+    },
+    {
+      "id": "manufacturing-ceo",
+      "role": "CEO",
+      "industry": "Manufacturing",
+      "quote": [
+        "Enabled Analytics (EA) has been extremely helpful with our implementation. They conducted detailed discovery sessions while explaining each and every concept well. EA team was very patient, supportive & made sure every user understands each Salesforce Feature. EA Team ensured all the sessions were interactive and productive.",
+        "Overall, EA Team has a very professional team and their customer service is very prompt, quick and helpful. We have been with Enabled Analytics for a while now, their service delivery more than expected."
+      ]
+    }
+  ],
+  "careers": {
+    "hero": {
+      "title": "Careers",
+      "lead": "Be a Part of the Most Dynamic Salesforce Team!"
+    },
+    "intro": [
+      "At Enabled Analytics, you’ll find the teams with the perfect blend of talent & tech. And each team is dedicated to accomplishing great things with Salesforce. We are a diverse group of people that encourage talent, curiosity and dedication. We believe that together, we can do so much more.",
+      "If you are someone who loves to learn, experiment, take risks, solve problems and explore new opportunities, we would love to have you on this incredibly enriching journey."
+    ],
+    "images": [
+      "/images/careers/careers-1.jpg",
+      "/images/careers/careers-2.jpg"
+    ],
+    "perks": {
+      "title": "What’s So Great About Being an Enabler",
+      "items": [
+        {
+          "icon": "wallet",
+          "title": "Competitive Salary",
+          "text": "We offer competitive and attractive salaries."
+        },
+        {
+          "icon": "piggy",
+          "title": "Investment options",
+          "text": "We help you invest in your future."
+        },
+        {
+          "icon": "folder",
+          "title": "Choose Your Projects",
+          "text": "Responsibility comes with fun and freedom."
+        },
+        {
+          "icon": "zap",
+          "title": "Stay Ahead",
+          "text": "Work with the latest tech and trends."
+        },
+        {
+          "icon": "graduation",
+          "title": "Training & Certification Programs",
+          "text": "Our programs help you grow consistently."
+        }
+      ]
+    },
+    "life": {
+      "title": "We Offer You More Than Just a Job",
+      "items": [
+        {
+          "icon": "party",
+          "title": "Fun",
+          "text": "Our fun activities are tailored to keep you stress-free."
+        },
+        {
+          "icon": "scale",
+          "title": "Work-life Balance",
+          "text": "Give time to your work, your family, your hobbies."
+        },
+        {
+          "icon": "clock",
+          "title": "Flexibility",
+          "text": "Choose your timings and your work locations."
+        },
+        {
+          "icon": "apple",
+          "title": "Keep It Healthy",
+          "text": "Enablers enjoy healthy snacks and meals."
+        }
+      ]
+    },
+    "hiring": {
+      "title": "Getting Your Dream Job Cannot Get Any Easier",
+      "steps": [
+        {
+          "title": "Apply for the Job"
+        },
+        {
+          "title": "Brief Interview Call"
+        },
+        {
+          "title": "In-person/On-call Interview"
+        },
+        {
+          "title": "Evaluation",
+          "text": "If selected, then welcome on board!"
+        }
+      ]
+    },
+    "openings": {
+      "title": "Ready to Become a Salesforce Hero?",
+      "lead": "Explore the open positions...",
+      "jobs": [
+        {
+          "title": "Salesforce Developer",
+          "location": "Hyderabad, India"
+        },
+        {
+          "title": "System Analyst",
+          "location": "Hyderabad, India"
+        },
+        {
+          "title": "Salesforce Administrator",
+          "location": "Hyderabad, India"
+        },
+        {
+          "title": "Application Architect",
+          "location": "Hyderabad, India"
+        },
+        {
+          "title": "Salesforce Lead Developer",
+          "location": "Hyderabad, India"
+        },
+        {
+          "title": "Application Developer",
+          "location": "Hyderabad, India"
+        },
+        {
+          "title": "Solution Architect",
+          "location": "Hyderabad, India"
+        },
+        {
+          "title": "Salesforce Analyst",
+          "location": "Hyderabad, India"
+        },
+        {
+          "title": "Marketing Cloud Developer",
+          "location": "Hyderabad, India"
+        }
+      ]
+    },
+    "apply": {
+      "title": "Join Enabled Analytics"
+    }
+  },
+  "contact": {
+    "hero": {
+      "title": "Contact Us",
+      "lead": "Tell us about your project in brief and we’ll connect you to one of our Salesforce experts."
+    },
+    "formTitle": "Feel free to fill the form",
+    "getInTouch": "Get in touch with us"
+  },
+  "engagementModels": {
+    "_note": "Derived from site copy: 'engagement models that include fixed price as well as time & material' and 'Partner up with us for your implementations or hire our experts'. No prices are published on the original site.",
+    "items": [
+      {
+        "name": "Fixed Price",
+        "description": "A defined scope delivered by our team — one of the engagement models we offer.",
+        "features": [
+          "Clear deliverables and a focused action plan",
+          "Proven implementation methodology",
+          "Starter packs and accelerators"
+        ]
+      },
+      {
+        "name": "Time & Material",
+        "description": "Scale up and down as per your implementation needs and stay ahead without any fuss.",
+        "features": [
+          "Increase and decrease team members on demand",
+          "Hybrid Agile approach available",
+          "Hand-picked premium talent"
+        ],
+        "featured": true
+      },
+      {
+        "name": "Hire Our Experts",
+        "description": "Partner up with us for your implementations or hire our experts.",
+        "features": [
+          "Curated talent with years of expertise",
+          "Access to CoE teams and best practices",
+          "Asset libraries and frameworks"
+        ]
+      }
+    ]
+  },
+  "faqs": {
+    "_note": "Questions were written for this site; every answer is quoted or condensed from copy on enabledanalytics.com. Review before launch.",
+    "items": [
+      {
+        "q": "What does Enabled Analytics do?",
+        "a": "Enabled Analytics is a hub of talented Salesforce experts dedicated to empowering your business. We provide service offerings and solutions for various Salesforce Clouds — consulting, implementation, and operational support & maintenance — and you can measure the results with our pre-built scorecards.",
+        "category": "Company"
+      },
+      {
+        "q": "Which Salesforce products do you work with?",
+        "a": "Our practice areas cover Sales Cloud, Service Cloud, Marketing Cloud, Account Engagement, Experience Cloud, CPQ (Salesforce CPQ, Vlocity CPQ and Apttus CPQ), Salesforce Field Service and Data Cloud.",
+        "category": "Services"
+      },
+      {
+        "q": "What engagement models do you offer?",
+        "a": "Our engagement models include fixed price as well as time & material. You can partner up with us for your implementations or hire our experts, and scale up and down as per your needs. While most companies prefer a Hybrid Agile approach, we can tailor our approach based on an evaluation.",
+        "category": "Engagement"
+      },
+      {
+        "q": "What is a CoE team?",
+        "a": "The CoE teams at Enabled Analytics are expert steering committees fluent in Salesforce. They are comprised of seasoned solution, technical, and design architects who bring together diverse skills, knowledge, assets, and tools to deliver tailored and effective solutions for your organization.",
+        "category": "Services"
+      },
+      {
+        "q": "Can you help if our Salesforce org already exists?",
+        "a": "Yes. Whether you're dealing with a well-established Salesforce org or starting fresh, our CoE teams offer guidance and support from day one. Our Org Assessment begins with a quick health check of your complete implementation, technical debts, and deployed technologies to identify gaps and areas for improvement.",
+        "category": "Services"
+      },
+      {
+        "q": "How do your accelerators speed up implementation?",
+        "a": "Our integration frameworks, pre-built data models, data migration templates, and apex utilities provide a solid foundation so you don't start from scratch. Our flagship assets and accelerators are designed to help you deploy at 3X speed and at up to 60% lower costs.",
+        "category": "Engagement"
+      },
+      {
+        "q": "What is Discover Cloud?",
+        "a": "Discover Cloud is our product designed to measure, benchmark, and sustain the highest quality code in your applications. It includes performance tracking, log insights, an automated scheduler for single and bulk transaction testing, subscriptions and bulk data testing.",
+        "category": "Product"
+      },
+      {
+        "q": "Where are your offices?",
+        "a": "We are spread across three continents. Our listed offices are in Lewisville, Texas (USA), Hyderabad (India) and Singapore.",
+        "category": "Company"
+      },
+      {
+        "q": "What is your track record?",
+        "a": "We have a 4.9 CSAT score, 100+ global clients, 500+ Salesforce certifications and 150+ projects.",
+        "category": "Company"
+      },
+      {
+        "q": "How do I get started?",
+        "a": "Tell us about your project in brief and we’ll connect you to one of our Salesforce experts. You can use the contact form, call 214 402 3125 or email info@enabledanalytics.com.",
+        "category": "Engagement"
+      }
+    ]
+  },
+  "legal": {
+    "privacy": {
+      "title": "Privacy Policy",
+      "effectiveDate": "September 18th, 2022",
+      "sections": [
+        {
+          "title": "Privacy Notice",
+          "body": [
+            "This privacy notice discloses the privacy practices for Enabled Analytics and our website. This privacy notice applies solely to information collected by this website, except where stated otherwise. It will notify you of the following:"
+          ],
+          "list": [
+            "What information we collect.",
+            "With whom it is shared.",
+            "How it can be corrected.",
+            "How it is secured.",
+            "How policy changes will be communicated.",
+            "How to address concerns over misuse of personal data."
+          ]
+        },
+        {
+          "title": "Information Collection, Use, and Sharing",
+          "body": [
+            "We are the sole owners of the information collected on this site. We only have access to/collect information that you voluntarily give us via email or other direct contact from you. We will not sell or rent this information to anyone.",
+            "We will use your information to respond to you, regarding the reason you contacted us. We will not share your information with any third party outside of our organization, other than as necessary to fulfil your request.",
+            "Unless you ask us not to, we may contact you via email in the future to tell you about specials, new products or services, or changes to this privacy policy."
+          ]
+        },
+        {
+          "title": "Your Access to and Control Over Information",
+          "body": [
+            "You may opt out of any future contacts from us at any time. You can do the following at any time by contacting us via the email address or phone number provided on our website:"
+          ],
+          "list": [
+            "See what data we have about you, if any.",
+            "Change/correct any data we have about you.",
+            "Have us delete any data we have about you.",
+            "Express any concern you have about our use of your data."
+          ]
+        },
+        {
+          "title": "Registration",
+          "body": [
+            "In order to use this website, a user must first complete the registration form. During registration, a user is required to give certain information (such as name and email address). This information is used to contact you about the products/services on our site in which you have expressed interest. At your option, you may also provide demographic information (such as gender or age) about yourself, but it is not required."
+          ]
+        },
+        {
+          "title": "Sharing",
+          "body": [
+            "We share aggregated demographic information with our partners. This is not linked to any personal information that can identify any individual person."
+          ]
+        },
+        {
+          "title": "Security",
+          "body": [
+            "We take precautions to protect your information. When you submit sensitive information via the website, your information is protected both online and offline.",
+            "Wherever we collect sensitive information, that information is encrypted and transmitted to us in a secure way. You can verify this by looking for a closed lock icon in your web browser, or looking for “https” at the beginning of the address of the web page.",
+            "While we use encryption to protect sensitive information transmitted online, we also protect your information offline. Only employees who need the information to perform a specific job are granted access to personally identifiable information."
+          ]
+        },
+        {
+          "title": "Cookies",
+          "body": [
+            "This website stores cookies on your computer. These cookies are used to improve your website experience and provide more personalized services to you, both on this website and through other media.",
+            "We won't track your information when you visit our site. But in order to comply with your preferences, we'll have to use just one tiny cookie so that you're not asked to make this choice again.",
+            "A cookie is a piece of data stored on a site visitor’s hard drive to help us improve your access to our site and identify repeat visitors to our site. Usage of a cookie is in no way linked to any personally identifiable information on our site."
+          ]
+        },
+        {
+          "title": "Links",
+          "body": [
+            "This website contains links to other sites. Please be aware that we are not responsible for the content or privacy practices of such other sites. We encourage our users to be aware when they leave our site and to read the privacy statements of any other site that collects personally identifiable information."
+          ]
+        },
+        {
+          "title": "Contact",
+          "body": [
+            "If you feel that we are not abiding by this privacy policy, you should contact us immediately via email at info@enabledanalytics.com."
+          ]
+        }
+      ]
+    }
+  }
+}
