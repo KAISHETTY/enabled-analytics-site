@@ -191,7 +191,7 @@ function LocalAssistant() {
   }
 
   return (
-    <div className="fixed right-4 bottom-4 z-40 flex flex-col items-end gap-3 md:right-6 md:bottom-6">
+    <div className="fixed right-3 bottom-3 z-40 flex flex-col items-end gap-3 sm:right-4 sm:bottom-4 md:right-6 md:bottom-6">
       <AnimatePresence>
         {open && (
           <m.div
@@ -201,7 +201,7 @@ function LocalAssistant() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 12, scale: 0.97 }}
             transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
-            className="flex h-[min(620px,calc(100dvh-7rem))] w-[min(380px,calc(100vw-2rem))] origin-bottom-right flex-col overflow-hidden rounded-[1.75rem] border border-line bg-white shadow-lift"
+            className="flex h-[min(620px,calc(100dvh-6rem))] w-[min(380px,calc(100vw-1.5rem))] origin-bottom-right flex-col overflow-hidden rounded-[1.75rem] border border-line bg-white shadow-lift"
           >
             <div className="flex items-center justify-between bg-gradient-to-r from-brand-600 to-agent-500 px-5 py-4 text-white">
               <span className="flex items-center gap-3">
@@ -298,11 +298,11 @@ function LocalAssistant() {
         onClick={() => setOpen((o) => !o)}
         aria-expanded={open}
         aria-label={open ? "Close assistant" : "Open the Enabled Analytics assistant"}
-        className="group relative flex h-14 items-center gap-2 rounded-full bg-gradient-to-r from-brand-600 to-agent-500 pr-5 pl-4 font-semibold text-white shadow-agent transition hover:-translate-y-0.5"
+        className="group relative flex size-14 items-center justify-center gap-2 rounded-full bg-gradient-to-r from-brand-600 to-agent-500 font-semibold text-white shadow-agent transition hover:-translate-y-0.5 sm:size-auto sm:h-14 sm:pr-5 sm:pl-4"
       >
         {!open && <span aria-hidden="true" className="absolute inset-0 animate-ping rounded-full bg-brand-400/30 [animation-duration:2.4s] motion-reduce:hidden" />}
         {open ? <X className="relative size-5" aria-hidden="true" /> : <Sparkles className="relative size-5" aria-hidden="true" />}
-        <span className="relative">{open ? "Close" : "Ask EA"}</span>
+        <span className="relative hidden sm:inline">{open ? "Close" : "Ask EA"}</span>
       </button>
     </div>
   )

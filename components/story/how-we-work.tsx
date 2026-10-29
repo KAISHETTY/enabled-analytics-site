@@ -7,6 +7,7 @@ import { ClipboardCheck, Handshake, ListOrdered, LogOut, Rocket, TrendingUp, typ
 import { cn } from "@/lib/utils"
 import { Timeline } from "@/components/ea/timeline"
 import { CloudMark } from "@/components/motion/sky-scene"
+import { MobileRoad } from "@/components/story/mobile-road"
 
 export type WorkStep = { title: string; text?: string; image?: string }
 
@@ -88,11 +89,12 @@ export function HowWeWork({ title, lead, steps }: { title: React.ReactNode; lead
     </div>
   )
 
+  // Phones/tablets get their own animated vertical road (not a static list).
   const fallback = (
     <div className="py-20 lg:hidden">
       {header}
-      <div className="container-page mt-12">
-        <Timeline steps={steps} orientation="vertical" />
+      <div className="container-page mt-10">
+        <MobileRoad steps={steps} icons={ICONS} />
       </div>
     </div>
   )

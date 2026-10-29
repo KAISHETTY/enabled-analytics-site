@@ -332,7 +332,7 @@ export default function HomePage() {
       <section className="relative overflow-hidden bg-white py-24 md:py-32">
         <div className="container-page grid items-center gap-14 lg:grid-cols-2">
           <Parallax speed={0.18} className="order-2 lg:order-1">
-            <div className="relative mx-auto aspect-square max-w-lg">
+            <div className="relative mx-auto aspect-square max-w-[78vw] sm:max-w-lg">
               <div aria-hidden="true" className="absolute inset-[8%] animate-spin-slow rounded-full border-2 border-dashed border-brand-200 motion-reduce:animate-none" />
               <div className="absolute inset-[18%] overflow-hidden rounded-full shadow-lift ring-8 ring-white">
                 <Image src="/images/services/data-analytics.jpg" alt="Performance dashboards with charts on a laptop" fill sizes="30vw" className="object-cover" />
@@ -342,7 +342,7 @@ export default function HomePage() {
                 return (
                   <span
                     key={mod.title}
-                    className="absolute flex -translate-x-1/2 -translate-y-1/2 items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-semibold text-ink shadow-lift ring-1 ring-line"
+                    className="absolute flex -translate-x-1/2 -translate-y-1/2 items-center gap-1.5 rounded-full bg-white px-2.5 py-1.5 text-[0.6875rem] font-semibold whitespace-nowrap text-ink shadow-lift ring-1 ring-line sm:gap-2 sm:px-4 sm:py-2 sm:text-sm"
                     style={{ left: `${50 + Math.cos(angle) * 46}%`, top: `${50 + Math.sin(angle) * 46}%` }}
                   >
                     <span className="font-mono text-xs text-brand-600">{mod.index}</span> {mod.title}

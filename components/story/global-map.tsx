@@ -125,7 +125,8 @@ export function GlobalMap({ width, height, landPath, graticule, pins, arcs }: { 
                 animate={play ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: 1.4 + i * 0.18, duration: 0.5 }}
                 className={cn(
-                  "pointer-events-none absolute top-3 hidden items-center gap-1.5 rounded-full bg-white/95 py-1 pr-2.5 pl-1 text-xs font-semibold whitespace-nowrap text-ink shadow-soft ring-1 ring-line md:flex",
+                  "pointer-events-none absolute top-3 items-center gap-1.5 rounded-full bg-white/95 py-1 pr-2.5 pl-1 text-xs font-semibold whitespace-nowrap text-ink shadow-soft ring-1 ring-line md:flex",
+                  p.kind === "HQ" ? "flex" : "hidden",
                   right ? "right-2" : "left-2",
                   open && "opacity-0!"
                 )}

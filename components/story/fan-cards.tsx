@@ -24,7 +24,8 @@ export function FanCards({ cards, className }: { cards: [FanCard, FanCard]; clas
     () => window.matchMedia("(min-width: 768px)").matches,
     () => false
   )
-  const reduce = useReducedMotion() || !wide
+  const prefersReduced = useReducedMotion()
+  const reduce = prefersReduced || !wide
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start 85%", "center 55%"] })
   const p = useSpring(scrollYProgress, { stiffness: 100, damping: 24 })
   const leftX = useTransform(p, [0, 1], ["22%", "0%"])
@@ -39,6 +40,15 @@ export function FanCards({ cards, className }: { cards: [FanCard, FanCard]; clas
         <m.article
           key={c.title}
           style={reduce ? undefined : { x: i === 0 ? leftX : rightX, rotate: i === 0 ? leftR : rightR, y }}
+          // Phones: each card swings in from its own side as it enters the screen.
+          {...(!wide && !prefersReduced
+            ? {
+                initial: { opacity: 0, x: i === 0 ? -70 : 70, rotate: i === 0 ? -7 : 7 },
+                whileInView: { opacity: 1, x: 0, rotate: i === 0 ? -1.5 : 1.5 },
+                viewport: { once: true, margin: "0px 0px -12% 0px" },
+                transition: { type: "spring", stiffness: 120, damping: 18 },
+              }
+            : {})}
           className={cn(
             "group/card relative flex flex-col rounded-[2rem] p-8 shadow-lift md:p-10",
             i === 0 ? "bg-white ring-1 ring-line" : "bg-gradient-to-br from-brand-600 to-brand-700 text-white"

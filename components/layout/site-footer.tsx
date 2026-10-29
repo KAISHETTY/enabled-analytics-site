@@ -23,7 +23,7 @@ export function SiteFooter() {
         </div>
 
         {/* Link columns + contact */}
-        <div className="grid gap-10 py-12 sm:grid-cols-2 lg:grid-cols-[repeat(4,1fr)_1.4fr]">
+        <div className="grid grid-cols-2 gap-x-6 gap-y-10 py-12 lg:grid-cols-[repeat(4,1fr)_1.4fr]">
           {footerNav.map((col, i) => (
             <nav key={col.title} aria-label={col.title}>
               <p className="mb-4 flex items-center gap-2 font-mono text-xs font-medium tracking-[0.14em] text-ink-subtle uppercase">
@@ -41,7 +41,7 @@ export function SiteFooter() {
               </ul>
             </nav>
           ))}
-          <div>
+          <div className="col-span-2 lg:col-span-1">
             <p className="mb-4 flex items-center gap-2 font-mono text-xs font-medium tracking-[0.14em] text-ink-subtle uppercase">
               <span className="text-brand-600">05</span>Reach Out
             </p>
