@@ -32,6 +32,7 @@ import { DreamforceFeature } from "@/components/story/dreamforce-feature"
 import { HealthTeaser } from "@/components/story/health-teaser"
 import { HowWeWork } from "@/components/story/how-we-work"
 import { GrowthSection } from "@/components/story/growth-section"
+import { MascotParade } from "@/components/story/mascot-parade"
 
 const byslug = (s: string) => services.find((x) => x.slug === s)!
 
@@ -389,7 +390,7 @@ export default function HomePage() {
       </Section>
 
       {/* ── Finale (TO TOP "Ready for the journey together?") ── */}
-      <section className="bg-sky relative overflow-hidden pt-28 pb-40 text-center md:pt-36 md:pb-52">
+      <section className="bg-sky relative overflow-hidden pt-28 pb-6 text-center md:pt-36 md:pb-10">
         <CloudSeam fill="var(--color-surface)" flip className="absolute top-0" />
         <Parallax speed={0.35} className="pointer-events-none absolute inset-x-0 bottom-0 h-full">
           <Cloud className="absolute bottom-10 left-[-5%] w-[38vw]" />
@@ -413,6 +414,7 @@ export default function HomePage() {
             </Button>
           </div>
         </div>
+        <MascotParade className="relative mt-6 md:mt-10" />
       </section>
     </>
   )
