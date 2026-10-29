@@ -44,6 +44,7 @@ Copy `.env.example` to `.env.local`. All variables are optional.
 |---|---|
 | `NEXT_PUBLIC_SITE_URL` | Canonical URL for metadata, sitemap and JSON-LD (default `https://www.enabledanalytics.com`) |
 | `SF_WEB_TO_LEAD_ORG_ID` | Salesforce Org ID. Every form (contact, quote, Org Health Check, newsletter, job application, assistant booking) creates a Lead through Web-to-Lead. See "Salesforce leads" below. |
+| `SF_WEB_TO_LEAD_URL` | Sandboxes only: `https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8`. Production orgs use the default `webto.salesforce.com`, and leads sent to the wrong one are silently dropped. |
 | `SF_LEAD_SOURCE` | Lead Source value for website leads (default `Web`) |
 | `SF_WEB_TO_LEAD_DEBUG_EMAIL` | Testing only: Salesforce emails a debug report for each submission |
 | `FORMS_WEBHOOK_URL` | Optional extra copy of each submission as JSON (Zapier, Make, Slack). With neither this nor the Org ID set, submissions are logged on the server. |

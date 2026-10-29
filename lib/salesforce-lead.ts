@@ -6,7 +6,8 @@ import { dimensions, questions } from "@/lib/health-check"
  * are mapped directly and the rest of the submission goes into Description so
  * nothing is lost without needing custom fields in the org.
  */
-const ENDPOINT = "https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8"
+// Production orgs post to webto.salesforce.com; sandboxes must use test.salesforce.com (set SF_WEB_TO_LEAD_URL).
+const endpoint = () => process.env.SF_WEB_TO_LEAD_URL || "https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8"
 
 const formLabels: Record<string, string> = {
   contact: "Contact form",
@@ -95,7 +96,7 @@ export async function createLead(kind: string, data: Record<string, unknown>) {
     body.set("debugEmail", process.env.SF_WEB_TO_LEAD_DEBUG_EMAIL)
   }
   // Salesforce answers 200 even for rejected leads; only transport errors are detectable here.
-  const res = await fetch(`${ENDPOINT}&orgId=${encodeURIComponent(oid)}`, {
+  const res = await fetch(`${endpoint()}&orgId=${encodeURIComponent(oid)}`, {
     method: "POST",
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
     body,
