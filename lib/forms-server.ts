@@ -1,6 +1,7 @@
 import "server-only"
 import { NextResponse } from "next/server"
 import type { z } from "zod"
+import { createLead, salesforceEnabled } from "@/lib/salesforce-lead"
 
 /** Best-effort per-instance rate limit (5 requests / minute / IP). Use a shared store in production at scale. */
 const hits = new Map<string, number[]>()
@@ -13,17 +14,25 @@ function rateLimited(ip: string) {
 }
 
 /**
- * Forwards a submission to FORMS_WEBHOOK_URL (Zapier, Make, Slack, CRM…) or,
- * when unset, logs it so local development works without credentials.
+ * Creates a Salesforce Lead (when SF_WEB_TO_LEAD_ORG_ID is set) and forwards
+ * the submission to FORMS_WEBHOOK_URL (Zapier, Make, Slack…) when that is set.
+ * With neither, it logs so local development works without credentials.
  */
 async function deliver(kind: string, data: Record<string, unknown>, webhook = process.env.FORMS_WEBHOOK_URL) {
   const payload = { kind, submittedAt: new Date().toISOString(), data }
-  if (!webhook) {
-    console.info(`[forms] ${kind} submission (set FORMS_WEBHOOK_URL to deliver):`, JSON.stringify(payload))
+  if (!webhook && !salesforceEnabled()) {
+    console.info(`[forms] ${kind} submission (set SF_WEB_TO_LEAD_ORG_ID or FORMS_WEBHOOK_URL to deliver):`, JSON.stringify(payload))
     return
   }
-  const res = await fetch(webhook, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) })
-  if (!res.ok) throw new Error(`Webhook responded ${res.status}`)
+  const jobs: Promise<void>[] = []
+  if (salesforceEnabled()) jobs.push(createLead(kind, data))
+  if (webhook)
+    jobs.push(
+      fetch(webhook, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) }).then((res) => {
+        if (!res.ok) throw new Error(`Webhook responded ${res.status}`)
+      })
+    )
+  await Promise.all(jobs)
 }
 
 export async function handleForm<S extends z.ZodType>(req: Request, kind: string, schema: S, webhook?: string) {

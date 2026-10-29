@@ -14,7 +14,7 @@ Everything below needs input from Enabled Analytics before launch. Placeholders 
 | 7 | **Agentforce assistant deployment** | "Ask EA" assistant | The built-in assistant answers from site content and books meetings. To run a real Agentforce Service Agent, set the four `NEXT_PUBLIC_SF_EMBEDDED_*` variables from your Embedded Messaging deployment (see README). The site then loads Salesforce's widget instead. |
 | 8 | **Social profiles** other than LinkedIn | Footer | Only LinkedIn is linked on the source site. |
 | 9 | **Newsletter provider** | Footer signup, `/api/newsletter` | The source site has no newsletter. The API route validates and forwards to `NEWSLETTER_WEBHOOK_URL` if it is set. |
-| 10 | **Email delivery for forms** | `/api/contact`, `/api/quote`, `/api/apply` | Set `FORMS_WEBHOOK_URL` (Zapier/Make/Slack/CRM) or wire up Resend/SendGrid. |
+| 10 | **Email delivery for forms** | `/api/contact`, `/api/quote`, `/api/apply` | Leads go to Salesforce via Web-to-Lead once `SF_WEB_TO_LEAD_ORG_ID` is set (see README). Add Lead assignment/auto-response rules in the org for email notifications. |
 | 11 | **Blog post authors** | `/blog/[slug]` | Wix lists the author as the username "sandeep499", so the site shows "Enabled Analytics". |
 | 12 | **OG/social share image** | Metadata | Generated automatically (`opengraph-image.tsx`). Replace it with a brand-approved image if you have one. |
 | 13 | **Resume upload storage** | `/careers` apply form | File upload is validated client-side, but storing the file needs a provider (S3/Blob). Currently only metadata is sent. |
@@ -26,7 +26,7 @@ Everything below needs input from Enabled Analytics before launch. Placeholders 
 |---|---|---|
 | **Agentforce practice copy** | `/agentforce`, `lib/agentforce.ts` | Capabilities, 6-step process and AI Readiness Assessment deliverables are new copy. No outcome numbers are claimed. Confirm scope, duration and price model of the assessment. |
 | **Agentforce demos** | `/agentforce`, home | Three scripted, clearly labelled *illustrative* conversations (Service, SDR, Field Service). Not customer data. |
-| **Org Health Check** | `/health-check`, `lib/health-check.ts` | 12 questions, scoring bands and PDF wording are new. **"Expert review within 48 hours" is a service commitment** someone must own. Submissions go to `FORMS_WEBHOOK_URL`. |
+| **Org Health Check** | `/health-check`, `lib/health-check.ts` | 12 questions, scoring bands and PDF wording are new. **"Expert review within 48 hours" is a service commitment** someone must own. Submissions become Salesforce Leads (score + answers in Description). |
 | **Journey milestones** | Home "Our journey" | Founding year and Discover Cloud launch date are unknown, so only "April 2025" (Ventas merger) has a date. Add years in `lib/trust.ts`. |
 | **Salesforce partner tier** | Trust strip, hero eyebrow, journey | Changed to **Summit Partner** on your instruction (2026-10-28). The Apr 2025 press release still says "Crest", so the badge has no source link. Add your Salesforce Partner/AppExchange profile URL in `lib/trust.ts` to link it. |
 | **Certifications** | Home + About stats, trust strip, FAQ, map counters | Updated to **500+** on your instruction (the old site showed 200+ and 300+). |

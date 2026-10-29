@@ -25,6 +25,17 @@ npx tsc --noEmit
 npm run lint
 ```
 
+## Salesforce leads
+
+Forms post to the site's own API routes, which validate with zod, drop honeypot bots, rate-limit, and then create the Lead server-side through Web-to-Lead. The visitor never sees the Org ID.
+
+1. In Salesforce Setup, open **Web-to-Lead**, then **Edit**, and tick **Web-to-Lead Enabled**. Leave **Require reCAPTCHA Verification** off, because the site posts server-side.
+2. Copy the Org ID from **Company Information** and set `SF_WEB_TO_LEAD_ORG_ID` in Netlify (Site configuration, then Environment variables), then redeploy.
+3. Name, email, phone, company and Lead Source map to standard Lead fields. Everything else (the form name, subject and message, quote choices, health score and every answer, job position) goes into **Description**.
+4. To test, set `SF_WEB_TO_LEAD_DEBUG_EMAIL` and Salesforce emails what it received. Remove it afterwards.
+
+Web-to-Lead accepts up to 500 leads per day. Salesforce returns 200 even when it rejects a lead, so use the debug email when something doesn't arrive. Resume files are not uploaded; only the file name is recorded.
+
 ## Environment variables
 
 Copy `.env.example` to `.env.local`. All variables are optional.
@@ -32,7 +43,10 @@ Copy `.env.example` to `.env.local`. All variables are optional.
 | Variable | Purpose |
 |---|---|
 | `NEXT_PUBLIC_SITE_URL` | Canonical URL for metadata, sitemap and JSON-LD (default `https://www.enabledanalytics.com`) |
-| `FORMS_WEBHOOK_URL` | Receives contact, quote and job-application submissions as JSON (Zapier, Make, Slack, CRM). Without it, submissions are logged on the server. |
+| `SF_WEB_TO_LEAD_ORG_ID` | Salesforce Org ID. Every form (contact, quote, Org Health Check, newsletter, job application, assistant booking) creates a Lead through Web-to-Lead. See "Salesforce leads" below. |
+| `SF_LEAD_SOURCE` | Lead Source value for website leads (default `Web`) |
+| `SF_WEB_TO_LEAD_DEBUG_EMAIL` | Testing only: Salesforce emails a debug report for each submission |
+| `FORMS_WEBHOOK_URL` | Optional extra copy of each submission as JSON (Zapier, Make, Slack). With neither this nor the Org ID set, submissions are logged on the server. |
 | `NEWSLETTER_WEBHOOK_URL` | Newsletter signups (falls back to `FORMS_WEBHOOK_URL`) |
 | `NEXT_PUBLIC_GA_ID` | GA4 measurement ID. It loads only after the visitor accepts cookies. |
 | `NEXT_PUBLIC_SF_EMBEDDED_ORG_ID` | Salesforce org ID (15/18 chars) of your Embedded Messaging deployment |
