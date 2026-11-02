@@ -33,8 +33,8 @@ export default async function Image() {
         </div>
         <div style={{ display: "flex", gap: 40, fontSize: 26, color: "#4a5866" }}>
           <span>4.9 CSAT Score</span>
-          <span>100+ Global Clients</span>
-          <span>150+ Projects</span>
+          <span>Salesforce Summit Partner</span>
+          <span>500+ Salesforce Certifications</span>
         </div>
       </div>
     ),

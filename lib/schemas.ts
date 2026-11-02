@@ -12,13 +12,29 @@ const phone = z
 /** Hidden honeypot field: humans leave it empty. */
 const honeypot = z.string().max(0).optional()
 
+/** Service-interest choices for the single inquiry form (2026-10-30 feedback). */
+export const serviceInterests = [
+  "Implementation",
+  "Enhancements / Modernization",
+  "Integration / Data Migration",
+  "AI / Agentforce / Data 360",
+  "Support / Optimization",
+  "Staff Augmentation",
+  "Public Sector",
+  "Other",
+] as const
+
+/** The two homepage lead paths; both open the same inquiry form. */
+export const journeys = ["Starting fresh", "Established org"] as const
+export type Journey = (typeof journeys)[number]
+
 export const contactSchema = z.object({
   name,
   email,
-  phone,
-  company: z.string().trim().max(120).optional(),
-  subject: z.string().trim().min(2, "Please add a subject").max(150),
+  company: z.string().trim().min(2, "Please enter your company").max(120),
+  services: z.array(z.enum(serviceInterests)).min(1, "Choose at least one service"),
   message: z.string().trim().min(10, "Please tell us a little more (10+ characters)").max(5000),
+  journey: z.enum(journeys).optional(),
   consent: z.literal(true, { error: "Please accept the privacy policy" }),
   website: honeypot,
 })

@@ -44,7 +44,7 @@ type StatsCounterProps = {
 
 /** Animated count-up stat tiles (ABSYZ "Why customers choose us"). */
 export function StatsCounter({ stats, variant = "tiles", className }: StatsCounterProps) {
-  const cols = stats.length === 3 ? "lg:grid-cols-3" : "lg:grid-cols-4"
+  const cols = stats.length === 2 ? "lg:grid-cols-2" : stats.length === 3 ? "lg:grid-cols-3" : "lg:grid-cols-4"
   return (
     <dl
       className={cn(

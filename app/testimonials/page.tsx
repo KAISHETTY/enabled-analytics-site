@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 export default function TestimonialsPage() {
   return (
     <>
-      <PageHero eyebrow="Testimonials" title={home.testimonialsTitle} lead="Feedback from IT, sales, marketing and customer-success leaders we have partnered with." crumbs={[{ label: "Testimonials" }]} />
+      <PageHero eyebrow="Client Success · Testimonials" title={home.testimonialsTitle} lead="Feedback from IT, sales, marketing and customer-success leaders we have partnered with." crumbs={[{ label: "Client Success", href: "/clients" }, { label: "Client Testimonials" }]} />
 
       <Section className="pt-6 md:pt-10">
         <Reveal>

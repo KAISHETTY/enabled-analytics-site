@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import { about, team } from "@/lib/content"
 import { siteUrl } from "@/lib/site-config"
 import { PageHero } from "@/components/ea/hero"
-import { Placeholder, Section } from "@/components/ea/primitives"
+import { Section } from "@/components/ea/primitives"
 import { SectionHeading } from "@/components/ea/section-heading"
 import { TeamCard } from "@/components/ea/team-card"
 import { CTABanner } from "@/components/ea/cta-banner"
@@ -23,7 +23,7 @@ export default function TeamPage() {
       {team.groups.map((g, gi) => (
         <Section key={g.title} tone={gi % 2 === 0 ? "white" : "tint"}>
           <SectionHeading index={String(gi + 1).padStart(2, "0")} eyebrow="Leadership" title={g.title} />
-          <RevealGroup className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <RevealGroup className="grid grid-cols-2 gap-3 sm:gap-6 lg:grid-cols-4">
             {g.members.map((m, i) => (
               <RevealItem key={m.name}>
                 <TeamCard member={m} priority={gi === 0 && i < 4} />
@@ -33,19 +33,13 @@ export default function TeamPage() {
         </Section>
       ))}
 
-      <Section>
-        <Placeholder title="Content needed: team bios">
-          Short bios and LinkedIn profile links for each leader are not published on the current website. Add them in <code>content/site-content.json → team</code>.
-        </Placeholder>
-      </Section>
-
       <CTABanner eyebrow="Careers" title="Ready to Become a Salesforce Hero?" lead="Explore the open positions..." primary={{ label: "View open roles", href: "/careers#openings" }} />
 
       <JsonLd
         data={{
           "@context": "https://schema.org",
           "@graph": team.groups.flatMap((g) =>
-            g.members.map((m) => ({ "@type": "Person", name: m.name, jobTitle: m.role, image: `${siteUrl}${m.image}`, worksFor: { "@id": `${siteUrl}/#organization` } }))
+            g.members.map((m) => ({ "@type": "Person", name: m.name, jobTitle: m.role, image: `${siteUrl}${m.image}`, sameAs: m.linkedin, worksFor: { "@id": `${siteUrl}/#organization` } }))
           ),
         }}
       />

@@ -12,7 +12,7 @@ export type Plan = {
 }
 
 /** Engagement-model / pricing card. Without `price` it shows a quote CTA. */
-export function PricingCard({ plan, ctaHref = "/get-a-quote" }: { plan: Plan; ctaHref?: string }) {
+export function PricingCard({ plan, ctaHref = "/contact" }: { plan: Plan; ctaHref?: string }) {
   return (
     <article
       className={cn(
@@ -37,7 +37,7 @@ export function PricingCard({ plan, ctaHref = "/get-a-quote" }: { plan: Plan; ct
         ))}
       </ul>
       <Button href={ctaHref} variant={plan.featured ? "primary" : "secondary"} className="mt-8 w-full">
-        Request a quote
+        Contact Us
         <ArrowIcon />
       </Button>
     </article>

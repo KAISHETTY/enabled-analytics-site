@@ -40,7 +40,12 @@ function healthCheckSummary(answers: Record<string, number>) {
 function describe(kind: string, d: Record<string, unknown>) {
   switch (kind) {
     case "contact":
-      return lines([["Subject", d.subject]]) + `\n\n${d.message ?? ""}`
+      return (
+        lines([
+          ["Journey", d.journey],
+          ["Service interest", d.services],
+        ]) + `\n\n${d.message ?? ""}`
+      )
     case "quote":
       return lines([
         ["Services", d.services],

@@ -5,7 +5,7 @@ export type TitledText = { title: string; text?: string }
 
 export type Service = {
   slug: string
-  category: "solution" | "practice"
+  category: "core" | "solution" | "practice"
   title: string
   icon: string
   tagline: string
@@ -28,7 +28,10 @@ export type Testimonial = {
   quote: string[]
 }
 
-export type TeamMember = { name: string; role: string; image: string }
+/** `linkedin`: profile URL. Until Enabled Analytics supplies exact URLs, the card links to a LinkedIn search for the person. */
+export type TeamMember = { name: string; role: string; image: string; linkedin?: string }
+
+export const linkedInFor = (m: TeamMember) => m.linkedin ?? `https://www.linkedin.com/search/results/people/?keywords=${encodeURIComponent(`${m.name} Enabled Analytics`)}`
 
 export const site = data.company
 export const announcements = data.announcements
@@ -46,6 +49,8 @@ export const faqs = data.faqs.items
 export const privacy = data.legal.privacy
 
 export const services = data.services as Service[]
+/** Implementation, Support and Staff Augmentation: the three core services on the homepage and Services tab. */
+export const coreServices = services.filter((s) => s.category === "core")
 export const solutions = services.filter((s) => s.category === "solution")
 export const practiceAreas = services.filter((s) => s.category === "practice")
 export const testimonials = data.testimonials as Testimonial[]

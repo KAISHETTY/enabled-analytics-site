@@ -1,44 +1,19 @@
-"use client"
-
-import * as React from "react"
-import { m } from "framer-motion"
-
 export const INTRO_KEY = "ea-intro-seen"
 
 /**
- * Inline <head> script: decides before first paint whether the intro plays.
- * Returning visitors (this session) and reduced-motion users skip it. While it
- * plays, `html.intro-playing` pauses the page's entrance animations so the
- * header → title choreography starts the moment the curtain lifts (TO TOP).
+ * Inline <head> script: decides before first paint whether the intro plays and,
+ * if it does, lifts the curtain on a fixed 1.25s timer from that moment, so the
+ * intro never waits for React to hydrate. Returning visitors (this session) and
+ * reduced-motion users skip it. While it plays, `html.intro-playing` pauses the
+ * page's entrance animations so the header → title choreography (and the hero
+ * longhorn) start the moment the curtain lifts (TO TOP).
  */
-export const introBootScript = `try{var s=sessionStorage.getItem("${INTRO_KEY}"),r=matchMedia("(prefers-reduced-motion: reduce)").matches;if(!s&&!r){document.documentElement.classList.add("intro-playing")}else{document.documentElement.classList.add("intro-skip")}}catch(e){document.documentElement.classList.add("intro-skip")}`
+export const introBootScript = `try{var d=document.documentElement,s=sessionStorage.getItem("${INTRO_KEY}"),r=matchMedia("(prefers-reduced-motion: reduce)").matches;if(!s&&!r){d.classList.add("intro-playing");sessionStorage.setItem("${INTRO_KEY}","1");setTimeout(function(){d.classList.remove("intro-playing")},1250)}else{d.classList.add("intro-skip")}}catch(e){document.documentElement.classList.add("intro-skip")}`
 
-/** Server-rendered curtain; CSS hides it instantly when `html.intro-skip` is set. */
+/** Server-rendered curtain; CSS slides it away when `html.intro-playing` is removed, or hides it when `html.intro-skip` is set. */
 export function IntroCurtain() {
-  const [lifted, setLifted] = React.useState(false)
-
-  React.useEffect(() => {
-    const root = document.documentElement
-    if (!root.classList.contains("intro-playing")) return
-    try {
-      sessionStorage.setItem(INTRO_KEY, "1")
-    } catch {}
-    const t = setTimeout(() => {
-      setLifted(true)
-      root.classList.remove("intro-playing")
-    }, 1350)
-    return () => clearTimeout(t)
-  }, [])
-
   return (
-    <m.div
-      aria-hidden="true"
-      className="intro-curtain bg-sky fixed inset-0 z-[100] flex items-center justify-center"
-      initial={false}
-      animate={lifted ? { y: "-100%" } : { y: 0 }}
-      transition={{ duration: 0.9, ease: [0.76, 0, 0.24, 1] }}
-      style={{ pointerEvents: lifted ? "none" : "auto" }}
-    >
+    <div aria-hidden="true" className="intro-curtain bg-sky fixed inset-0 z-[100] flex items-center justify-center">
       <svg viewBox="0 0 120 80" className="w-36">
         <path
           className="intro-stroke"
@@ -53,6 +28,6 @@ export function IntroCurtain() {
           ea
         </text>
       </svg>
-    </m.div>
+    </div>
   )
 }

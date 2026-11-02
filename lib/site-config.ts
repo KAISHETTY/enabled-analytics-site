@@ -1,60 +1,60 @@
-import { practiceAreas, solutions } from "@/lib/content"
+import { coreServices } from "@/lib/content"
 
 export const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.enabledanalytics.com").replace(/\/$/, "")
 
 export type NavLink = { label: string; href: string; description?: string }
-export type NavItem = { label: string; href?: string; children?: NavLink[] }
+/** The waving-longhorn card beside each menu's links. */
+export type NavFeature = { kicker: string; title: string; cta: string; href: string }
+export type NavItem = { label: string; href?: string; children?: NavLink[]; feature?: NavFeature }
 
+/** Top navigation per the 2026-11-02 homepage/menu feedback: Services | Who We Serve | Client Success | Apps & Accelerators | About. "Contact Us" is the header's primary button. */
 export const mainNav: NavItem[] = [
   {
-    label: "Solutions",
+    label: "Services",
     children: [
-      { label: "Agentforce Implementation", href: "/agentforce", description: "AI agents grounded in your Salesforce data, from readiness to production." },
-      ...solutions.map((s) => ({ label: s.title, href: `/services/${s.slug}`, description: s.summary })),
-      { label: "Discover Cloud", href: "/products", description: "Prebuilt data analytics scorecards for your Salesforce code quality." },
-      { label: "Free Org Health Check", href: "/health-check", description: "12 questions, an instant score and a PDF report." },
+      ...coreServices.map((s) => ({ label: s.title, href: `/services/${s.slug}`, description: s.summary })),
+      { label: "Salesforce Clouds & Data", href: "/expertise", description: "Every Salesforce Cloud, Data 360 and analytics." },
+      { label: "Agentforce & AI", href: "/agentforce", description: "AI agents grounded in your Salesforce data." },
+      { label: "How we deliver", href: "/services#how-we-deliver", description: "Our methodology, process and Shape Cycle." },
     ],
+    feature: { kicker: "Howdy, partner", title: "Let’s get Salesforce right the first time", cta: "Contact Us", href: "/contact" },
   },
   {
-    label: "Practice Areas",
-    children: practiceAreas.map((s) => ({ label: s.title, href: `/services/${s.slug}`, description: s.summary })),
-  },
-  { label: "Agentforce", href: "/agentforce" },
-  { label: "Case Studies", href: "/case-studies" },
-  {
-    label: "Company",
+    label: "Who We Serve",
     children: [
-      { label: "About Us", href: "/about", description: "Our mission, culture and the Four E’s of Excellence." },
+      { label: "Public Sector", href: "/solutions/public-sector", description: "Grantmaking and Agentforce Public Sector for government and education." },
+      { label: "Telecom", href: "/solutions/telecom", description: "Customer 360, quoting and pricing for communications providers." },
+      { label: "Commercial", href: "/solutions/commercial", description: "Manufacturing, retail, services and financial services." },
+    ],
+    feature: { kicker: "Who we serve", title: "Three sectors, one standard of delivery", cta: "See Public Sector", href: "/solutions/public-sector" },
+  },
+  {
+    label: "Client Success",
+    children: [
+      { label: "Clients", href: "/clients", description: "Organizations that trust Enabled Analytics." },
+      { label: "Case Studies", href: "/case-studies", description: "Challenge → Solution → Result stories." },
+      { label: "Client Testimonials", href: "/testimonials", description: "What our clients say about us." },
+    ],
+    feature: { kicker: "Client success", title: "Ready to be our next success story?", cta: "Contact Us", href: "/contact" },
+  },
+  {
+    label: "Apps & Accelerators",
+    children: [
+      { label: "Discover Cloud", href: "/products", description: "Our AppExchange product: prebuilt code-quality scorecards." },
+      { label: "All accelerators", href: "/accelerators", description: "Playbooks, kits and frameworks that speed delivery." },
+      { label: "Salesforce Starter Kit", href: "/accelerators#starter-kit", description: "Configure from a solid foundation." },
+      { label: "Integration & Data Migration", href: "/accelerators#integration-playbook", description: "Proven playbooks for interfaces and legacy data." },
+      { label: "Data Cloud Framework", href: "/accelerators#data-cloud-framework", description: "Industrialized data models for Data Cloud and AI." },
+    ],
+    feature: { kicker: "ISV partner", title: "Discover Cloud on AppExchange", cta: "Explore Discover Cloud", href: "/products" },
+  },
+  {
+    label: "About",
+    children: [
+      { label: "Company", href: "/about", description: "Our story, history and locations." },
       { label: "Leadership", href: "/team", description: "Co-Founders and Executive Team." },
       { label: "Careers", href: "/careers", description: "Be a part of the most dynamic Salesforce team." },
-      { label: "Testimonials", href: "/testimonials", description: "What our clients say about us." },
-      { label: "Industries", href: "/industries", description: "Win effortlessly in every segment." },
     ],
-  },
-  { label: "Insights", href: "/blog" },
-]
-
-export const footerNav: { title: string; links: NavLink[] }[] = [
-  { title: "Solutions", links: [{ label: "Agentforce", href: "/agentforce" }, ...solutions.map((s) => ({ label: s.title, href: `/services/${s.slug}` })), { label: "Discover Cloud", href: "/products" }] },
-  { title: "Practice Areas", links: practiceAreas.map((s) => ({ label: s.title, href: `/services/${s.slug}` })) },
-  {
-    title: "Company",
-    links: [
-      { label: "About Us", href: "/about" },
-      { label: "Leadership", href: "/team" },
-      { label: "Careers", href: "/careers" },
-      { label: "Case Studies", href: "/case-studies" },
-      { label: "Testimonials", href: "/testimonials" },
-    ],
-  },
-  {
-    title: "Resources",
-    links: [
-      { label: "Insights", href: "/blog" },
-      { label: "Org Health Check", href: "/health-check" },
-      { label: "FAQ", href: "/faq" },
-      { label: "Get a Quote", href: "/get-a-quote" },
-      { label: "Contact", href: "/contact" },
-    ],
+    feature: { kicker: "Careers", title: "Join the most dynamic Salesforce team", cta: "See open roles", href: "/careers" },
   },
 ]

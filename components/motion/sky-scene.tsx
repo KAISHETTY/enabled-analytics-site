@@ -38,13 +38,23 @@ export function SkyScene({ children, badge, className }: { children: React.React
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] })
   const p = useSpring(scrollYProgress, { stiffness: 90, damping: 26, mass: 0.5 })
   const progress = reduce ? (scrollYProgress as MotionValue<number>) : p
+  // Phones: the title scrolls normally; lifting and fading it would leave empty sky above the next section.
+  const wide = React.useSyncExternalStore(
+    (cb) => {
+      const mq = window.matchMedia("(min-width: 768px)")
+      mq.addEventListener("change", cb)
+      return () => mq.removeEventListener("change", cb)
+    },
+    () => window.matchMedia("(min-width: 768px)").matches,
+    () => true
+  )
   const titleY = useTransform(progress, [0, 1], ["0%", "-55%"])
   const titleOpacity = useTransform(progress, [0, 0.55], [1, 0])
   const badgeY = useTransform(progress, [0, 1], ["0%", "160%"])
   const badgeRotate = useTransform(progress, [0, 1], [0, 90])
 
   return (
-    <section ref={ref} className={cn("bg-sky relative isolate h-[118vh] min-h-[760px] overflow-hidden", className)}>
+    <section ref={ref} className={cn("bg-sky relative isolate overflow-hidden pb-40 md:h-[118vh] md:min-h-[760px] md:pb-0", className)}>
       {/* sun glow */}
       <div aria-hidden="true" className="absolute top-[12%] right-[12%] size-[38vw] max-w-[520px] rounded-full bg-[radial-gradient(circle,rgba(255,255,255,0.95),rgba(255,255,255,0)_65%)]" />
 
@@ -62,7 +72,7 @@ export function SkyScene({ children, badge, className }: { children: React.React
       </Layer>
 
       {/* title block */}
-      <m.div style={reduce ? undefined : { y: titleY, opacity: titleOpacity }} className="relative z-30 flex h-[100vh] min-h-[700px] flex-col justify-center pt-24">
+      <m.div style={reduce || !wide ? undefined : { y: titleY, opacity: titleOpacity }} className="relative z-30 flex flex-col justify-center pt-28 md:h-[100vh] md:min-h-[700px] md:pt-24">
         {children}
       </m.div>
 

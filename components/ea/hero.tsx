@@ -73,7 +73,7 @@ export function PageHero({ eyebrow, title, lead, crumbs, image, children, align 
           )}
         </div>
         {image && (
-          <div className="relative">
+          <div className="relative animate-in fill-mode-both duration-1000 fade-in zoom-in-95" style={{ animationDelay: "200ms" }}>
             <div className="absolute -inset-3 rotate-2 rounded-2xl bg-brand-100/60" aria-hidden="true" />
             <Image
               src={image.src}

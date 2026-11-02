@@ -13,6 +13,9 @@ import { CTABanner } from "@/components/ea/cta-banner"
 import { Reveal, RevealGroup, RevealItem } from "@/components/ea/reveal"
 import { ArrowIcon, Button } from "@/components/ea/button"
 import { JsonLd } from "@/components/seo/json-ld"
+import { MethodologyBoard } from "@/components/story/methodology-board"
+import { TransitionBoard } from "@/components/story/transition-board"
+import { implementationMethodology, managedServices } from "@/lib/overview"
 
 export function generateStaticParams() {
   return services.map((s) => ({ slug: s.slug }))
@@ -36,18 +39,15 @@ export default async function ServiceDetailPage(props: PageProps<"/services/[slu
   if (!s) notFound()
 
   const related = services.filter((x) => x.category === s.category && x.slug !== s.slug).slice(0, 3)
-  const parent = s.category === "solution" ? "Solutions" : "Practice Areas"
+  const parent = s.category === "core" ? "Services" : "Salesforce Clouds & Data"
   let n = 0
   const idx = () => String(++n).padStart(2, "0")
 
   return (
     <>
-      <PageHero eyebrow={parent} title={s.title} lead={s.tagline} crumbs={[{ label: "Services", href: "/services" }, { label: s.title }]} image={{ src: s.image, alt: `${s.title} by Enabled Analytics` }}>
-        <Button href={`/get-a-quote?service=${s.slug}`} size="lg">
-          Get a Quote <ArrowIcon />
-        </Button>
-        <Button href="/contact" size="lg" variant="secondary">
-          Talk to an expert
+      <PageHero eyebrow={parent} title={s.title} lead={s.tagline} crumbs={s.category === "core" ? [{ label: "Services", href: "/services" }, { label: s.title }] : [{ label: "Services", href: "/services" }, { label: "Salesforce Clouds & Data", href: "/expertise" }, { label: s.title }]} image={{ src: s.image, alt: `${s.title} by Enabled Analytics` }}>
+        <Button href="/contact" size="lg">
+          Contact Us <ArrowIcon />
         </Button>
       </PageHero>
 
@@ -117,6 +117,43 @@ export default async function ServiceDetailPage(props: PageProps<"/services/[slu
               </Button>
             </Card>
           </Reveal>
+        </Section>
+      )}
+
+      {s.slug === "implementation" && (
+        <Section tone="tint" className="overflow-hidden">
+          <SectionHeading index={idx()} eyebrow="Methodology" title="Implementation methodology" lead={implementationMethodology.lead} />
+          <MethodologyBoard data={implementationMethodology} />
+        </Section>
+      )}
+
+      {s.slug === "support" && (
+        <Section tone="tint" className="overflow-hidden">
+          <SectionHeading index={idx()} eyebrow="Managed services" title="From kick-off to full support ownership in seven weeks" lead={managedServices.lead} />
+          <TransitionBoard data={managedServices} />
+          <Reveal className="mt-10 flex flex-wrap items-center gap-3">
+            <span className="font-mono text-xs tracking-[0.14em] text-brand-600 uppercase">Support models</span>
+            {managedServices.models.map((m) => (
+              <span key={m} className="rounded-full bg-brand-600 px-4 py-2 text-sm font-semibold text-white">
+                {m}
+              </span>
+            ))}
+          </Reveal>
+        </Section>
+      )}
+
+      {s.slug === "staff-augmentation" && (
+        <Section tone="tint">
+          <SectionHeading index={idx()} eyebrow="Delivery models" title="Talent that scales with your roadmap" />
+          <FeatureGrid
+            items={[
+              { title: "Nearshore / rightshore models", text: "A mature global delivery model across the USA, India, Singapore and Australia, with a high degree of focus and flexibility." },
+              { title: managedServices.benefits[0].title, text: managedServices.benefits[0].text },
+              { title: "Backed by our CoE groups", text: "Every consultant is supported by Centre of Excellence teams, standardized tools and frameworks, and continuous enablement." },
+            ]}
+            variant="numbered"
+            columns={3}
+          />
         </Section>
       )}
 

@@ -43,7 +43,12 @@ const nextConfig: NextConfig = {
       { source: "/blogs", destination: "/blog", permanent: true },
       { source: "/post/:slug", destination: "/blog/:slug", permanent: true },
       { source: "/practice-area", destination: "/services", permanent: true },
-      { source: "/industry", destination: "/industries", permanent: true },
+      { source: "/industry", destination: "/solutions/commercial", permanent: true },
+      // Removed for now per the 2026-10-30 feedback (pages kept in the repo so they can return).
+      { source: "/industries", destination: "/solutions/commercial", permanent: false },
+      { source: "/get-a-quote", destination: "/contact", permanent: false },
+      { source: "/health-check", destination: "/contact", permanent: false },
+      { source: "/solutions", destination: "/", permanent: false },
       { source: "/privacy-policy", destination: "/privacy", permanent: true },
       { source: "/apply-now", destination: "/careers#apply", permanent: true },
       { source: "/coeenablement", destination: "/services/coe-enablement", permanent: true },

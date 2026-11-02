@@ -48,7 +48,7 @@ export function HorizontalPin({
   return (
     <section ref={ref} className={cn("relative", className)} style={pinned ? { height: `calc(100vh + ${distance}px)` } : undefined}>
       <div className={cn(pinned ? "sticky top-0 flex h-[100svh] flex-col justify-center overflow-hidden" : "py-20")}>
-        {heading && <div className="container-page mb-10">{heading}</div>}
+        {heading && <div className="container-page mb-6 md:mb-10">{heading}</div>}
         <div className={cn("container-page", !pinned && "overflow-x-auto pb-4 [scrollbar-width:thin]")}>
           <m.div ref={trackRef} style={pinned ? { x } : undefined} className="flex w-max gap-6 will-change-transform">
             {children.map((c, i) => (
@@ -59,7 +59,7 @@ export function HorizontalPin({
           </m.div>
         </div>
         {pinned && (
-          <div className="container-page mt-10">
+          <div className="container-page mt-6 md:mt-10">
             <div className="relative h-px bg-line">
               <m.span style={{ width: bar }} className="absolute inset-y-0 left-0 bg-brand-600" />
             </div>

@@ -6,7 +6,6 @@ import { LinkedInIcon, Section } from "@/components/ea/primitives"
 import { SectionHeading } from "@/components/ea/section-heading"
 import { ContactForm } from "@/components/forms/contact-form"
 import { Reveal } from "@/components/ea/reveal"
-import { ArrowIcon, Button } from "@/components/ea/button"
 
 export const metadata: Metadata = {
   title: "Contact Us",
@@ -23,7 +22,7 @@ export default function ContactPage() {
   ]
   return (
     <>
-      <PageHero eyebrow={contact.getInTouch} title={contact.hero.title} lead={contact.hero.lead} crumbs={[{ label: "Contact" }]} />
+      <PageHero eyebrow={contact.getInTouch} title={contact.hero.title} lead={contact.hero.lead} crumbs={[{ label: "Contact" }]} image={{ src: "/images/photos/contact-call.webp", alt: "An Enabled Analytics consultant smiling on a video call with a client" }} />
 
       <Section className="pt-6 md:pt-10">
         <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
@@ -83,12 +82,7 @@ export default function ContactPage() {
             className="block h-[360px] w-full md:h-[440px]"
           />
         </Reveal>
-        <div className="mt-6 flex flex-wrap items-center justify-between gap-4">
-          <p className="text-sm">{site.offices[0].address}</p>
-          <Button href="/get-a-quote" variant="secondary">
-            Prefer a guided form? Get a Quote <ArrowIcon />
-          </Button>
-        </div>
+        <p className="mt-6 text-sm">{site.offices[0].address}</p>
       </Section>
     </>
   )

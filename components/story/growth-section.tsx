@@ -23,7 +23,7 @@ export function GrowthSection() {
             </PlayOnView>
           </h2>
           <Reveal>
-            <p className="mt-6 text-lg">From our Lewisville, Texas headquarters we deliver Salesforce solutions across the USA, India, the UAE, Singapore and Australia. Hover a pin to explore.</p>
+            <p className="mt-6 text-lg">From our Lewisville, Texas headquarters we deliver Salesforce solutions across the USA, India, the UAE, Singapore and Australia. Hover or tap a pin to explore.</p>
           </Reveal>
         </div>
 
@@ -52,7 +52,6 @@ export function GrowthSection() {
             variant="inline"
             stats={[
               { value: 5, label: "Countries we operate in" },
-              { value: 100, suffix: "+", label: "Global Clients" },
               { value: 500, suffix: "+", label: "Salesforce Certifications" },
               { value: 4.9, decimals: 1, label: "CSAT Score" },
             ]}

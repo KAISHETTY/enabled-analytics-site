@@ -1,5 +1,4 @@
 import type { Metadata } from "next"
-import Link from "next/link"
 import { Check, Sparkles } from "lucide-react"
 import { agentDemos, agentforce } from "@/lib/agentforce"
 import { siteUrl } from "@/lib/site-config"
@@ -133,17 +132,10 @@ export default function AgentforcePage() {
                   </li>
                 ))}
               </ul>
-              <p className="mt-8 text-sm">
-                Want a quick baseline first?{" "}
-                <Link href="/health-check" className="font-semibold text-agent-600 underline underline-offset-2">
-                  Take the free Org Health Check
-                </Link>
-                . It includes an AI-readiness score.
-              </p>
             </Reveal>
             <Reveal delay={0.1} className="rounded-[2rem] border border-white bg-white p-6 shadow-soft md:p-8">
               <h3 className="mb-6 text-2xl font-bold">Book your assessment</h3>
-              <ContactForm defaultSubject="AI Readiness Assessment" />
+              <ContactForm defaultServices={["AI / Agentforce / Data 360"]} idPrefix="agentforce" />
             </Reveal>
           </div>
         </div>

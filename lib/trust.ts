@@ -6,27 +6,32 @@
  * site copy, and the Salesforce+ episode page. Items without a verified `href`
  * or `value` are listed in MISSING_CONTENT.md, and unverified badges stay hidden.
  */
-export const PRESS_RELEASE =
-  "https://www.prnewswire.com/in/news-releases/enabled-analytics-expands-global-reach-with-strategic-merger-of-ventas-consulting-302421029.html"
+
+/** Enabled Analytics consulting listing and the Discover Cloud app listing (supplied 2026-11-02). */
+export const APPEXCHANGE_LISTING = "https://appexchange.salesforce.com/appxListingDetail?listingId=a0N4V00000IrGSWUA3"
+export const DISCOVER_CLOUD_LISTING = "https://appexchange.salesforce.com/appxListingDetail?listingId=a0N4V00000IrHK0UAN"
 
 export type TrustItem = {
   label: string
   value: string
   detail: string
   href?: string
+  /** Visible link label, so the link is obvious on touch screens too. */
+  cta?: string
   /** false = hidden until Enabled Analytics supplies the real profile/widget */
   verified: boolean
   kind: "partner" | "rating" | "certs" | "review"
+  /** Shown in the homepage credibility strip (Summit, certifications, verified satisfaction only). */
+  credibility?: boolean
 }
 
 export const trustItems: TrustItem[] = [
-  // Confirmed by Enabled Analytics (2026-10-28). The Apr 2025 release still says "Crest", so no link until the Partner profile URL is added.
-  { kind: "partner", label: "Salesforce", value: "Summit Partner", detail: "Highest Salesforce consulting partner tier", verified: true },
+  // Confirmed by Enabled Analytics (2026-10-28). Links to AppExchange per the 2026-11-02 feedback.
+  { kind: "partner", label: "Salesforce", value: "Summit Partner", detail: "Highest Salesforce consulting partner tier", href: APPEXCHANGE_LISTING, cta: "View on AppExchange", verified: true, credibility: true },
   { kind: "partner", label: "Salesforce", value: "ISV Partner", detail: "Builder of Discover Cloud", href: "/products", verified: true },
-  // TODO(EA): replace href with the Discover Cloud AppExchange listing URL.
-  { kind: "rating", label: "AppExchange", value: "4.95 / 5", detail: "Rating on Salesforce AppExchange", href: PRESS_RELEASE, verified: true },
+  { kind: "rating", label: "AppExchange", value: "4.95 / 5", detail: "Verified customer rating on Salesforce AppExchange", href: DISCOVER_CLOUD_LISTING, cta: "View on AppExchange", verified: true, credibility: true },
   // TODO(EA): link to the Salesforce Trailblazer / Partner Finder profile.
-  { kind: "certs", label: "Certified team", value: "500+", detail: "Salesforce certifications", verified: true },
+  { kind: "certs", label: "Certified team", value: "500+", detail: "Verified Salesforce certifications", verified: true, credibility: true },
   // TODO(EA): add Clutch / G2 profile URLs + rating, then set verified: true.
   { kind: "review", label: "Clutch", value: "", detail: "Client reviews", verified: false },
   { kind: "review", label: "G2", value: "", detail: "Client reviews", verified: false },
@@ -65,7 +70,7 @@ export const journey: Milestone[] = [
     when: "Today",
     tag: "Reach",
     title: "Delivering across four regions",
-    text: "Salesforce solutions across the USA, Singapore, Australia and India, for 100+ global clients.",
+    text: "Salesforce solutions across the USA, Singapore, Australia and India.",
   },
   {
     when: "Next",

@@ -7,33 +7,58 @@ import { usePathname } from "next/navigation"
 import { Dialog as D, NavigationMenu as NM } from "radix-ui"
 import { ChevronDown, Menu, Phone, X } from "lucide-react"
 import { cn } from "@/lib/utils"
-import { mainNav, type NavItem } from "@/lib/site-config"
+import { mainNav, type NavFeature, type NavItem } from "@/lib/site-config"
 import { site } from "@/lib/content"
 import { ArrowIcon, Button } from "@/components/ea/button"
 import { SearchButton } from "@/components/layout/search"
+import { Cloud } from "@/components/motion/sky-scene"
+import { HeroMascot } from "@/components/story/hero-mascot"
 
 function isActive(pathname: string, item: NavItem) {
   if (item.href) return item.href === "/" ? pathname === "/" : pathname.startsWith(item.href)
   return item.children?.some((c) => pathname.startsWith(c.href)) ?? false
 }
 
-/** Highlight card inside each mega menu: Agentforce, or the Org Health Check lead magnet. */
-function FeaturePanel({ agent }: { agent: boolean }) {
+/** Stacked-alpha longhorn clip; menus start straight in his waving loop. */
+const MASCOT = { src: "/videos/longhorn-hero.mp4", srcSmall: "/videos/longhorn-hero-sm.mp4", poster: "/images/mascot/longhorn-hero-poster.webp", width: 734, height: 600, loopStart: 14.708 }
+
+const DEFAULT_FEATURE: NavFeature = { kicker: "Contact Us", title: "Talk to a Salesforce expert", cta: "Get in touch", href: "/contact" }
+
+/** The longhorn waving his flag from a cloud, straight into his loop. */
+function WavingLonghorn({ className }: { className?: string }) {
+  return (
+    <HeroMascot
+      src={MASCOT.src}
+      srcSmall={MASCOT.srcSmall}
+      poster={MASCOT.poster}
+      width={MASCOT.width}
+      height={MASCOT.height}
+      loopStart={MASCOT.loopStart}
+      startAt={MASCOT.loopStart}
+      waitForIntro={false}
+      foreground={
+        <div aria-hidden="true" className="absolute -bottom-[6%] left-[6%] w-[88%] origin-bottom scale-y-[0.32]">
+          <Cloud className="w-full" />
+        </div>
+      }
+      className={className}
+    />
+  )
+}
+
+/** Sky card beside each mega menu: the longhorn waves his flag from a cloud above the menu's call to action. */
+function FeaturePanel({ feature }: { feature: NavFeature }) {
   return (
     <NM.Link asChild>
-      <Link
-        href={agent ? "/agentforce" : "/health-check"}
-        className={cn(
-          "group/fp relative flex flex-col justify-end overflow-hidden rounded-2xl p-5 text-white",
-          agent ? "bg-gradient-to-br from-brand-600 via-brand-500 to-agent-500" : "bg-gradient-to-br from-brand-500 to-brand-700"
-        )}
-      >
-        <span aria-hidden="true" className="absolute -top-8 -right-8 size-32 rounded-full bg-white/15 blur-xl transition-transform duration-700 group-hover/fp:scale-150" />
-        <span className="font-mono text-[0.6875rem] tracking-[0.14em] text-white/80 uppercase">{agent ? "New · Agentforce" : "Free · 12 questions"}</span>
-        <span className="mt-2 font-heading text-xl leading-tight font-bold">{agent ? "Put AI agents to work in your org" : "Get your Org Health Score"}</span>
-        <span className="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold">
-          {agent ? "Explore the practice" : "Start the check"} <ArrowIcon />
+      <Link href={feature.href} className="group/fp relative flex min-h-[300px] flex-col overflow-hidden rounded-2xl bg-gradient-to-b from-brand-100 via-brand-50 to-white p-5 ring-1 ring-brand-100">
+        <Cloud className="absolute top-3 -right-6 w-24 opacity-90 transition-transform duration-[2s] group-hover/fp:-translate-x-3" />
+        <Cloud className="absolute top-16 -left-8 w-20 opacity-70 transition-transform duration-[2s] group-hover/fp:translate-x-3" />
+        <span className="relative font-mono text-[0.6875rem] tracking-[0.14em] text-brand-600 uppercase">{feature.kicker}</span>
+        <span className="relative mt-2 font-heading text-xl leading-tight font-bold text-ink">{feature.title}</span>
+        <span className="relative mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-700">
+          {feature.cta} <ArrowIcon className="transition-transform group-hover/fp:translate-x-0.5" />
         </span>
+        <WavingLonghorn className="relative -mx-2 mt-auto -mb-3" />
       </Link>
     </NM.Link>
   )
@@ -60,34 +85,32 @@ function DesktopNav({ pathname }: { pathname: string }) {
               </NM.Item>
             )
           }
-          const wide = item.children.length > 5
+          const wide = item.children.length > 6
+          const feature = item.feature ?? DEFAULT_FEATURE
           return (
             <NM.Item key={item.label}>
               <NM.Trigger className={cn(base, "group")}>
                 {item.label}
                 <ChevronDown aria-hidden="true" className="size-4 transition-transform duration-200 group-data-[state=open]:rotate-180" />
               </NM.Trigger>
-              <NM.Content className="absolute top-full left-0 mt-3 data-[motion=from-end]:animate-in data-[motion=from-end]:fade-in data-[motion=from-start]:animate-in data-[motion=from-start]:fade-in data-[state=open]:animate-in data-[state=open]:fade-in data-[state=open]:slide-in-from-top-1">
-                <div className={cn("grid rounded-[1.5rem] border border-line bg-white/95 p-3 shadow-lift backdrop-blur-xl", wide ? "w-[880px] grid-cols-[1fr_260px] gap-3" : "w-[640px] grid-cols-[1fr_220px] gap-3")}>
+              <NM.Content className="absolute top-full left-1/2 mt-3 -translate-x-1/2 data-[motion=from-end]:animate-in data-[motion=from-end]:fade-in data-[motion=from-start]:animate-in data-[motion=from-start]:fade-in data-[state=open]:animate-in data-[state=open]:fade-in data-[state=open]:slide-in-from-top-1">
+                <div className={cn("grid gap-3 rounded-[1.5rem] border border-line bg-white p-3 shadow-lift", wide ? "w-[760px] grid-cols-[1fr_250px]" : "w-[540px] grid-cols-[1fr_240px]")}>
                   <div>
-                  <p className="eyebrow px-3 pt-2 pb-3">{item.label}</p>
-                  <ul className={cn("grid gap-1", wide && "grid-cols-2")}>
-                    {item.children.map((c) => (
-                      <li key={c.href}>
-                        <NM.Link asChild active={pathname === c.href}>
-                          <Link href={c.href} className="group/nl block rounded-xl p-3 transition-colors hover:bg-brand-50 focus-visible:bg-brand-50 data-[active]:bg-brand-50">
-                            <span className="flex items-center gap-1.5 font-semibold text-ink group-hover/nl:text-brand-700">
+                    <p className="eyebrow px-3 pt-2 pb-2">{item.label}</p>
+                    <ul className={cn("grid gap-0.5", wide && "grid-cols-2")}>
+                      {item.children.map((c) => (
+                        <li key={c.href + c.label}>
+                          <NM.Link asChild active={pathname === c.href}>
+                            <Link href={c.href} className="group/nl flex items-center justify-between gap-2 rounded-xl px-3 py-2.5 font-semibold text-ink transition-colors hover:bg-brand-50 hover:text-brand-700 focus-visible:bg-brand-50 data-[active]:bg-brand-50 data-[active]:text-brand-700">
                               {c.label}
-                              <ArrowIcon className="size-3.5 opacity-0 transition-all group-hover/nl:translate-x-0.5 group-hover/nl:opacity-100" />
-                            </span>
-                            {c.description && <span className="mt-1 line-clamp-2 block text-sm leading-snug text-ink-subtle">{c.description}</span>}
-                          </Link>
-                        </NM.Link>
-                      </li>
-                    ))}
-                  </ul>
+                              <ArrowIcon className="size-3.5 shrink-0 -translate-x-1 opacity-0 transition-all group-hover/nl:translate-x-0 group-hover/nl:opacity-100" />
+                            </Link>
+                          </NM.Link>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
-                  <FeaturePanel agent={item.label !== "Company"} />
+                  <FeaturePanel feature={feature} />
                 </div>
               </NM.Content>
             </NM.Item>
@@ -95,6 +118,23 @@ function DesktopNav({ pathname }: { pathname: string }) {
         })}
       </NM.List>
     </NM.Root>
+  )
+}
+
+/** Phone menu's sky card: the longhorn waves beside the open section's call to action. */
+function MobileFeature({ feature }: { feature: NavFeature }) {
+  return (
+    <Link href={feature.href} className="relative mx-1 mt-4 flex items-end gap-2 overflow-hidden rounded-2xl bg-gradient-to-b from-brand-100 via-brand-50 to-white p-4 pb-0 ring-1 ring-brand-100">
+      <Cloud className="absolute top-2 -right-4 w-20 animate-drift-card opacity-90 motion-reduce:animate-none" />
+      <span key={feature.href} className="relative flex-1 animate-in pb-5 duration-500 fade-in slide-in-from-left-2">
+        <span className="block font-mono text-[0.6875rem] tracking-[0.14em] text-brand-600 uppercase">{feature.kicker}</span>
+        <span className="mt-1.5 block font-heading text-lg leading-tight font-bold text-ink">{feature.title}</span>
+        <span className="mt-2 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-700">
+          {feature.cta} <ArrowIcon className="animate-nudge motion-reduce:animate-none" />
+        </span>
+      </span>
+      <WavingLonghorn className="-mr-2 w-[46%] shrink-0" />
+    </Link>
   )
 }
 
@@ -148,7 +188,7 @@ function MobileNav({ pathname }: { pathname: string }) {
                     {expanded === item.label && (
                       <ul className="mb-2 ml-3 border-l border-brand-100 pl-3">
                         {item.children.map((c) => (
-                          <li key={c.href}>
+                          <li key={c.href + c.label}>
                             <Link href={c.href} aria-current={pathname === c.href ? "page" : undefined} className="flex min-h-11 items-center rounded-lg px-3 text-ink-muted hover:bg-brand-50 hover:text-brand-700 aria-[current=page]:text-brand-700">
                               {c.label}
                             </Link>
@@ -165,16 +205,12 @@ function MobileNav({ pathname }: { pathname: string }) {
                   </li>
                 )
               )}
-              <li>
-                <Link href="/contact" className="flex h-12 items-center rounded-xl px-3 text-lg font-semibold text-ink hover:bg-brand-50">
-                  Contact
-                </Link>
-              </li>
             </ul>
+            <MobileFeature feature={mainNav.find((i) => i.label === expanded)?.feature ?? DEFAULT_FEATURE} />
           </nav>
           <div className="flex flex-col gap-3 border-t border-line p-5" onClick={() => setOpen(false)}>
-            <Button href="/get-a-quote" size="lg">
-              Get a Quote
+            <Button href="/contact" size="lg">
+              Contact Us
               <ArrowIcon />
             </Button>
             <Button href={`tel:${site.phoneHref}`} variant="secondary" size="lg">
@@ -226,8 +262,8 @@ export function SiteHeader() {
         <div className="nav-stagger flex items-center gap-2">
           <SearchButton className="hidden sm:inline-flex" />
           <SearchButton compact className="sm:hidden" />
-          <Button href="/get-a-quote" size="sm" className="hidden h-10 px-5 md:inline-flex">
-            Get a Quote
+          <Button href="/contact" size="sm" className="hidden h-10 px-5 md:inline-flex">
+            Contact Us
             <ArrowIcon />
           </Button>
           <MobileNav pathname={pathname} />

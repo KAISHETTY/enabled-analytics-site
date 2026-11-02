@@ -6,10 +6,10 @@ import { CONSENT_KEY } from "@/lib/analytics"
 import { SiteHeader } from "@/components/layout/site-header"
 import { SiteFooter } from "@/components/layout/site-footer"
 import { SearchLauncher } from "@/components/layout/search"
-import { Assistant } from "@/components/layout/assistant"
 import { ConsentAndAnalytics } from "@/components/layout/consent-and-analytics"
 import { MotionProvider } from "@/components/ea/reveal"
 import { SmoothScroll } from "@/components/motion/smooth-scroll"
+import { PageTransition } from "@/components/motion/page-transition"
 import { IntroCurtain, introBootScript } from "@/components/motion/intro-curtain"
 import { JsonLd, organizationJsonLd, websiteJsonLd } from "@/components/seo/json-ld"
 import { LazyToaster } from "@/components/layout/lazy-toaster"
@@ -102,10 +102,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             <IntroCurtain />
             <SiteHeader />
             <main id="main" className="flex-1">
-              {children}
+              <PageTransition>{children}</PageTransition>
             </main>
             <SiteFooter />
-            <Assistant />
             <ConsentAndAnalytics />
             <SearchLauncher />
           </>

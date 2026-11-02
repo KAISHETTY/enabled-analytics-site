@@ -1,5 +1,5 @@
 {
-  "_source": "All copy extracted from https://www.enabledanalytics.com/ on 2026-10-27. Obvious typos fixed (see NOTES.md). Do not add facts that are not on the original site. Updated 2026-10-28 from the client: Salesforce Summit Partner, 500+ certifications, Lisa Malmanger and Kim Escobar added to the Executive Team.",
+  "_source": "All copy extracted from https://www.enabledanalytics.com/ on 2026-10-27. Obvious typos fixed (see NOTES.md). Do not add facts that are not on the original site. Updated 2026-10-28 from the client: Salesforce Summit Partner, 500+ certifications, Lisa Malmanger and Kim Escobar were added, then removed from the leadership page per client feedback (2026-11-02). LinkedIn URLs supplied 2026-11-02.",
   "company": {
     "name": "Enabled Analytics",
     "shortName": "EA",
@@ -84,19 +84,9 @@
         "label": "CSAT Score"
       },
       {
-        "value": 100,
-        "suffix": "+",
-        "label": "Global Clients"
-      },
-      {
         "value": 500,
         "suffix": "+",
         "label": "Salesforce Certifications"
-      },
-      {
-        "value": 150,
-        "suffix": "+",
-        "label": "Projects"
       }
     ],
     "segments": {
@@ -229,19 +219,9 @@
         "label": "CSAT Score"
       },
       {
-        "value": 100,
-        "suffix": "+",
-        "label": "Global Clients"
-      },
-      {
         "value": 500,
         "suffix": "+",
         "label": "Salesforce Certifications"
-      },
-      {
-        "value": 150,
-        "suffix": "",
-        "label": "Projects"
       }
     ],
     "culture": {
@@ -289,22 +269,26 @@
           {
             "name": "Raghu Chittimalla",
             "role": "Chief Executive Officer",
-            "image": "/images/team/raghu-chittimalla.jpg"
+            "image": "/images/team/raghu-chittimalla.jpg",
+            "linkedin": "https://www.linkedin.com/in/raghu-chittimalla-230bb92/"
           },
           {
             "name": "Ashok K. Chitiprolu",
             "role": "Managing Partner",
-            "image": "/images/team/ashok-chitiprolu.png"
+            "image": "/images/team/ashok-chitiprolu.png",
+            "linkedin": "https://www.linkedin.com/in/ashok-chitiprolu-42a06992/"
           },
           {
             "name": "Sandeep Korlapati",
             "role": "Chief Technology Officer",
-            "image": "/images/team/sandeep-korlapati.jpg"
+            "image": "/images/team/sandeep-korlapati.jpg",
+            "linkedin": "https://www.linkedin.com/in/sandeep-k-81a538191/"
           },
           {
             "name": "Richard Gonzales",
             "role": "Chief Revenue Officer",
-            "image": "/images/team/richard-gonzales.png"
+            "image": "/images/team/richard-gonzales.png",
+            "linkedin": "https://www.linkedin.com/in/richard-gonzales-6abbb85/"
           }
         ]
       },
@@ -314,32 +298,26 @@
           {
             "name": "Michael Malone",
             "role": "SVP of Sales and Operations",
-            "image": "/images/team/michael-malone.png"
+            "image": "/images/team/michael-malone.png",
+            "linkedin": "https://www.linkedin.com/in/mmalone-ea/"
           },
           {
             "name": "Parthasarathy TMK",
             "role": "SVP Delivery",
-            "image": "/images/team/parthasarathy-tmk.jpg"
+            "image": "/images/team/parthasarathy-tmk.jpg",
+            "linkedin": "https://www.linkedin.com/in/parthasarathy-tmk-25451823/"
           },
           {
             "name": "Karthik Muthusamy",
             "role": "Vice President of Technology",
-            "image": "/images/team/karthik-muthusamy.jpg"
+            "image": "/images/team/karthik-muthusamy.jpg",
+            "linkedin": "https://www.linkedin.com/in/karthik-muthusamy-995a484b/"
           },
           {
             "name": "Lawrence Tijerina",
             "role": "VP of Solution Architecture",
-            "image": "/images/team/lawrence-tijerina.png"
-          },
-          {
-            "name": "Lisa Malmanger",
-            "role": "Sr. Principal Consultant",
-            "image": "/images/team/lisa-malmanger.jpg"
-          },
-          {
-            "name": "Kim Escobar",
-            "role": "Salesforce Principal Consultant",
-            "image": "/images/team/kim-escobar.jpg"
+            "image": "/images/team/lawrence-tijerina.png",
+            "linkedin": "https://www.linkedin.com/in/lawrence-tijerina-9132078/"
           }
         ]
       }
@@ -1296,6 +1274,137 @@
           }
         ]
       }
+    },
+    {
+      "slug": "implementation",
+      "category": "core",
+      "title": "Implementation",
+      "icon": "rocket",
+      "tagline": "Wouldn’t it be great to hit the bull’s eye the very first time?",
+      "summary": "Salesforce consulting and implementation led by our CoE teams, starting on a solid foundation instead of from scratch.",
+      "image": "/images/photos/implementation-architecture.webp",
+      "overview": {
+        "title": "Get it right the first time",
+        "body": [
+          "The CoE teams at Enabled Analytics are expert steering committees fluent in Salesforce, equipped to ensure successful implementations and ongoing excellence. Comprised of seasoned solution, technical, and design architects with decades of expertise, our CoE teams bring together diverse skills, knowledge, assets, and tools to deliver tailored and effective solutions for your organization.",
+          "Start on a solid foundation instead of from scratch, with a proven implementation methodology, starter packs and accelerators."
+        ]
+      },
+      "features": {
+        "title": "What every implementation includes",
+        "items": [
+          "Integration frameworks & pre-built data models",
+          "Data migration templates & apex utilities",
+          "Deploy at 3X speed with our accelerators",
+          "Clear deliverables and a focused action plan",
+          "Proven implementation methodology",
+          "Starter packs and accelerators"
+        ]
+      },
+      "benefits": {
+        "title": "Additional benefits",
+        "lead": "The CoE teams ensure success of your implementation project and come with additional benefits",
+        "items": [
+          {
+            "title": "Asset Library & Frameworks for Increased Reusability"
+          },
+          {
+            "title": "Aligned Business and IT Goals"
+          },
+          {
+            "title": "Informed Decision Making"
+          },
+          {
+            "title": "Quality & Governance"
+          },
+          {
+            "title": "Effective Collaboration"
+          },
+          {
+            "title": "Scalability & Consistency"
+          },
+          {
+            "title": "Optimization & Better Compliance"
+          },
+          {
+            "title": "Cost Savings & On-time Delivery"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "support",
+      "category": "core",
+      "title": "Support",
+      "icon": "stethoscope",
+      "tagline": "Unlock Your Salesforce Org's Full Potential with a Comprehensive Performance Assessment.",
+      "summary": "Operational support, maintenance and optimization from our expert “mechanics” to keep your Salesforce org running like new.",
+      "image": "/images/photos/support-monitoring.webp",
+      "overview": {
+        "title": "Keep your org running like new",
+        "body": [
+          "Over time, even the best Salesforce implementations can encounter performance issues due to factors like technical debt, outdated workflows, empty fields, large Data Volumes and the accumulation of undocumented changes over time. These issues can lead to slow page loads, incomplete records, and inefficient workflows.",
+          "Whether you're dealing with a well-established Salesforce org or starting fresh, our CoE teams offer invaluable guidance and support from day one. We conduct comprehensive org assessments, develop customized strategies and roadmaps, provide ongoing support and training, and leverage industry best practices to drive efficiency, productivity, and ROI for your Salesforce investments."
+        ]
+      },
+      "features": {
+        "title": "How we support your org",
+        "items": [
+          "Operational Support & Maintenance",
+          "Optimization Strategy",
+          "Initial assessment of your org",
+          "The Three Angles: enterprise, data, vision",
+          "Phased lift-and-shift execution plan",
+          "Ongoing support and training"
+        ]
+      },
+      "benefits": {
+        "title": "What You Achieve with Org Assessment",
+        "items": [
+          {
+            "title": "Capex & Opex Cost Saving"
+          },
+          {
+            "title": "Data Unification"
+          },
+          {
+            "title": "Maximized Scalability & Reusability"
+          },
+          {
+            "title": "Elevated Customer Experience"
+          },
+          {
+            "title": "Increased ROI"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "staff-augmentation",
+      "category": "core",
+      "title": "Staff Augmentation",
+      "icon": "users",
+      "tagline": "Partner up with us for your implementations or hire our experts.",
+      "summary": "Hand-picked premium Salesforce talent that scales up and down with your implementation needs.",
+      "image": "/images/photos/staff-augmentation.webp",
+      "overview": {
+        "title": "Hire our experts",
+        "body": [
+          "Get access to hand-picked premium talent for your Salesforce project.",
+          "Scale up and down as per your implementation needs and stay ahead without any fuss."
+        ]
+      },
+      "features": {
+        "title": "What you get",
+        "items": [
+          "Curated talent with years of expertise",
+          "Access to CoE teams and best practices",
+          "Asset libraries and frameworks",
+          "Increase and decrease team members on demand",
+          "Hybrid Agile approach available",
+          "Hand-picked premium talent"
+        ]
+      }
     }
   ],
   "industries": {
@@ -1329,95 +1438,118 @@
   "clients": [
     {
       "name": "ULSE",
-      "logo": "/images/clients/ulse.png"
+      "logo": "/images/clients/ulse.png",
+      "sector": "Commercial"
     },
     {
       "name": "Lennox",
-      "logo": "/images/clients/lennox.png"
+      "logo": "/images/clients/lennox.png",
+      "sector": "Commercial"
     },
     {
       "name": "Texas Veterans Commission",
-      "logo": "/images/clients/texas-veterans-commission.png"
+      "logo": "/images/clients/texas-veterans-commission.png",
+      "sector": "Public Sector"
     },
     {
       "name": "Frost",
-      "logo": "/images/clients/frost.jpg"
+      "logo": "/images/clients/frost.jpg",
+      "sector": "Commercial"
     },
     {
       "name": "Tessco",
-      "logo": "/images/clients/tessco.png"
+      "logo": "/images/clients/tessco.png",
+      "sector": "Telecom"
     },
     {
       "name": "Meriplex",
-      "logo": "/images/clients/meriplex.png"
+      "logo": "/images/clients/meriplex.png",
+      "sector": "Telecom"
     },
     {
       "name": "NEC",
-      "logo": "/images/clients/nec.png"
+      "logo": "/images/clients/nec.png",
+      "sector": "Telecom"
     },
     {
       "name": "TearLab",
-      "logo": "/images/clients/tearlab.jpg"
+      "logo": "/images/clients/tearlab.jpg",
+      "sector": "Commercial"
     },
     {
       "name": "Skywire",
-      "logo": "/images/clients/skywire.png"
+      "logo": "/images/clients/skywire.png",
+      "sector": "Telecom"
     },
     {
       "name": "Vari",
-      "logo": "/images/clients/vari.png"
+      "logo": "/images/clients/vari.png",
+      "sector": "Commercial"
     },
     {
-      "name": "Trion",
-      "logo": "/images/clients/trion.png"
+      "name": "Trion Solutions",
+      "logo": "/images/clients/trion.png",
+      "sector": "Commercial"
     },
     {
-      "name": "Propump",
-      "logo": "/images/clients/propump.png"
+      "name": "ProPump",
+      "logo": "/images/clients/propump.png",
+      "sector": "Commercial"
     },
     {
-      "name": "Elemeta",
-      "logo": "/images/clients/elemeta.png"
+      "name": "Elemetal",
+      "logo": "/images/clients/elemeta.png",
+      "sector": "Commercial"
     },
     {
-      "name": "Planate",
-      "logo": "/images/clients/planate.png"
+      "name": "Planate Management Group",
+      "logo": "/images/clients/planate.png",
+      "sector": "Commercial"
     },
     {
-      "name": "ARA",
-      "logo": "/images/clients/ara.png"
+      "name": "Agricultural Retailers Association",
+      "logo": "/images/clients/ara.png",
+      "sector": "Commercial"
     },
     {
-      "name": "CNG",
-      "logo": "/images/clients/cng.png"
+      "name": "Central National Gottesman",
+      "logo": "/images/clients/cng.png",
+      "sector": "Commercial"
     },
     {
-      "name": "NIC",
-      "logo": "/images/clients/nic.png"
+      "name": "Network Connections",
+      "logo": "/images/clients/nic.png",
+      "sector": "Telecom"
     },
     {
-      "name": "HHS",
-      "logo": "/images/clients/hhs.png"
+      "name": "Texas Health and Human Services",
+      "logo": "/images/clients/hhs.png",
+      "sector": "Public Sector"
     },
     {
-      "name": "AISD",
-      "logo": "/images/clients/aisd.png"
+      "name": "Austin Independent School District",
+      "logo": "/images/clients/aisd.png",
+      "sector": "Public Sector"
     },
     {
-      "name": "CSCF",
-      "logo": "/images/clients/cscf.png"
+      "name": "CareerSource Florida",
+      "logo": "/images/clients/cscf.png",
+      "sector": "Public Sector"
     },
     {
-      "name": "Mandtt",
-      "logo": "/images/clients/mandtt.png"
+      "name": "The Mandt System",
+      "logo": "/images/clients/mandtt.png",
+      "sector": "Commercial"
     },
     {
-      "name": "MJI",
-      "logo": "/images/clients/mji.png"
+      "name": "Michael James Industries",
+      "logo": "/images/clients/mji.png",
+      "sector": "Commercial"
     },
     {
-      "name": "GWTT",
-      "logo": "/images/clients/gwtt.png"
+      "name": "Ground/Water Treatment & Technology",
+      "logo": "/images/clients/gwtt.png",
+      "sector": "Commercial"
     }
   ],
   "testimonials": [
@@ -1722,7 +1854,7 @@
       },
       {
         "q": "What is your track record?",
-        "a": "We have a 4.9 CSAT score, 100+ global clients, 500+ Salesforce certifications and 150+ projects.",
+        "a": "We are a Salesforce Summit Partner with a 4.9 CSAT score and 500+ Salesforce certifications.",
         "category": "Company"
       },
       {

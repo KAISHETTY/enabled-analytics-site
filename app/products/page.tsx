@@ -3,6 +3,7 @@ import Image from "next/image"
 import { home, product } from "@/lib/content"
 import { siteUrl } from "@/lib/site-config"
 import { PageHero } from "@/components/ea/hero"
+import { DISCOVER_CLOUD_LISTING } from "@/lib/trust"
 import { Section } from "@/components/ea/primitives"
 import { SectionHeading } from "@/components/ea/section-heading"
 import { StatsCounter } from "@/components/ea/stats-counter"
@@ -21,12 +22,12 @@ export const metadata: Metadata = {
 export default function ProductsPage() {
   return (
     <>
-      <PageHero eyebrow="Products" title={product.name} lead={product.hero.lead} crumbs={[{ label: "Products" }]} image={{ src: "/images/services/data-analytics.jpg", alt: "Analytics dashboards with charts on a laptop" }}>
+      <PageHero eyebrow="Apps & Accelerators" title={product.name} lead={product.hero.lead} crumbs={[{ label: "Apps & Accelerators", href: "/accelerators" }, { label: product.name }]} image={{ src: "/images/services/data-analytics.jpg", alt: "Analytics dashboards with charts on a laptop" }}>
         <Button href="/contact" size="lg">
           Contact us <ArrowIcon />
         </Button>
-        <Button href="#modules" size="lg" variant="secondary">
-          See the modules
+        <Button href={DISCOVER_CLOUD_LISTING} external size="lg" variant="secondary">
+          View on AppExchange <ArrowIcon />
         </Button>
       </PageHero>
 
