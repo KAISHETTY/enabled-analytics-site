@@ -8,8 +8,8 @@ import { cn } from "@/lib/utils"
 type Logo = { name: string; logo: string; sector: string }
 
 /**
- * Client logos with sector filters: tiles reflow smoothly (layout animation)
- * as a filter changes, and each logo warms from grey to full colour on hover.
+ * Client logos (in their original colours) with sector filters: tiles reflow smoothly (layout animation)
+ * as a filter changes, and each logo lifts slightly on hover.
  */
 export function LogoWall({ logos, sectors }: { logos: Logo[]; sectors: string[] }) {
   const [filter, setFilter] = React.useState("All")
@@ -50,7 +50,7 @@ export function LogoWall({ logos, sectors }: { logos: Logo[]; sectors: string[] 
               transition={{ type: "spring", stiffness: 260, damping: 26, delay: Math.min(i, 10) * 0.02 }}
               className="group/logo relative flex aspect-[5/3] items-center justify-center overflow-hidden rounded-2xl border border-line bg-white p-5 shadow-soft transition-shadow duration-300 hover:shadow-lift"
             >
-              <Image src={l.logo} alt={l.name} width={220} height={110} className="max-h-full w-auto object-contain transition duration-500 group-hover/logo:scale-105 md:grayscale md:group-hover/logo:grayscale-0" />
+              <Image src={l.logo} alt={l.name} width={220} height={110} className="max-h-full w-auto object-contain transition duration-500 group-hover/logo:scale-105" />
               <span className="pointer-events-none absolute inset-x-0 bottom-0 translate-y-full bg-brand-700/90 px-2 py-1.5 text-center text-[0.6875rem] font-semibold text-white transition-transform duration-300 group-hover/logo:translate-y-0">{l.sector}</span>
             </m.li>
           ))}
