@@ -48,19 +48,30 @@ function WavingLonghorn({ className }: { className?: string }) {
 
 /** Sky card beside each mega menu: the longhorn waves his flag from a cloud above the menu's call to action. */
 function FeaturePanel({ feature }: { feature: NavFeature }) {
-  return (
-    <NM.Link asChild>
-      <Link href={feature.href} className="group/fp relative flex min-h-[300px] flex-col overflow-hidden rounded-2xl bg-gradient-to-b from-brand-100 via-brand-50 to-white p-5 ring-1 ring-brand-100">
-        <Cloud className="absolute top-3 -right-6 w-24 opacity-90 transition-transform duration-[2s] group-hover/fp:-translate-x-3" />
-        <Cloud className="absolute top-16 -left-8 w-20 opacity-70 transition-transform duration-[2s] group-hover/fp:translate-x-3" />
-        <span className="relative font-mono text-[0.6875rem] tracking-[0.14em] text-brand-600 uppercase">{feature.kicker}</span>
-        <span className="relative mt-2 font-heading text-xl leading-tight font-bold text-ink">{feature.title}</span>
+  const cls = "group/fp relative flex min-h-[300px] flex-col overflow-hidden rounded-2xl bg-gradient-to-b from-brand-100 via-brand-50 to-white p-5 ring-1 ring-brand-100"
+  const body = (
+    <>
+      <Cloud className="absolute top-3 -right-6 w-24 opacity-90 transition-transform duration-[2s] group-hover/fp:-translate-x-3" />
+      <Cloud className="absolute top-16 -left-8 w-20 opacity-70 transition-transform duration-[2s] group-hover/fp:translate-x-3" />
+      <span className="relative font-mono text-[0.6875rem] tracking-[0.14em] text-brand-600 uppercase">{feature.kicker}</span>
+      <span className="relative mt-2 font-heading text-xl leading-tight font-bold text-ink">{feature.title}</span>
+      {feature.cta && (
         <span className="relative mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-700">
           {feature.cta} <ArrowIcon className="transition-transform group-hover/fp:translate-x-0.5" />
         </span>
-        <WavingLonghorn className="relative -mx-2 mt-auto -mb-3" />
+      )}
+      <WavingLonghorn className="relative -mx-2 mt-auto -mb-3" />
+    </>
+  )
+  // Without an `href` the card is just the message and the waving longhorn.
+  return feature.href ? (
+    <NM.Link asChild>
+      <Link href={feature.href} className={cls}>
+        {body}
       </Link>
     </NM.Link>
+  ) : (
+    <div className={cls}>{body}</div>
   )
 }
 
@@ -123,18 +134,21 @@ function DesktopNav({ pathname }: { pathname: string }) {
 
 /** Phone menu's sky card: the longhorn waves beside the open section's call to action. */
 function MobileFeature({ feature }: { feature: NavFeature }) {
+  const Card = feature.href ? Link : "div"
   return (
-    <Link href={feature.href} className="relative mx-1 mt-4 flex items-end gap-2 overflow-hidden rounded-2xl bg-gradient-to-b from-brand-100 via-brand-50 to-white p-4 pb-0 ring-1 ring-brand-100">
+    <Card href={feature.href ?? ""} className="relative mx-1 mt-4 flex items-end gap-2 overflow-hidden rounded-2xl bg-gradient-to-b from-brand-100 via-brand-50 to-white p-4 pb-0 ring-1 ring-brand-100">
       <Cloud className="absolute top-2 -right-4 w-20 animate-drift-card opacity-90 motion-reduce:animate-none" />
-      <span key={feature.href} className="relative flex-1 animate-in pb-5 duration-500 fade-in slide-in-from-left-2">
+      <span key={feature.title} className="relative flex-1 animate-in pb-5 duration-500 fade-in slide-in-from-left-2">
         <span className="block font-mono text-[0.6875rem] tracking-[0.14em] text-brand-600 uppercase">{feature.kicker}</span>
         <span className="mt-1.5 block font-heading text-lg leading-tight font-bold text-ink">{feature.title}</span>
-        <span className="mt-2 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-700">
-          {feature.cta} <ArrowIcon className="animate-nudge motion-reduce:animate-none" />
-        </span>
+        {feature.cta && (
+          <span className="mt-2 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-700">
+            {feature.cta} <ArrowIcon className="animate-nudge motion-reduce:animate-none" />
+          </span>
+        )}
       </span>
       <WavingLonghorn className="-mr-2 w-[46%] shrink-0" />
-    </Link>
+    </Card>
   )
 }
 

@@ -4,7 +4,7 @@ export const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.enabled
 
 export type NavLink = { label: string; href: string; description?: string }
 /** The waving-longhorn card beside each menu's links. */
-export type NavFeature = { kicker: string; title: string; cta: string; href: string }
+export type NavFeature = { kicker: string; title: string; cta?: string; href?: string }
 export type NavItem = { label: string; href?: string; children?: NavLink[]; feature?: NavFeature }
 
 /** Top navigation per the 2026-11-02 homepage/menu feedback: Services | Who We Serve | Apps & Accelerators | Client Success | About (2026-11-03 order). "Contact Us" is the header's primary button. */
@@ -25,7 +25,7 @@ export const mainNav: NavItem[] = [
       { label: "Public Sector", href: "/solutions/public-sector", description: "Grantmaking and Agentforce Public Sector for government and education." },
       { label: "Commercial", href: "/solutions/commercial", description: "Manufacturing, retail, services and financial services." },
     ],
-    feature: { kicker: "Who we serve", title: "Two industries, one standard of delivery", cta: "See Public Sector", href: "/solutions/public-sector" },
+    feature: { kicker: "Who we serve", title: "Multiple industries, one standard of delivery" },
   },
   {
     label: "Apps & Accelerators",
