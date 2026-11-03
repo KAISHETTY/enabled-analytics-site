@@ -1,5 +1,4 @@
 import type { Metadata } from "next"
-import Link from "next/link"
 import { Check } from "lucide-react"
 import { home, industries, practiceAreas, testimonials } from "@/lib/content"
 import { caseStudiesBySector } from "@/lib/case-studies"
@@ -70,9 +69,6 @@ export default function CommercialPage() {
               {t}
             </span>
           ))}
-          <Link href="/solutions/telecom" className="rounded-full bg-brand-50 px-4 py-2 text-sm font-semibold text-brand-700 ring-1 ring-brand-100 hover:bg-brand-100">
-            Telecom →
-          </Link>
         </Reveal>
       </Section>
 

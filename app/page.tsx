@@ -23,7 +23,7 @@ const COMMERCIAL_INDUSTRIES = industryExpertise.filter((i) => !["telecom", "publ
 
 const FEATURED = ["manufacturing-implementation-risk", "state-developmental-disabilities-council-grants"].map((s) => getCaseStudy(s)!)
 
-/** Public Sector and Telecom come first so both are visible immediately (2026-11-02 feedback). */
+/** Public Sector comes first so it is visible immediately; Telecom is hidden until validated (2026-11-02 feedback). */
 const SECTORS: Sector[] = [
   {
     href: "/solutions/public-sector",
@@ -33,15 +33,6 @@ const SECTORS: Sector[] = [
     text: "Grantmaking and Agentforce Public Sector for state agencies, councils and school districts, from applications through monitoring and closeout.",
     tags: ["Grants management", "Self-service portals", "Case management"],
     tone: "dark",
-  },
-  {
-    href: "/solutions/telecom",
-    icon: "radio",
-    kicker: "Telecom",
-    title: "Faster quotes and a 360° view of every customer",
-    text: "Customer 360, smart pricing and quotation lifecycle management on Communications and Revenue Cloud, with IT autonomy over product changes.",
-    tags: ["Customer 360", "Smart pricing", "Quote lifecycle"],
-    tone: "navy",
   },
   {
     href: "/solutions/commercial",
@@ -109,7 +100,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── 03 · Public Sector, Telecom & Commercial ── */}
+      {/* ── 03 · Public Sector & Commercial ── */}
       <section className="relative overflow-hidden bg-gradient-to-b from-white via-brand-50 to-white py-20 md:py-28" aria-labelledby="sectors-title">
         {/* two cloud layers drifting at different speeds */}
         <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-10 h-40">
@@ -145,7 +136,7 @@ export default function HomePage() {
                 Built for <span className="accent-serif text-brand-600">your sector</span>
               </span>
             }
-            lead="Three teams, one standard of delivery. Choose where you work and see how we help."
+            lead="Two teams, one standard of delivery. Choose where you work and see how we help."
           />
           <SectorCards sectors={SECTORS} />
         </div>

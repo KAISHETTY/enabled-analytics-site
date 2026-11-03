@@ -1281,54 +1281,12 @@
       "title": "Implementation",
       "icon": "rocket",
       "tagline": "Wouldn’t it be great to hit the bull’s eye the very first time?",
-      "summary": "Salesforce consulting and implementation led by our CoE teams, starting on a solid foundation instead of from scratch.",
+      "summary": "Salesforce consulting and implementation led by our CoE teams.",
       "image": "/images/photos/implementation-architecture.webp",
       "overview": {
         "title": "Get it right the first time",
         "body": [
-          "The CoE teams at Enabled Analytics are expert steering committees fluent in Salesforce, equipped to ensure successful implementations and ongoing excellence. Comprised of seasoned solution, technical, and design architects with decades of expertise, our CoE teams bring together diverse skills, knowledge, assets, and tools to deliver tailored and effective solutions for your organization.",
-          "Start on a solid foundation instead of from scratch, with a proven implementation methodology, starter packs and accelerators."
-        ]
-      },
-      "features": {
-        "title": "What every implementation includes",
-        "items": [
-          "Integration frameworks & pre-built data models",
-          "Data migration templates & apex utilities",
-          "Deploy at 3X speed with our accelerators",
-          "Clear deliverables and a focused action plan",
-          "Proven implementation methodology",
-          "Starter packs and accelerators"
-        ]
-      },
-      "benefits": {
-        "title": "Additional benefits",
-        "lead": "The CoE teams ensure success of your implementation project and come with additional benefits",
-        "items": [
-          {
-            "title": "Asset Library & Frameworks for Increased Reusability"
-          },
-          {
-            "title": "Aligned Business and IT Goals"
-          },
-          {
-            "title": "Informed Decision Making"
-          },
-          {
-            "title": "Quality & Governance"
-          },
-          {
-            "title": "Effective Collaboration"
-          },
-          {
-            "title": "Scalability & Consistency"
-          },
-          {
-            "title": "Optimization & Better Compliance"
-          },
-          {
-            "title": "Cost Savings & On-time Delivery"
-          }
+          "The CoE teams at Enabled Analytics are expert steering committees fluent in Salesforce, equipped to ensure successful implementations and ongoing excellence. Comprised of seasoned solution, technical, and design architects with decades of expertise, our CoE teams bring together diverse skills, knowledge, assets, and tools to deliver tailored and effective solutions for your organization."
         ]
       }
     },
@@ -1356,26 +1314,6 @@
           "The Three Angles: enterprise, data, vision",
           "Phased lift-and-shift execution plan",
           "Ongoing support and training"
-        ]
-      },
-      "benefits": {
-        "title": "What You Achieve with Org Assessment",
-        "items": [
-          {
-            "title": "Capex & Opex Cost Saving"
-          },
-          {
-            "title": "Data Unification"
-          },
-          {
-            "title": "Maximized Scalability & Reusability"
-          },
-          {
-            "title": "Elevated Customer Experience"
-          },
-          {
-            "title": "Increased ROI"
-          }
         ]
       }
     },

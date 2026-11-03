@@ -23,10 +23,9 @@ export const mainNav: NavItem[] = [
     label: "Who We Serve",
     children: [
       { label: "Public Sector", href: "/solutions/public-sector", description: "Grantmaking and Agentforce Public Sector for government and education." },
-      { label: "Telecom", href: "/solutions/telecom", description: "Customer 360, quoting and pricing for communications providers." },
       { label: "Commercial", href: "/solutions/commercial", description: "Manufacturing, retail, services and financial services." },
     ],
-    feature: { kicker: "Who we serve", title: "Three sectors, one standard of delivery", cta: "See Public Sector", href: "/solutions/public-sector" },
+    feature: { kicker: "Who we serve", title: "Two sectors, one standard of delivery", cta: "See Public Sector", href: "/solutions/public-sector" },
   },
   {
     label: "Client Success",
@@ -41,10 +40,6 @@ export const mainNav: NavItem[] = [
     label: "Apps & Accelerators",
     children: [
       { label: "Discover Cloud", href: "/products", description: "Our AppExchange product: prebuilt code-quality scorecards." },
-      { label: "All accelerators", href: "/accelerators", description: "Playbooks, kits and frameworks that speed delivery." },
-      { label: "Salesforce Starter Kit", href: "/accelerators#starter-kit", description: "Configure from a solid foundation." },
-      { label: "Integration & Data Migration", href: "/accelerators#integration-playbook", description: "Proven playbooks for interfaces and legacy data." },
-      { label: "Data Cloud Framework", href: "/accelerators#data-cloud-framework", description: "Industrialized data models for Data Cloud and AI." },
     ],
     feature: { kicker: "ISV partner", title: "Discover Cloud on AppExchange", cta: "Explore Discover Cloud", href: "/products" },
   },
@@ -53,8 +48,8 @@ export const mainNav: NavItem[] = [
     children: [
       { label: "Company", href: "/about", description: "Our story, history and locations." },
       { label: "Leadership", href: "/team", description: "Co-Founders and Executive Team." },
-      { label: "Careers", href: "/careers", description: "Be a part of the most dynamic Salesforce team." },
+      { label: "Careers", href: "/careers", description: "No open roles at the moment." },
     ],
-    feature: { kicker: "Careers", title: "Join the most dynamic Salesforce team", cta: "See open roles", href: "/careers" },
+    feature: { kicker: "Leadership", title: "Meet the team behind Enabled Analytics", cta: "Meet our leadership", href: "/team" },
   },
 ]

@@ -33,7 +33,7 @@ export default function TeamPage() {
         </Section>
       ))}
 
-      <CTABanner eyebrow="Careers" title="Ready to Become a Salesforce Hero?" lead="Explore the open positions..." primary={{ label: "View open roles", href: "/careers#openings" }} />
+      <CTABanner title="Ready to work with our team?" lead="Tell us about your project in brief and we’ll connect you to one of our Salesforce experts." primary={{ label: "Contact Us", href: "/contact" }} />
 
       <JsonLd
         data={{

@@ -2,7 +2,6 @@ import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
 import { getService, practiceAreas, practiceAreasIntro, product, solutions } from "@/lib/content"
-import { agentDemos, agentforce } from "@/lib/agentforce"
 import { PageHero } from "@/components/ea/hero"
 import { Section } from "@/components/ea/primitives"
 import { SectionHeading } from "@/components/ea/section-heading"
@@ -12,17 +11,14 @@ import { CTABanner } from "@/components/ea/cta-banner"
 import { Reveal, RevealGroup, RevealItem } from "@/components/ea/reveal"
 import { ArrowIcon, Button } from "@/components/ea/button"
 import { CloudMark } from "@/components/motion/sky-scene"
-import { Typewriter } from "@/components/motion/typewriter"
 import { Parallax } from "@/components/motion/parallax"
-import { AgentDemoPlayer } from "@/components/story/agent-demo"
 import { PracticeList } from "@/components/story/practice-list"
-import { DreamforceFeature } from "@/components/story/dreamforce-feature"
 import { CloudGrid } from "@/components/story/cloud-grid"
 import { cloudGroups } from "@/lib/overview"
 
 export const metadata: Metadata = {
-  title: "Salesforce Expertise: Clouds, Agentforce & Data 360",
-  description: "Every Salesforce Cloud, Agentforce AI agents, Data 360 and analytics, CoE advisory and our Discover Cloud product, delivered by Enabled Analytics.",
+  title: "Salesforce Clouds & Data 360",
+  description: "Every Salesforce Cloud, Data 360 and analytics, CoE advisory and our Discover Cloud product, delivered by Enabled Analytics.",
   alternates: { canonical: "/expertise" },
 }
 
@@ -32,7 +28,7 @@ const advisory = solutions.filter((s) => s.slug !== "data-analytics")
 export default function ExpertisePage() {
   return (
     <>
-      <PageHero eyebrow="Services · Salesforce Clouds & Data" title="Every Salesforce Cloud, AI and data capability" lead={practiceAreasIntro} crumbs={[{ label: "Services", href: "/services" }, { label: "Salesforce Clouds & Data" }]}>
+      <PageHero eyebrow="Services · Salesforce Clouds & Data" title="Every Salesforce Cloud and data capability" lead={practiceAreasIntro} crumbs={[{ label: "Services", href: "/services" }, { label: "Salesforce Clouds & Data" }]}>
         <Button href="/contact" size="lg">
           Contact Us <ArrowIcon />
         </Button>
@@ -46,31 +42,6 @@ export default function ExpertisePage() {
         <CloudGrid groups={cloudGroups} />
       </Section>
 
-      {/* Agentforce & AI */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-white via-agent-50/60 to-white py-24 md:py-32" aria-labelledby="agentic-title">
-        <div aria-hidden="true" className="absolute top-20 -left-40 size-[520px] rounded-full bg-agent-100/50 blur-3xl" />
-        <div aria-hidden="true" className="absolute right-[-10%] bottom-10 size-[460px] rounded-full bg-brand-100/60 blur-3xl" />
-        <div className="container-page relative">
-          <div className="mb-14 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
-            <Reveal className="max-w-3xl">
-              <p className="eyebrow flex items-center gap-3 text-agent-600">
-                <CloudMark tone="agent" /> 02 · Agentforce & AI
-              </p>
-              <h2 id="agentic-title" className="mt-5 text-[clamp(2.4rem,5.5vw,4.75rem)] leading-[0.98] font-extrabold tracking-[-0.03em]">
-                The future is <Typewriter words={["agentic.", "autonomous.", "grounded in your data.", "here."]} className="accent-serif font-normal text-agent-500" />
-              </h2>
-              <p className="mt-6 text-lg leading-relaxed">{agentforce.lead}</p>
-            </Reveal>
-            <Reveal delay={0.1} className="flex shrink-0 flex-wrap gap-3">
-              <Link href="/agentforce" className="group/btn inline-flex h-12 items-center gap-2 rounded-full bg-agent-500 px-6 font-semibold text-white shadow-agent transition hover:-translate-y-0.5 hover:bg-agent-600">
-                Agentforce practice <ArrowIcon />
-              </Link>
-            </Reveal>
-          </div>
-          <AgentDemoPlayer demos={agentDemos} />
-        </div>
-      </section>
-
       {/* Data 360 & analytics */}
       <Section>
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
@@ -78,7 +49,7 @@ export default function ExpertisePage() {
             <Image src={data360.image} alt="Salesforce data analytics dashboards" width={640} height={420} sizes="(min-width: 1024px) 45vw, 100vw" className="w-full rounded-2xl object-cover shadow-lift ring-1 ring-line" />
           </Reveal>
           <div>
-            <SectionHeading index="03" eyebrow="Data 360 & analytics" title={data360.tagline} className="mb-6 md:mb-8" />
+            <SectionHeading index="02" eyebrow="Data 360 & analytics" title={data360.tagline} className="mb-6 md:mb-8" />
             <Reveal className="space-y-6 text-lg leading-relaxed">
               <p>{data360.summary}</p>
               <Button href={`/services/${data360.slug}`} variant="secondary">
@@ -95,7 +66,7 @@ export default function ExpertisePage() {
           <div aria-hidden="true" className="absolute -top-20 -right-20 size-72 rounded-full bg-white/10 blur-2xl" />
           <div className="relative grid gap-8 lg:grid-cols-[1.3fr_1fr] lg:items-end">
             <div>
-              <p className="font-mono text-xs tracking-[0.14em] text-brand-100 uppercase">04 · Public Sector & Grantmaking</p>
+              <p className="font-mono text-xs tracking-[0.14em] text-brand-100 uppercase">03 · Public Sector & Grantmaking</p>
               <h2 id="public-title" className="mt-4 text-[clamp(2rem,4vw,3.25rem)] leading-[1.05] font-extrabold text-white">
                 Enterprise grants management for government and education
               </h2>
@@ -121,7 +92,7 @@ export default function ExpertisePage() {
 
       {/* CoE advisory */}
       <Section>
-        <SectionHeading index="05" eyebrow="Advisory & CoE" title="Centre of Excellence teams and org assessments" />
+        <SectionHeading index="04" eyebrow="Advisory & CoE" title="Centre of Excellence teams and org assessments" />
         <RevealGroup className="grid gap-6 md:grid-cols-3">
           {advisory.map((s, i) => (
             <RevealItem key={s.slug}>
@@ -156,7 +127,7 @@ export default function ExpertisePage() {
           </Parallax>
           <Reveal className="order-1 lg:order-2">
             <p className="eyebrow flex items-center gap-3">
-              <CloudMark /> 06 · Our product
+              <CloudMark /> 05 · Our product
             </p>
             <h2 id="product-title" className="mt-5 text-[clamp(2rem,4vw,3.5rem)] leading-[1.02] font-extrabold">
               Discover Cloud: <span className="accent-serif text-brand-600">prebuilt scorecards</span> for top-tier code
@@ -169,8 +140,6 @@ export default function ExpertisePage() {
           </Reveal>
         </div>
       </section>
-
-      <DreamforceFeature />
 
       <CTABanner title="Not sure which Salesforce capability you need?" lead="Tell us about your goals and we’ll connect you to the right Salesforce expert." primary={{ label: "Contact Us", href: "/contact" }} />
     </>

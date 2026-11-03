@@ -13,9 +13,7 @@ import { CTABanner } from "@/components/ea/cta-banner"
 import { Reveal, RevealGroup, RevealItem } from "@/components/ea/reveal"
 import { ArrowIcon, Button } from "@/components/ea/button"
 import { JsonLd } from "@/components/seo/json-ld"
-import { MethodologyBoard } from "@/components/story/methodology-board"
-import { TransitionBoard } from "@/components/story/transition-board"
-import { implementationMethodology, managedServices } from "@/lib/overview"
+import { managedServices } from "@/lib/overview"
 
 export function generateStaticParams() {
   return services.map((s) => ({ slug: s.slug }))
@@ -116,28 +114,6 @@ export default async function ServiceDetailPage(props: PageProps<"/services/[slu
                 Contact us <ArrowIcon />
               </Button>
             </Card>
-          </Reveal>
-        </Section>
-      )}
-
-      {s.slug === "implementation" && (
-        <Section tone="tint" className="overflow-hidden">
-          <SectionHeading index={idx()} eyebrow="Methodology" title="Implementation methodology" lead={implementationMethodology.lead} />
-          <MethodologyBoard data={implementationMethodology} />
-        </Section>
-      )}
-
-      {s.slug === "support" && (
-        <Section tone="tint" className="overflow-hidden">
-          <SectionHeading index={idx()} eyebrow="Managed services" title="From kick-off to full support ownership in seven weeks" lead={managedServices.lead} />
-          <TransitionBoard data={managedServices} />
-          <Reveal className="mt-10 flex flex-wrap items-center gap-3">
-            <span className="font-mono text-xs tracking-[0.14em] text-brand-600 uppercase">Support models</span>
-            {managedServices.models.map((m) => (
-              <span key={m} className="rounded-full bg-brand-600 px-4 py-2 text-sm font-semibold text-white">
-                {m}
-              </span>
-            ))}
           </Reveal>
         </Section>
       )}

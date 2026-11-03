@@ -102,9 +102,6 @@ export default function AboutPage() {
               {about.culture.body.map((p) => (
                 <p key={p.slice(0, 20)}>{p}</p>
               ))}
-              <Button href="/careers" variant="secondary">
-                Join the team <ArrowIcon />
-              </Button>
             </Reveal>
           </div>
         </div>
