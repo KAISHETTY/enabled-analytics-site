@@ -7,6 +7,10 @@ import { mascotPlayer } from "@/lib/mascot-player"
 /** Inline bootstrap: runs as the HTML parses, so the longhorn starts before hydration. */
 const BOOT = `(${mascotPlayer.toString()})(document.currentScript.parentElement)`
 
+/** True while server rendering and hydrating, false for client mounts (React never runs scripts it creates on the client). */
+const noop = () => () => {}
+const useServerRendered = () => React.useSyncExternalStore(noop, () => false, () => true)
+
 /**
  * Hero longhorn: plays the arrival (raises and plants the summit flag) once,
  * then loops the proud idle from `loopStart`. The stacked-alpha MP4 is drawn
@@ -45,6 +49,7 @@ export function HeroMascot({
 }) {
   const wrap = React.useRef<HTMLDivElement>(null)
   const at = (f: string) => (startAt ? `${f}#t=${startAt}` : f)
+  const serverRendered = useServerRendered()
 
   // Client-mounted instances (menus) never run the inline script, so start them here. Idempotent for server-rendered ones.
   React.useEffect(() => {
@@ -83,7 +88,7 @@ export function HeroMascot({
         {srcSmall && <source src={at(src)} type="video/mp4" media="(min-width: 768px)" />}
         <source src={at(srcSmall ?? src)} type="video/mp4" />
       </video>
-      <script suppressHydrationWarning dangerouslySetInnerHTML={{ __html: BOOT }} />
+      {serverRendered && <script suppressHydrationWarning dangerouslySetInnerHTML={{ __html: BOOT }} />}
       {foreground}
     </div>
   )

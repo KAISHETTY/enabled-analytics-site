@@ -1,13 +1,12 @@
 import type { Metadata } from "next"
 import Image from "next/image"
-import { about, careers, home, site, team } from "@/lib/content"
+import { about, home, site, team } from "@/lib/content"
 import { PageHero } from "@/components/ea/hero"
 import { Section } from "@/components/ea/primitives"
 import { SectionHeading } from "@/components/ea/section-heading"
 import { StatsCounter } from "@/components/ea/stats-counter"
 import { FeatureGrid } from "@/components/ea/feature-grid"
 import { TeamCard } from "@/components/ea/team-card"
-import { Gallery } from "@/components/ea/gallery"
 import { CTABanner } from "@/components/ea/cta-banner"
 import { GrowthSection } from "@/components/story/growth-section"
 import { HorizontalPin } from "@/components/motion/horizontal-pin"
@@ -24,13 +23,12 @@ export const metadata: Metadata = {
   alternates: { canonical: "/about" },
 }
 
-const galleryImages = [
-  { src: about.culture.image, alt: "Recognising excellence at Enabled Analytics", width: 536, height: 332 },
-  { src: about.story.image, alt: "Enabled Analytics team meeting", width: 535, height: 397 },
-  { src: home.intro.images[0], alt: "Consultants reviewing analytics dashboards", width: 306, height: 399 },
-  { src: home.intro.images[1], alt: "Colleagues collaborating on a project", width: 305, height: 399 },
-  { src: careers.images[0], alt: "Partners shaking hands after a successful engagement", width: 420, height: 229 },
-  { src: careers.images[1], alt: "Enabled Analytics team at work", width: 420, height: 229 },
+/** Life at EA photo wall: a landscape pair and two portraits (grid spans match each photo's shape). */
+const LIFE = [
+  { src: "/images/life/team-outing.webp", alt: "Enabled Analytics team members at a team outing", caption: "Team outing", span: "col-span-2" },
+  { src: "/images/life/team-workshop.webp", alt: "Team members listening to a presentation in a working session", caption: "Working sessions", span: "row-span-2", focus: "object-[50%_80%]" },
+  { src: "/images/life/team-get-together.webp", alt: "Enabled Analytics colleagues together in a meeting room", caption: "Together in person", span: "row-span-2", focus: "object-[50%_85%]" },
+  { src: "/images/life/india-office-celebration.webp", alt: "The India team celebrating together at the office", caption: "Celebrations at our India office", span: "col-span-2" },
 ]
 
 export default function AboutPage() {
@@ -165,8 +163,16 @@ export default function AboutPage() {
       </div>
 
       <Section>
-        <SectionHeading index="06" eyebrow="Life at EA" title="Inside Enabled Analytics" />
-        <Gallery images={galleryImages} />
+        <SectionHeading index="06" eyebrow="Life at EA" title="Inside Enabled Analytics" lead="One team across the USA and India, working, learning and celebrating together." />
+        <RevealGroup className="grid auto-rows-[150px] grid-flow-dense grid-cols-2 gap-3 sm:auto-rows-[220px] sm:gap-5 lg:auto-rows-[260px] lg:grid-cols-4">
+          {LIFE.map((p) => (
+            <RevealItem key={p.src} className={`group/photo relative overflow-hidden rounded-2xl shadow-soft ring-1 ring-line ${p.span}`}>
+              <Image src={p.src} alt={p.alt} fill sizes="(min-width: 1024px) 50vw, 100vw" className={`object-cover transition-transform duration-700 group-hover/photo:scale-105 ${"focus" in p ? p.focus : ""}`} />
+              <span aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-brand-800/60 via-transparent to-transparent" />
+              <span className="absolute bottom-3 left-3 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-ink backdrop-blur sm:bottom-4 sm:left-4 sm:text-sm">{p.caption}</span>
+            </RevealItem>
+          ))}
+        </RevealGroup>
       </Section>
 
       <CTABanner title={home.cta.title} primary={{ label: "Contact Us", href: "/contact" }} secondary={{ label: "Explore services", href: "/services" }} />

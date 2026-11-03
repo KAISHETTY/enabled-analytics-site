@@ -7,7 +7,7 @@ export type NavLink = { label: string; href: string; description?: string }
 export type NavFeature = { kicker: string; title: string; cta: string; href: string }
 export type NavItem = { label: string; href?: string; children?: NavLink[]; feature?: NavFeature }
 
-/** Top navigation per the 2026-11-02 homepage/menu feedback: Services | Who We Serve | Client Success | Apps & Accelerators | About. "Contact Us" is the header's primary button. */
+/** Top navigation per the 2026-11-02 homepage/menu feedback: Services | Who We Serve | Apps & Accelerators | Client Success | About (2026-11-03 order). "Contact Us" is the header's primary button. */
 export const mainNav: NavItem[] = [
   {
     label: "Services",
@@ -25,7 +25,14 @@ export const mainNav: NavItem[] = [
       { label: "Public Sector", href: "/solutions/public-sector", description: "Grantmaking and Agentforce Public Sector for government and education." },
       { label: "Commercial", href: "/solutions/commercial", description: "Manufacturing, retail, services and financial services." },
     ],
-    feature: { kicker: "Who we serve", title: "Two sectors, one standard of delivery", cta: "See Public Sector", href: "/solutions/public-sector" },
+    feature: { kicker: "Who we serve", title: "Two industries, one standard of delivery", cta: "See Public Sector", href: "/solutions/public-sector" },
+  },
+  {
+    label: "Apps & Accelerators",
+    children: [
+      { label: "Discover Cloud", href: "/products", description: "Our AppExchange product: prebuilt code-quality scorecards." },
+    ],
+    feature: { kicker: "ISV partner", title: "Discover Cloud on AppExchange", cta: "Explore Discover Cloud", href: "/products" },
   },
   {
     label: "Client Success",
@@ -35,13 +42,6 @@ export const mainNav: NavItem[] = [
       { label: "Client Testimonials", href: "/testimonials", description: "What our clients say about us." },
     ],
     feature: { kicker: "Client success", title: "Ready to be our next success story?", cta: "Contact Us", href: "/contact" },
-  },
-  {
-    label: "Apps & Accelerators",
-    children: [
-      { label: "Discover Cloud", href: "/products", description: "Our AppExchange product: prebuilt code-quality scorecards." },
-    ],
-    feature: { kicker: "ISV partner", title: "Discover Cloud on AppExchange", cta: "Explore Discover Cloud", href: "/products" },
   },
   {
     label: "About",

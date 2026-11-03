@@ -1,5 +1,7 @@
+import Link from "next/link"
 import { clients, coreServices, home } from "@/lib/content"
 import { industryExpertise } from "@/lib/overview"
+import { agentforce } from "@/lib/agentforce"
 import { getCaseStudy } from "@/lib/case-studies"
 import { ArrowIcon, Button } from "@/components/ea/button"
 import { SectionHeading } from "@/components/ea/section-heading"
@@ -62,7 +64,7 @@ export default function HomePage() {
           </h1>
           <div className="mt-6 flex max-w-2xl flex-col items-start gap-5 md:mt-8 md:gap-7">
             <p className="max-w-xl animate-in text-base leading-relaxed duration-700 fill-mode-both fade-in slide-in-from-bottom-3 sm:text-lg md:text-xl" style={{ animationDelay: "1300ms" }}>
-              Enabled Analytics helps commercial and public sector organizations implement, support and scale Salesforce, with certified experts who get it right the first time.
+              Enabled Analytics helps commercial and public sector organizations implement, support and scale Salesforce and Agentforce AI, with certified experts who get it right the first time.
             </p>
             {/* Phones: the longhorn stands beside the button so he is on the first screen. Desktop: he stands to the right of the headline. */}
             <div className="flex w-full items-end justify-between gap-2 lg:block">
@@ -100,6 +102,36 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── AI up front: "The future of Salesforce is agentic." (2026-11-03 feedback) ── */}
+      <section className="relative overflow-hidden bg-gradient-to-b from-white via-agent-50/70 to-white pt-20 pb-6 md:pt-28 md:pb-10" aria-labelledby="ai-title">
+        <div aria-hidden="true" className="pointer-events-none absolute top-10 -left-40 size-[460px] rounded-full bg-agent-100/50 blur-3xl" />
+        <div aria-hidden="true" className="pointer-events-none absolute -right-32 bottom-0 size-[400px] rounded-full bg-brand-100/50 blur-3xl" />
+        <div className="container-page relative grid gap-10 lg:grid-cols-[1.15fr_1fr] lg:items-end lg:gap-16">
+          <Reveal>
+            <p className="eyebrow flex items-center gap-3 text-agent-600">
+              <CloudMark tone="agent" /> {agentforce.eyebrow}
+            </p>
+            <h2 id="ai-title" className="mt-5 text-[clamp(2.4rem,6vw,5rem)] leading-[0.98] font-extrabold tracking-[-0.03em]">
+              <span className="block">{agentforce.headline[0]}</span>
+              <span className="block accent-serif font-normal tracking-normal text-agent-500">{agentforce.headline[1]}</span>
+            </h2>
+            <p className="mt-6 max-w-2xl text-lg leading-relaxed">{agentforce.lead}</p>
+          </Reveal>
+          <Reveal delay={0.1} className="flex flex-col items-start gap-6">
+            <ul className="flex flex-wrap gap-2.5">
+              {agentforce.capabilities.slice(0, 4).map((c) => (
+                <li key={c.title} className="rounded-full bg-white px-4 py-2 text-sm font-semibold text-ink shadow-soft ring-1 ring-agent-100">
+                  {c.title}
+                </li>
+              ))}
+            </ul>
+            <Link href="/agentforce" className="group/btn inline-flex h-12 items-center gap-2 rounded-full bg-agent-500 px-6 font-semibold text-white shadow-agent transition hover:-translate-y-0.5 hover:bg-agent-600">
+              Explore Agentforce & AI <ArrowIcon />
+            </Link>
+          </Reveal>
+        </div>
+      </section>
+
       {/* ── 03 · Public Sector & Commercial ── */}
       <section className="relative overflow-hidden bg-gradient-to-b from-white via-brand-50 to-white py-20 md:py-28" aria-labelledby="sectors-title">
         {/* two cloud layers drifting at different speeds */}
@@ -133,10 +165,10 @@ export default function HomePage() {
             eyebrow="Who we serve"
             title={
               <span id="sectors-title">
-                Built for <span className="accent-serif text-brand-600">your sector</span>
+                Built for <span className="accent-serif text-brand-600">your industry</span>
               </span>
             }
-            lead="Two teams, one standard of delivery. Choose where you work and see how we help."
+            lead="Two industries, one standard of delivery. Choose where you work and see how we help."
           />
           <SectorCards sectors={SECTORS} />
         </div>
