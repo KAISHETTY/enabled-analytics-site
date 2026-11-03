@@ -21,7 +21,9 @@ export const metadata: Metadata = {
   alternates: { canonical: "/solutions/commercial" },
 }
 
-const COMMERCIAL = industryExpertise.filter((i) => !["telecom", "public-sector"].includes(i.slug))
+/** Telecom and Manufacturing have their own pages; Commercial houses the other industries. */
+const SEPARATE = ["Communications", "Manufacturing"]
+const COMMERCIAL = industryExpertise.filter((i) => !["telecom", "public-sector", "manufacturing"].includes(i.slug))
 /** Industries from the original site not covered by the deck's four commercial verticals. */
 const ALSO = ["Healthcare & Pharmaceuticals", "Technology & IT Services", "Logistics & Supply Chain"]
 
@@ -100,7 +102,7 @@ export default function CommercialPage() {
       <Section id="case-studies">
         <SectionHeading index="03" eyebrow="Client success" title="Commercial case studies" />
         <RevealGroup className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {caseStudiesBySector("Commercial").map((c) => (
+          {caseStudiesBySector("Commercial").filter((c) => !SEPARATE.includes(c.industry)).map((c) => (
             <RevealItem key={c.slug}>
               <CaseStudyCard c={c} />
             </RevealItem>

@@ -50,7 +50,6 @@ const nextConfig: NextConfig = {
       { source: "/health-check", destination: "/contact", permanent: false },
       { source: "/solutions", destination: "/", permanent: false },
       // Hidden until validated per the 2026-11-02 feedback (pages kept in the repo).
-      { source: "/solutions/telecom", destination: "/solutions/commercial", permanent: false },
       { source: "/accelerators", destination: "/products", permanent: false },
       { source: "/privacy-policy", destination: "/privacy", permanent: true },
       { source: "/apply-now", destination: "/careers", permanent: true },

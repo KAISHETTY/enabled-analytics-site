@@ -14,6 +14,8 @@ export function buildSearchIndex(): SearchEntry[] {
     { title: "Services", href: "/services", group: "Pages", text: "Implementation, Support and Staff Augmentation, how we deliver, engagement models" },
     { title: "Public Sector", href: "/solutions/public-sector", group: "Pages", text: "Grantmaking and Agentforce Public Sector for state agencies, councils and school districts" },
     { title: "Commercial", href: "/solutions/commercial", group: "Pages", text: "Manufacturing, retail, services, financial and insurance services, healthcare, technology, logistics" },
+    { title: "Telecom", href: "/solutions/telecom", group: "Pages", text: "Salesforce for telecom and communications providers" },
+    { title: "Manufacturing", href: "/solutions/manufacturing", group: "Pages", text: "Salesforce for manufacturers, ERP integration, pricing and quoting" },
     { title: "Clients", href: "/clients", group: "Pages", text: "Public Sector, Telecom and Commercial clients" },
     { title: "Salesforce Clouds & Data", href: "/expertise", group: "Pages", text: "Every Salesforce cloud, Data 360, CoE advisory, Discover Cloud" },
     { title: "Discover Cloud", href: "/products", group: "Pages", text: product.overview.body[0] },

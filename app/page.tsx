@@ -21,7 +21,7 @@ import { JourneyContact } from "@/components/story/journey-contact"
 const HERO_MASCOT = { src: "/videos/longhorn-hero.mp4", srcSmall: "/videos/longhorn-hero-sm.mp4", poster: "/images/mascot/longhorn-hero-poster.webp", width: 734, height: 600, loopStart: 14.708 }
 
 /** Featured client results: one Commercial and one Public Sector study. */
-const COMMERCIAL_INDUSTRIES = industryExpertise.filter((i) => !["telecom", "public-sector"].includes(i.slug)).map((i) => i.title)
+const COMMERCIAL_INDUSTRIES = industryExpertise.filter((i) => !["telecom", "public-sector", "manufacturing"].includes(i.slug)).map((i) => i.title)
 
 const FEATURED = ["manufacturing-implementation-risk", "state-developmental-disabilities-council-grants"].map((s) => getCaseStudy(s)!)
 

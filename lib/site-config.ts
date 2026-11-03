@@ -23,7 +23,9 @@ export const mainNav: NavItem[] = [
     label: "Who We Serve",
     children: [
       { label: "Public Sector", href: "/solutions/public-sector", description: "Grantmaking and Agentforce Public Sector for government and education." },
-      { label: "Commercial", href: "/solutions/commercial", description: "Manufacturing, retail, services and financial services." },
+      { label: "Telecom", href: "/solutions/telecom", description: "Salesforce for communications providers." },
+      { label: "Manufacturing", href: "/solutions/manufacturing", description: "Salesforce for manufacturers." },
+      { label: "Commercial", href: "/solutions/commercial", description: "Retail, services, financial services and more." },
     ],
     feature: { kicker: "Who we serve", title: "Multiple industries, one standard of delivery" },
   },
