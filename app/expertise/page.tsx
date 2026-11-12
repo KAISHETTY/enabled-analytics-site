@@ -82,7 +82,7 @@ export default function ExpertisePage() {
                   </li>
                 ))}
               </ul>
-              <Link href="/solutions/public-sector" className="group/btn inline-flex h-12 items-center gap-2 rounded-full bg-white px-6 font-semibold text-brand-700 transition hover:-translate-y-0.5 hover:bg-brand-50">
+              <Link href="/industries/public-sector" className="group/btn inline-flex h-12 items-center gap-2 rounded-full bg-white px-6 font-semibold text-brand-700 transition hover:-translate-y-0.5 hover:bg-brand-50">
                 Explore Public Sector <ArrowIcon />
               </Link>
             </div>

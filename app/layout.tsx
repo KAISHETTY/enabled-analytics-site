@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     "Marketing Cloud",
     "CPQ",
     "Field Service",
-    "Data Cloud",
+    "Data 360",
     "Center of Excellence",
   ],
   openGraph: {
@@ -101,7 +101,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           <>
             <IntroCurtain />
             <SiteHeader />
-            <main id="main" className="flex-1">
+            <main id="main" className="flex-1 overflow-x-clip">
               <PageTransition>{children}</PageTransition>
             </main>
             <SiteFooter />

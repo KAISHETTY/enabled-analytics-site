@@ -1,7 +1,5 @@
-import Link from "next/link"
-import { clients, coreServices, home } from "@/lib/content"
-import { industryExpertise } from "@/lib/overview"
-import { agentforce } from "@/lib/agentforce"
+import { clients, home } from "@/lib/content"
+import { homeCopy, industryLinks, offerings } from "@/lib/offerings"
 import { getCaseStudy } from "@/lib/case-studies"
 import { ArrowIcon, Button } from "@/components/ea/button"
 import { SectionHeading } from "@/components/ea/section-heading"
@@ -15,37 +13,17 @@ import { SectorCards, type Sector } from "@/components/story/sector-cards"
 import { ServiceCards } from "@/components/story/service-cards"
 import { CaseStudyCard } from "@/components/story/case-study-card"
 import { HeroMascot } from "@/components/story/hero-mascot"
-import { JourneyContact } from "@/components/story/journey-contact"
+import { FeatureGrid } from "@/components/ea/feature-grid"
+import { ContactForm } from "@/components/forms/contact-form"
 
 /** Stacked-alpha hero clip: colour on top, matte below (see components/story/hero-mascot.tsx). */
 const HERO_MASCOT = { src: "/videos/longhorn-hero.mp4", srcSmall: "/videos/longhorn-hero-sm.mp4", poster: "/images/mascot/longhorn-hero-poster.webp", width: 734, height: 600, loopStart: 14.708 }
 
-/** Featured client results: one Commercial and one Public Sector study. */
-const COMMERCIAL_INDUSTRIES = industryExpertise.filter((i) => !["telecom", "public-sector", "manufacturing"].includes(i.slug)).map((i) => i.title)
-
+/** Proof of experience: one Commercial and one Public Sector study (approved case studies). */
 const FEATURED = ["manufacturing-implementation-risk", "state-developmental-disabilities-council-grants"].map((s) => getCaseStudy(s)!)
 
-/** Public Sector comes first so it is visible immediately; Telecom is hidden until validated (2026-11-02 feedback). */
-const SECTORS: Sector[] = [
-  {
-    href: "/solutions/public-sector",
-    icon: "landmark",
-    kicker: "Public Sector",
-    title: "Grants, programs and services for government",
-    text: "Grantmaking and Agentforce Public Sector for state agencies, councils and school districts, from applications through monitoring and closeout.",
-    tags: ["Grants management", "Self-service portals", "Case management"],
-    tone: "dark",
-  },
-  {
-    href: "/solutions/commercial",
-    icon: "building",
-    kicker: "Commercial",
-    title: "Win effortlessly in every segment",
-    text: home.segments.lead,
-    tags: COMMERCIAL_INDUSTRIES,
-    tone: "light",
-  },
-]
+const TONES = ["dark", "navy", "light"] as const
+const INDUSTRIES: Sector[] = industryLinks.map((l, k) => ({ href: l.href, icon: l.icon, kicker: l.title, title: l.link, text: l.text, tags: [], tone: TONES[k] }))
 
 export default function HomePage() {
   return (
@@ -54,17 +32,17 @@ export default function HomePage() {
       <SkyScene>
         <div className="container-page relative">
           <p className="eyebrow mb-6 flex items-center gap-3 animate-in fade-in duration-700 fill-mode-both" style={{ animationDelay: "500ms" }}>
-            <CloudMark /> Salesforce Summit Partner
+            <CloudMark /> {homeCopy.label}
           </p>
-          <h1 className="max-w-6xl text-[clamp(2.5rem,8vw,7.25rem)] leading-[0.92] font-extrabold tracking-[-0.035em]">
+          <h1 className="max-w-[60rem] text-[clamp(2.1rem,4.2vw,4rem)] leading-[1.05] font-extrabold tracking-[-0.03em]">
             <SplitReveal
               delay={550}
-              parts={[{ text: "Complete Suite of", className: "block" }, { text: "Salesforce Solutions", className: "block text-brand-600" }, { text: "in One Place", className: "block accent-serif font-normal tracking-normal" }]}
+              parts={[{ text: "Engineering-led solutions", className: "block" }, { text: "for critical", className: "block text-brand-600" }, { text: "business workflows.", className: "block accent-serif font-normal tracking-normal" }]}
             />
           </h1>
           <div className="mt-6 flex max-w-2xl flex-col items-start gap-5 md:mt-8 md:gap-7">
-            <p className="max-w-xl animate-in text-base leading-relaxed duration-700 fill-mode-both fade-in slide-in-from-bottom-3 sm:text-lg md:text-xl" style={{ animationDelay: "1300ms" }}>
-              Enabled Analytics helps commercial and public sector organizations implement, support and scale Salesforce and Agentforce AI, with certified experts who get it right the first time.
+            <p className="max-w-2xl animate-in text-base leading-relaxed duration-700 fill-mode-both fade-in slide-in-from-bottom-3 sm:text-lg" style={{ animationDelay: "1300ms" }}>
+              {homeCopy.lead}
             </p>
             {/* Phones: the longhorn stands beside the button so he is on the first screen. Desktop: he stands to the right of the headline. */}
             <div className="flex w-full items-end justify-between gap-2 lg:block">
@@ -102,79 +80,23 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── AI up front: "The future of Salesforce is agentic." (2026-11-03 feedback) ── */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-white via-agent-50/70 to-white pt-20 pb-6 md:pt-28 md:pb-10" aria-labelledby="ai-title">
-        <div aria-hidden="true" className="pointer-events-none absolute top-10 -left-40 size-[460px] rounded-full bg-agent-100/50 blur-3xl" />
-        <div aria-hidden="true" className="pointer-events-none absolute -right-32 bottom-0 size-[400px] rounded-full bg-brand-100/50 blur-3xl" />
-        <div className="container-page relative grid gap-10 lg:grid-cols-[1.15fr_1fr] lg:items-end lg:gap-16">
-          <Reveal>
-            <p className="eyebrow flex items-center gap-3 text-agent-600">
-              <CloudMark tone="agent" /> {agentforce.eyebrow}
-            </p>
-            <h2 id="ai-title" className="mt-5 text-[clamp(2.4rem,6vw,5rem)] leading-[0.98] font-extrabold tracking-[-0.03em]">
-              <span className="block">{agentforce.headline[0]}</span>
-              <span className="block accent-serif font-normal tracking-normal text-agent-500">{agentforce.headline[1]}</span>
-            </h2>
-            <p className="mt-6 max-w-2xl text-lg leading-relaxed">{agentforce.lead}</p>
-          </Reveal>
-          <Reveal delay={0.1} className="flex flex-col items-start gap-6">
-            <ul className="flex flex-wrap gap-2.5">
-              {agentforce.capabilities.slice(0, 4).map((c) => (
-                <li key={c.title} className="rounded-full bg-white px-4 py-2 text-sm font-semibold text-ink shadow-soft ring-1 ring-agent-100">
-                  {c.title}
-                </li>
-              ))}
-            </ul>
-            <Link href="/agentforce" className="group/btn inline-flex h-12 items-center gap-2 rounded-full bg-agent-500 px-6 font-semibold text-white shadow-agent transition hover:-translate-y-0.5 hover:bg-agent-600">
-              Explore Agentforce & AI <ArrowIcon />
-            </Link>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* ── 03 · Public Sector & Commercial ── */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-white via-brand-50 to-white py-20 md:py-28" aria-labelledby="sectors-title">
-        {/* two cloud layers drifting at different speeds */}
-        <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-10 h-40">
-          <div className="flex w-[200%] animate-drift opacity-80 motion-reduce:animate-none">
-            {[0, 1].map((k) => (
-              <div key={k} className="relative h-40 w-1/2">
-                <Cloud className="absolute top-0 left-[8%] w-44" opacity={0.9} />
-                <Cloud className="absolute top-16 left-[46%] w-28" opacity={0.7} />
-                <Cloud className="absolute top-4 left-[78%] w-36" opacity={0.85} />
-              </div>
-            ))}
-          </div>
-        </div>
-        <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 bottom-6 h-48">
-          <div className="flex w-[200%] animate-drift opacity-90 [animation-direction:reverse] [animation-duration:90s] motion-reduce:animate-none">
-            {[0, 1].map((k) => (
-              <div key={k} className="relative h-48 w-1/2">
-                <Cloud className="absolute bottom-0 left-[2%] w-64" />
-                <Cloud className="absolute bottom-10 left-[40%] w-40" opacity={0.8} />
-                <Cloud className="absolute bottom-2 left-[70%] w-56" opacity={0.95} />
-              </div>
-            ))}
-          </div>
-        </div>
-        {/* dotted road that draws itself as you scroll, weaving between the heading and the cards */}
-        <TrailPath className="hidden opacity-80 md:block" d="M540 0 C 500 120, 530 260, 440 360 S 250 430, 280 600 S 110 900, 60 1100" />
-        <div className="container-page relative">
+      {/* ── 03 · Why Enabled Analytics ── */}
+      <section className="relative overflow-hidden py-20 md:py-28" aria-labelledby="why-title">
+        <div className="container-page">
           <SectionHeading
             index="01"
-            eyebrow="Who we serve"
+            eyebrow="Why Enabled Analytics"
             title={
-              <span id="sectors-title">
-                Built for <span className="accent-serif text-brand-600">your industry</span>
+              <span id="why-title">
+                What makes us <span className="accent-serif text-brand-600">different</span>
               </span>
             }
-            lead="Two industries, one standard of delivery. Choose where you work and see how we help."
           />
-          <SectorCards sectors={SECTORS} />
+          <FeatureGrid items={homeCopy.differentiators} columns={4} />
         </div>
       </section>
 
-      {/* ── 04 · Core Services ── */}
+      {/* ── 04 · What We Do ── */}
       <section className="relative overflow-hidden bg-surface py-20 md:py-28" aria-labelledby="services-title">
         <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-6 h-32">
           <div className="flex w-[200%] animate-drift opacity-70 [animation-duration:80s] motion-reduce:animate-none">
@@ -189,36 +111,41 @@ export default function HomePage() {
         <div className="container-page relative">
           <SectionHeading
             index="02"
-            eyebrow="Core services"
-            title={
-              <span id="services-title">
-                Everything you need, <span className="accent-serif text-brand-600">from one partner</span>
-              </span>
-            }
+            eyebrow="What we do"
+            title={<span id="services-title">{homeCopy.servicesTitle}</span>}
             actions={
               <Button href="/services" variant="secondary">
-                Services in detail <ArrowIcon />
+                Explore Our Services <ArrowIcon />
               </Button>
             }
           />
-          <ServiceCards services={coreServices} />
+          <ServiceCards services={offerings.map((o) => ({ slug: o.slug, href: o.href, title: o.title, summary: o.summary, icon: o.icon }))} />
         </div>
       </section>
 
-      {/* ── 05 · Client Success ── */}
+      {/* ── 05 · Industries ── */}
+      <section className="relative overflow-hidden bg-gradient-to-b from-white via-brand-50 to-white py-20 md:py-28" aria-labelledby="industries-title">
+        <TrailPath className="hidden opacity-80 md:block" d="M540 0 C 500 120, 530 260, 440 360 S 250 430, 280 600 S 110 900, 60 1100" />
+        <div className="container-page relative">
+          <SectionHeading index="03" eyebrow="Industries" title={<span id="industries-title">{homeCopy.industriesTitle}</span>} lead={homeCopy.industriesLead} />
+          <SectorCards sectors={INDUSTRIES} />
+        </div>
+      </section>
+
+      {/* ── 06 · Proof of experience ── */}
       <section className="relative overflow-hidden py-20 md:py-28" aria-labelledby="results-title">
         <div className="container-page">
           <SectionHeading
-            index="03"
-            eyebrow="Client success"
+            index="04"
+            eyebrow="Proof of experience"
             title={
               <span id="results-title">
                 Challenge → Solution → <span className="accent-serif text-brand-600">Result</span>
               </span>
             }
             actions={
-              <Button href="/case-studies" variant="secondary">
-                All case studies <ArrowIcon />
+              <Button href="/clients" variant="secondary">
+                Client Success <ArrowIcon />
               </Button>
             }
           />
@@ -240,22 +167,23 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── 06 · Your Journey & Contact ── */}
-      <section className="relative overflow-hidden bg-sky py-24 md:py-32" aria-labelledby="journey-title">
+      {/* ── 07 · Get in touch ── */}
+      <section id="contact" className="relative scroll-mt-20 overflow-hidden bg-sky py-24 md:py-32" aria-labelledby="contact-title">
         <TrailPath className="hidden opacity-70 md:block" />
-        <div className="container-page relative">
+        <div className="container-page relative grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
           <SectionHeading
-            align="center"
-            index="04"
-            eyebrow="Your journey"
+            index="05"
+            eyebrow="Get in touch"
             title={
-              <span id="journey-title">
-                Where is your Salesforce org <span className="accent-serif text-brand-600">today?</span>
+              <span id="contact-title">
+                Let’s talk about <span className="accent-serif text-brand-600">your workflow</span>
               </span>
             }
-            lead="Whether you're dealing with a well-established Salesforce org or starting fresh, our CoE teams offer invaluable guidance and support from day one."
+            lead="Tell us about your project in brief and we’ll connect you to one of our specialists."
           />
-          <JourneyContact />
+          <Reveal className="rounded-[1.75rem] border border-line bg-white p-6 shadow-lift md:p-10">
+            <ContactForm idPrefix="home" />
+          </Reveal>
         </div>
       </section>
     </>

@@ -12,15 +12,16 @@ const phone = z
 /** Hidden honeypot field: humans leave it empty. */
 const honeypot = z.string().max(0).optional()
 
-/** Service-interest choices for the single inquiry form (2026-10-30 feedback). */
+/** Service-interest choices for the single inquiry form (updated for the 12 Nov 2026 service names). */
 export const serviceInterests = [
-  "Implementation",
-  "Enhancements / Modernization",
+  "Implementation & Transformation",
+  "Managed Support & Optimization",
+  "Forward-Deployed Engineering",
+  "Agentforce & Applied AI",
   "Integration / Data Migration",
-  "AI / Agentforce / Data 360",
-  "Support / Optimization",
-  "Staff Augmentation",
+  "Data 360 / Analytics",
   "Public Sector",
+  "Telecommunications",
   "Other",
 ] as const
 

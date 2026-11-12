@@ -14,12 +14,12 @@ export const agentforce = {
     title: "Why Agentforce, why now",
     body: [
       "Salesforce’s platform is now built around autonomous agents that can reason over your data and take action, not just answer questions. The agents are only as good as the data, processes and guardrails underneath them.",
-      "That’s where Enabled Analytics comes in: the same CoE teams, accelerators and Data Cloud practice that power our implementations now prepare your org for agents and put them to work safely.",
+      "That’s where Enabled Analytics comes in: the same CoE teams, accelerators and Data 360 practice that power our implementations now prepare your org for agents and put them to work safely.",
     ],
   },
   capabilities: [
     { icon: "route", title: "Use-case discovery", text: "Identify the jobs agents should own first, ranked by value, data readiness and risk." },
-    { icon: "layers", title: "Data Cloud grounding", text: "Harmonize data from across your enterprise systems so agents answer from a single, trusted customer view." },
+    { icon: "layers", title: "Data 360 grounding", text: "Harmonize data from across your enterprise systems so agents answer from a single, trusted customer view." },
     { icon: "sparkles", title: "Agent build", text: "Topics, instructions, actions (Flows, Apex, MuleSoft) and prompt templates tailored to your processes." },
     { icon: "award", title: "Trust & guardrails", text: "Permissions, data masking and the Einstein Trust Layer configured so agents stay inside policy." },
     { icon: "zap", title: "Testing & launch", text: "Scenario testing before go-live, then a phased rollout with human hand-off built in." },
@@ -27,7 +27,7 @@ export const agentforce = {
   ],
   process: [
     { title: "Assess", text: "AI Readiness Assessment of your data, processes, security and org health." },
-    { title: "Ground", text: "Connect and harmonize the data your agents need in Data Cloud." },
+    { title: "Ground", text: "Connect and harmonize the data your agents need in Data 360." },
     { title: "Build", text: "Configure topics, actions and guardrails; integrate with your systems." },
     { title: "Test", text: "Run real-world scenarios and edge cases before anyone talks to an agent." },
     { title: "Launch", text: "Roll out in phases with clear hand-off to people." },

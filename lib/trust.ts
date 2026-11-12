@@ -76,7 +76,7 @@ export const journey: Milestone[] = [
     when: "Next",
     tag: "Agentic",
     title: "The Agentforce practice",
-    text: "AI agents grounded in Data Cloud, built with the same CoE discipline, from readiness assessment to production.",
+    text: "AI agents grounded in Data 360, built with the same CoE discipline, from readiness assessment to production.",
   },
 ]
 

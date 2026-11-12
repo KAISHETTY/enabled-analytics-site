@@ -1,71 +1,52 @@
 import type { Metadata } from "next"
-import Image from "next/image"
-import { DynamicIcon } from "@/components/ea/icon"
-import { home, industries, practiceAreas } from "@/lib/content"
+import { industriesLanding as l, industryLinks } from "@/lib/offerings"
 import { PageHero } from "@/components/ea/hero"
-import { IconTile, Placeholder, Section } from "@/components/ea/primitives"
+import { Section } from "@/components/ea/primitives"
 import { SectionHeading } from "@/components/ea/section-heading"
-import { ServiceCard } from "@/components/ea/cards"
+import { FeatureGrid } from "@/components/ea/feature-grid"
 import { CTABanner } from "@/components/ea/cta-banner"
-import { RevealGroup, RevealItem } from "@/components/ea/reveal"
+import { Reveal } from "@/components/ea/reveal"
+import { ArrowIcon, Button } from "@/components/ea/button"
+import { SectorCards } from "@/components/story/sector-cards"
+import { ChipRow } from "@/components/story/offering-page"
 
 export const metadata: Metadata = {
-  title: "Industries",
-  description: "Enabled Analytics serves retail & consumer goods, financial services & banking, healthcare & pharmaceuticals, technology & IT services, and logistics & supply chain.",
+  title: "Industries: Public Sector, Telecommunications & Commercial",
+  description: "Enabled Analytics combines specialist engineering with practical industry knowledge for Public Sector, Telecommunications and Commercial organizations.",
   alternates: { canonical: "/industries" },
 }
+
+const TONES = ["dark", "navy", "light"] as const
 
 export default function IndustriesPage() {
   return (
     <>
-      <PageHero eyebrow="Industries" title={industries.title} lead={industries.lead} crumbs={[{ label: "Industries" }]} />
+      <PageHero eyebrow="Industries" title={l.heroTitle} lead={l.heroLead} crumbs={[{ label: "Industries" }]}>
+        <Button href="#industries" size="lg">
+          Explore Our Industries <ArrowIcon />
+        </Button>
+      </PageHero>
 
-      <Section>
-        <RevealGroup className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {industries.items.map((ind, i) => {
-            return (
-              <RevealItem key={ind.title}>
-                <article className="group/card flex h-full flex-col overflow-hidden rounded-xl border border-line bg-white shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-lift">
-                  {"image" in ind && ind.image ? (
-                    <div className="relative aspect-[16/9] overflow-hidden">
-                      <Image src={ind.image} alt="" fill sizes="(min-width: 1024px) 30vw, 90vw" className="object-cover transition-transform duration-500 group-hover/card:scale-105" />
-                    </div>
-                  ) : (
-                    <div aria-hidden="true" className="bg-grid relative flex aspect-[16/9] items-center justify-center bg-gradient-to-br from-brand-50 to-surface-warm">
-                      <DynamicIcon name={ind.icon} className="size-14 text-brand-300" />
-                    </div>
-                  )}
-                  <div className="flex flex-1 flex-col gap-4 p-6">
-                    <div className="flex items-center justify-between">
-                      <IconTile>
-                        <DynamicIcon name={ind.icon} />
-                      </IconTile>
-                      <span className="font-mono text-sm text-ink-subtle">{String(i + 1).padStart(2, "0")}</span>
-                    </div>
-                    <h2 className="text-xl font-bold">{ind.title}</h2>
-                  </div>
-                </article>
-              </RevealItem>
-            )
-          })}
-        </RevealGroup>
-        <Placeholder className="mt-10" title="Content needed: industry descriptions">
-          The current industry page contains placeholder (Lorem Ipsum) text. Add a short description, relevant clouds and outcomes for each industry in <code>content/site-content.json → industries</code>.
-        </Placeholder>
+      <Section id="industries" className="scroll-mt-20 pt-6 md:pt-10">
+        <SectionHeading index="01" eyebrow="Industries we serve" title="Choose your industry" />
+        <SectorCards sectors={industryLinks.map((i, k) => ({ href: i.href, icon: i.icon, kicker: i.title, title: i.link, text: i.text, tags: [], tone: TONES[k] }))} />
       </Section>
 
       <Section tone="tint">
-        <SectionHeading eyebrow="Practice Areas" title="Salesforce clouds we implement" lead={home.segments.lead} />
-        <RevealGroup className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {practiceAreas.slice(0, 6).map((s) => (
-            <RevealItem key={s.slug}>
-              <ServiceCard service={s} />
-            </RevealItem>
-          ))}
-        </RevealGroup>
+        <SectionHeading index="02" eyebrow="Why context matters" title="Industry knowledge that shapes the solution" />
+        <FeatureGrid items={l.why} columns={4} />
       </Section>
 
-      <CTABanner title={home.cta.title} primary={home.cta.button} />
+      <Section>
+        <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+          <SectionHeading index="03" eyebrow="Our approach" title="Understand your reality. Engineer for your business." className="mb-0 md:mb-0" />
+          <Reveal>
+            <ChipRow items={["Understand your operating reality", "Engineer for your business"]} />
+          </Reveal>
+        </div>
+      </Section>
+
+      <CTABanner title="Let’s connect" lead="Tell us about your organization and we’ll connect you to one of our industry specialists." primary={{ label: "Contact Us", href: "/contact" }} />
     </>
   )
 }

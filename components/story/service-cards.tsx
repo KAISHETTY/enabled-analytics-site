@@ -6,8 +6,9 @@ import Link from "next/link"
 import { m, useMotionTemplate, useScroll, useSpring, useTransform, type Variants } from "framer-motion"
 import { ArrowIcon } from "@/components/ea/button"
 import { DynamicIcon } from "@/components/ea/icon"
+import { cn } from "@/lib/utils"
 
-export type CoreService = { slug: string; title: string; summary: string; icon: string; image?: string }
+export type CoreService = { slug: string; title: string; summary: string; icon: string; image?: string; href?: string }
 
 const EASE = [0.22, 1, 0.36, 1] as const
 
@@ -33,13 +34,17 @@ export function ServiceCards({ services }: { services: CoreService[] }) {
   const hClip = useMotionTemplate`inset(0 ${rest} 0 0)`
   const vClip = useMotionTemplate`inset(0 0 ${rest} 0)`
 
+  // Three cards sit in a row from md; four from lg (two-by-two on tablets, with the vertical road).
+  const four = services.length === 4
+  const edge = four ? "12.5%" : "16.66%"
+
   return (
-    <div ref={ref} className="relative grid gap-6 pl-10 md:grid-cols-3 md:pt-16 md:pl-0">
+    <div ref={ref} className={cn("relative grid gap-6 pl-10", four ? "md:grid-cols-2 lg:grid-cols-4 lg:pt-16 lg:pl-0" : "md:grid-cols-3 md:pt-16 md:pl-0")}>
       {/* the road: a faint track with a bright copy revealed by scroll */}
-      <div aria-hidden="true" className="absolute top-3 bottom-10 left-[15px] border-l-2 border-dashed border-brand-200 md:hidden" />
-      <m.div aria-hidden="true" style={{ clipPath: vClip }} className="absolute top-3 bottom-10 left-[15px] border-l-2 border-dashed border-brand-500 md:hidden" />
-      <div aria-hidden="true" className="absolute top-[22px] right-[16.66%] left-[16.66%] hidden border-t-2 border-dashed border-brand-200 md:block" />
-      <m.div aria-hidden="true" style={{ clipPath: hClip }} className="absolute top-[22px] right-[16.66%] left-[16.66%] hidden border-t-2 border-dashed border-brand-500 md:block" />
+      <div aria-hidden="true" className={cn("absolute top-3 bottom-10 left-[15px] border-l-2 border-dashed border-brand-200", four ? "lg:hidden" : "md:hidden")} />
+      <m.div aria-hidden="true" style={{ clipPath: vClip }} className={cn("absolute top-3 bottom-10 left-[15px] border-l-2 border-dashed border-brand-500", four ? "lg:hidden" : "md:hidden")} />
+      <div aria-hidden="true" style={{ left: edge, right: edge }} className={cn("absolute top-[22px] hidden border-t-2 border-dashed border-brand-200", four ? "lg:block" : "md:block")} />
+      <m.div aria-hidden="true" style={{ left: edge, right: edge, clipPath: hClip }} className={cn("absolute top-[22px] hidden border-t-2 border-dashed border-brand-500", four ? "lg:block" : "md:block")} />
 
       {services.map((s, i) => (
         <m.div key={s.slug} custom={i} variants={card} initial="hidden" whileInView="show" viewport={{ once: true, margin: "0px 0px -12% 0px" }} className="relative [perspective:1000px]">
@@ -47,7 +52,7 @@ export function ServiceCards({ services }: { services: CoreService[] }) {
           <m.span
             aria-hidden="true"
             variants={{ hidden: { scale: 0 }, show: { scale: 1, transition: { type: "spring", stiffness: 320, damping: 14 } } }}
-            className="absolute top-9 -left-[34px] flex size-5 items-center justify-center rounded-full bg-white ring-2 ring-brand-500 md:-top-[51px] md:left-1/2 md:-ml-2.5"
+            className={cn("absolute top-9 -left-[34px] flex size-5 items-center justify-center rounded-full bg-white ring-2 ring-brand-500", four ? "lg:-top-[51px] lg:left-1/2 lg:-ml-2.5" : "md:-top-[51px] md:left-1/2 md:-ml-2.5")}
           >
             <span className="absolute inset-0 animate-ping rounded-full bg-brand-400/40 motion-reduce:animate-none" />
             <span className="size-2 rounded-full bg-brand-500" />
@@ -55,7 +60,7 @@ export function ServiceCards({ services }: { services: CoreService[] }) {
 
           <m.div whileTap={{ scale: 0.98 }} className="h-full">
             <Link
-              href={`/services/${s.slug}`}
+              href={s.href ?? `/services/${s.slug}`}
               className="group/svc relative flex h-full flex-col overflow-hidden rounded-[1.75rem] border border-line bg-white p-7 shadow-soft transition-all duration-500 hover:-translate-y-1.5 hover:border-brand-200 hover:shadow-lift md:p-8"
             >
               {/* light sweep on hover */}
@@ -64,7 +69,7 @@ export function ServiceCards({ services }: { services: CoreService[] }) {
                   variants={{ hidden: { opacity: 0, scale: 1.08 }, show: { opacity: 1, scale: 1, transition: { duration: 0.9, ease: EASE } } }}
                   className="relative -mx-7 -mt-7 mb-6 aspect-[16/9] overflow-hidden md:-mx-8 md:-mt-8"
                 >
-                  <Image src={s.image} alt="" fill sizes="(min-width: 768px) 33vw, 100vw" className="object-cover transition-transform duration-700 group-hover/svc:scale-105" />
+                  <Image src={s.image} alt="" fill sizes="(min-width: 1024px) 25vw, (min-width: 768px) 50vw, 100vw" className="object-cover transition-transform duration-700 group-hover/svc:scale-105" />
                   <span aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-white/30 to-transparent" />
                 </m.div>
               )}

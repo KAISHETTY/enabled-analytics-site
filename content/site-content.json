@@ -4,7 +4,7 @@
     "name": "Enabled Analytics",
     "shortName": "EA",
     "url": "https://www.enabledanalytics.com",
-    "tagline": "Complete Suite of Salesforce Solutions in One Place",
+    "tagline": "Engineering-led solutions for critical business workflows",
     "description": "Enabled Analytics is a hub of talented Salesforce experts dedicated to empowering your business. We deliver exceptional Salesforce Cloud services to help you achieve your goals.",
     "email": "info@enabledanalytics.com",
     "phone": "214 402 3125",
@@ -44,7 +44,7 @@
       "external": true
     },
     {
-      "title": "Complete Suite of Salesforce Solutions in One Place",
+      "title": "Engineering-led solutions for critical business workflows",
       "text": "Helping customers at every touchpoint, process, and data",
       "href": "/contact"
     },
@@ -57,7 +57,7 @@
   "home": {
     "hero": {
       "eyebrow": "Salesforce Consulting Partner",
-      "title": "Complete Suite of Salesforce Solutions in One Place",
+      "title": "Engineering-led solutions for critical business workflows",
       "lead": "Helping customers at every touchpoint, process, and data.",
       "primaryCta": {
         "label": "Get Started",
@@ -90,7 +90,7 @@
       }
     ],
     "segments": {
-      "title": "Win Effortlessly in Every Segment With the Right Teams",
+      "title": "Connected customer and business operations",
       "lead": "Take the lead with our carefully chosen strategies and professionals in every area of your operations"
     },
     "benefits": {
@@ -429,7 +429,7 @@
       "category": "solution",
       "title": "CoE Teams",
       "icon": "users",
-      "tagline": "Wouldn’t it be great to hit the bull’s eye the very first time?",
+      "tagline": "A strong foundation for every engagement.",
       "summary": "Expert steering committees fluent in Salesforce, equipped to ensure successful implementations and ongoing excellence.",
       "image": "/images/services/coe-setup.jpg",
       "overview": {
@@ -489,7 +489,7 @@
       },
       "process": {
         "title": "Flexible Process, Tailored for Your Success",
-        "lead": "Whether you are dealing with a messed-up org or a well-oiled org. Whether you are facing governance issues or technical challenges. Our CoE teams can help you overcome any hurdle effortlessly. Here’s how we do it:",
+        "lead": "Whether your org needs attention or already runs well, and whether you face governance issues or technical challenges, our CoE teams can help you optimize and scale.",
         "steps": [
           {
             "title": "Evaluation",
@@ -569,13 +569,13 @@
       "title": "Org Assessment",
       "icon": "stethoscope",
       "tagline": "Unlock Your Salesforce Org's Full Potential with a Comprehensive Performance Assessment.",
-      "summary": "Our expert “mechanics” have the tools and experience to get your Salesforce Org running like new.",
+      "summary": "Our specialist engineers assess your Salesforce org and help it perform reliably again.",
       "image": "/images/services/org-assessment-1.jpg",
       "intro": [
         "Over time, even the best Salesforce implementations can encounter performance issues due to factors like technical debt, outdated workflows, empty fields, large Data Volumes and the accumulation of undocumented changes over time. These issues can lead to slow page loads, incomplete records, and inefficient workflows."
       ],
       "overview": {
-        "title": "The Good News is that our expert “mechanics” have the tools and experience to get your Salesforce Org running like new.",
+        "title": "Our specialist engineers have the tools and experience to help your Salesforce org perform reliably.",
         "body": [
           "Our Org Assessment engagement helps you streamline and optimize your org effortlessly."
         ]
@@ -636,7 +636,7 @@
       "title": "Data Analytics",
       "icon": "chart",
       "tagline": "Are your Analytics Tools keeping pace with your business?",
-      "summary": "Salesforce Data Cloud provides real-time data analytics, harmonizing data from across all enterprise systems.",
+      "summary": "Salesforce Data 360 provides real-time data analytics, harmonizing data from across all enterprise systems.",
       "image": "/images/services/data-analytics.jpg",
       "intro": [
         "Many businesses seeking real-time intelligence are facing a harsh reality – Their analytic tools simply aren’t keeping pace. Critical reports being requested by Executives require time-consuming spreadsheet exercises that take days or even weeks to complete.",
@@ -644,7 +644,7 @@
       ],
       "benefits": {
         "title": "Advantages of Data Analytics",
-        "lead": "Salesforce’s Data Cloud provides real time Data Analytics allowing Enterprise to seamlessly Harmonize Data from across all Enterprise systems enabling:",
+        "lead": "Salesforce Data 360 provides real time Data Analytics allowing Enterprise to seamlessly Harmonize Data from across all Enterprise systems enabling:",
         "items": [
           {
             "title": "Data Driven Decision Making"
@@ -679,7 +679,7 @@
         ]
       },
       "closing": {
-        "title": "Enabled Analytics Data Cloud practice is ready to help!",
+        "title": "Enabled Analytics Data 360 practice is ready to help!",
         "body": "Contact us today to schedule time with our data experts."
       }
     },
@@ -742,11 +742,11 @@
         },
         {
           "title": "Get Ahead Faster with Our Starter Packs and Accelerators",
-          "text": "You can get it right the first time with the help of our CoE teams, without starting from scratch. Our integration frameworks, pre-built data models, data migration templates, and apex utilities provide you with a solid foundation to build upon and enable you to accelerate the process. Our flagship assets and accelerators are designed specifically to reduce the time of deployment. Get your implementations done at 3X speed and at up to 60% lower costs while staying ahead seamlessly."
+          "text": "You can get it right the first time with the help of our CoE teams, without starting from scratch. Our integration frameworks, pre-built data models, data migration templates, and apex utilities provide you with a solid foundation to build upon and enable you to accelerate the process. Our flagship assets and accelerators are designed specifically to reduce the time of deployment."
         },
         {
-          "title": "Our Flexible Engagement Models Designed to Cater to Your Needs",
-          "text": "Get the right talent, the right teams with years of expertise. Partner up with us for your implementations or hire our experts. Scale up and down as per your implementation teams and stay ahead without any fuss."
+          "title": "Flexible Engagement Models",
+          "text": "Work with us on a defined implementation or bring our engineers alongside your team through Forward-Deployed Engineering, and scale engagement as your program evolves."
         }
       ],
       "benefits": {
@@ -829,7 +829,7 @@
         },
         {
           "title": "Unlock Outstanding Customer Experience Quicker with Our Starter Packs and Accelerators",
-          "text": "Get ahead in no time with our CoE teams, starter packs and accelerators. Our pre-built data models, apex utilities, data migration templates and integration frameworks are crafted to help you build strong foundations. The best part? You don't have to start from scratch! Our accelerators and flagship assets are tailored to help you deploy at 3X speed and with 60% lower costs."
+          "text": "Get ahead in no time with our CoE teams, starter packs and accelerators. Our pre-built data models, apex utilities, data migration templates and integration frameworks are crafted to help you build strong foundations. The best part? You don't have to start from scratch!"
         },
         {
           "title": "One Step Closer to Success with Right teams",
@@ -911,7 +911,7 @@
         },
         {
           "title": "Launch in No Time with Our Starter Packs and Accelerators",
-          "text": "With Enabled Analytics, not only you get access to top-notch CoE teams, but also you get access to our starter packs and accelerators. These eliminate the need of starting from scratch by giving you access to integration frameworks, data migration templates, pre-built data models, apex utilities and much more. Leverage our flagship assets and accelerators, lay strong foundations, get started in no time while reducing costs by 60% and increasing implementation speed by 3X."
+          "text": "With Enabled Analytics, not only you get access to top-notch CoE teams, but also you get access to our starter packs and accelerators. These eliminate the need of starting from scratch by giving you access to integration frameworks, data migration templates, pre-built data models, apex utilities and much more."
         },
         {
           "title": "Right Teams for All Your Requirements",
@@ -994,7 +994,7 @@
         },
         {
           "title": "Deploy Quicker with Our Starter Packs and Accelerators",
-          "text": "Deploy quicker at 3X speed, at 60% lower costs. Our starter packs and accelerators can help you succeed in the competitive market in no time. Leverage our integration frameworks, apex utilities, data migration templates, pre-built data models, flagship assets, accelerators and much more to meet your business goals. Apart from these, you get the expertise of our CoE teams, that enable you to get the implementations done smoothly, without any fuss."
+          "text": "Our starter packs and accelerators can help you succeed in the competitive market in no time. Leverage our integration frameworks, apex utilities, data migration templates, pre-built data models, flagship assets, accelerators and much more to meet your business goals. Apart from these, you get the expertise of our CoE teams, that enable you to get the implementations done smoothly, without any fuss."
         },
         {
           "title": "World-class Teams, Just a Few Clicks Away",
@@ -1074,11 +1074,11 @@
       "approach": [
         {
           "title": "Engage Your Customers with Our Custom Experience Cloud Implementation",
-          "text": "Deliver powerful first impressions with our custom implementation, at lightning fast speed. You get your implementation in place, without starting from scratch. Harness the power of our flagship assets, accelerators, apex utilities, pre-built data models, integration frameworks and data migration templates and accelerate deployment by 3X."
+          "text": "Deliver powerful first impressions with our custom implementation, at lightning fast speed. You get your implementation in place, without starting from scratch."
         },
         {
           "title": "Enhance Customer Interactions Quicker with Our Starter Packs and Accelerators",
-          "text": "Get the expertise and decades of experience of our CoE teams, paired with our accelerators and starter packs and deploy your implementations at 60% reduced costs, with 3X more speed. Our starter packs, accelerators and flagship assets are crafted to help lay strong foundations, without the need of starting from ground up. Leverage our pre-built data models, data migration templates, apex utilities and integration framework and slash the time between the starting point and your success."
+          "text": "Get the expertise and decades of experience of our CoE teams, paired with our accelerators and starter packs. Our starter packs, accelerators and flagship assets are crafted to help lay strong foundations, without the need of starting from ground up. Leverage our pre-built data models, data migration templates, apex utilities and integration framework and slash the time between the starting point and your success."
         },
         {
           "title": "Get Right Teams for Effortless Win",
@@ -1162,7 +1162,7 @@
           "text": "Your needs might differ, your goals may be different. Hence, to cater to your ever-changing needs, we arm you with our custom CPQ implementation services that help you get the most out of your investment. Meet all your distinctive needs and focus on your business goals while our teams lay the roadmap for your success."
         },
         {
-          "title": "60% Lower Costs, 3X Speed",
+          "title": "A Stronger Starting Point",
           "text": "Get the industry experts by your side and launch in less time, at lesser cost. Our CoE teams not only bring decades of experience and effective strategies, but also bring data migration templates, pre-built data models, integration frameworks, apex utilities, and much more. These eliminate the need of starting from ground up and enable you to get started effortlessly. Now you can get ahead of the competition in no time and deploy your implementations at lightning speed."
         },
         {
@@ -1274,79 +1274,10 @@
           }
         ]
       }
-    },
-    {
-      "slug": "implementation",
-      "category": "core",
-      "title": "Implementation",
-      "icon": "rocket",
-      "tagline": "Wouldn’t it be great to hit the bull’s eye the very first time?",
-      "summary": "Salesforce consulting and implementation led by our CoE teams.",
-      "image": "/images/photos/implementation-architecture.webp",
-      "overview": {
-        "title": "Get it right the first time",
-        "body": [
-          "The CoE teams at Enabled Analytics are expert steering committees fluent in Salesforce, equipped to ensure successful implementations and ongoing excellence. Comprised of seasoned solution, technical, and design architects with decades of expertise, our CoE teams bring together diverse skills, knowledge, assets, and tools to deliver tailored and effective solutions for your organization."
-        ]
-      }
-    },
-    {
-      "slug": "support",
-      "category": "core",
-      "title": "Support",
-      "icon": "stethoscope",
-      "tagline": "Unlock Your Salesforce Org's Full Potential with a Comprehensive Performance Assessment.",
-      "summary": "Operational support, maintenance and optimization from our expert “mechanics” to keep your Salesforce org running like new.",
-      "image": "/images/photos/support-monitoring.webp",
-      "overview": {
-        "title": "Keep your org running like new",
-        "body": [
-          "Over time, even the best Salesforce implementations can encounter performance issues due to factors like technical debt, outdated workflows, empty fields, large Data Volumes and the accumulation of undocumented changes over time. These issues can lead to slow page loads, incomplete records, and inefficient workflows.",
-          "Whether you're dealing with a well-established Salesforce org or starting fresh, our CoE teams offer invaluable guidance and support from day one. We conduct comprehensive org assessments, develop customized strategies and roadmaps, provide ongoing support and training, and leverage industry best practices to drive efficiency, productivity, and ROI for your Salesforce investments."
-        ]
-      },
-      "features": {
-        "title": "How we support your org",
-        "items": [
-          "Operational Support & Maintenance",
-          "Optimization Strategy",
-          "Initial assessment of your org",
-          "The Three Angles: enterprise, data, vision",
-          "Phased lift-and-shift execution plan",
-          "Ongoing support and training"
-        ]
-      }
-    },
-    {
-      "slug": "staff-augmentation",
-      "category": "core",
-      "title": "Staff Augmentation",
-      "icon": "users",
-      "tagline": "Partner up with us for your implementations or hire our experts.",
-      "summary": "Hand-picked premium Salesforce talent that scales up and down with your implementation needs.",
-      "image": "/images/photos/staff-augmentation.webp",
-      "overview": {
-        "title": "Hire our experts",
-        "body": [
-          "Get access to hand-picked premium talent for your Salesforce project.",
-          "Scale up and down as per your implementation needs and stay ahead without any fuss."
-        ]
-      },
-      "features": {
-        "title": "What you get",
-        "items": [
-          "Curated talent with years of expertise",
-          "Access to CoE teams and best practices",
-          "Asset libraries and frameworks",
-          "Increase and decrease team members on demand",
-          "Hybrid Agile approach available",
-          "Hand-picked premium talent"
-        ]
-      }
     }
   ],
   "industries": {
-    "title": "Win Effortlessly in Every Segment With the Right Teams",
+    "title": "Connected customer and business operations",
     "lead": "Take the lead with our carefully chosen strategies and professionals in every area of your operations",
     "items": [
       {
@@ -1737,8 +1668,8 @@
         "featured": true
       },
       {
-        "name": "Hire Our Experts",
-        "description": "Partner up with us for your implementations or hire our experts.",
+        "name": "Forward-Deployed Engineering",
+        "description": "Experienced engineers embedded with your teams, backed by EA specialists.",
         "features": [
           "Curated talent with years of expertise",
           "Access to CoE teams and best practices",
@@ -1757,12 +1688,12 @@
       },
       {
         "q": "Which Salesforce products do you work with?",
-        "a": "Our practice areas cover Sales Cloud, Service Cloud, Marketing Cloud, Account Engagement, Experience Cloud, CPQ (Salesforce CPQ, Vlocity CPQ and Apttus CPQ), Salesforce Field Service and Data Cloud.",
+        "a": "Our practice areas cover Sales Cloud, Service Cloud, Marketing Cloud, Account Engagement, Experience Cloud, CPQ (Salesforce CPQ, Vlocity CPQ and Apttus CPQ), Salesforce Field Service and Data 360.",
         "category": "Services"
       },
       {
         "q": "What engagement models do you offer?",
-        "a": "Our engagement models include fixed price as well as time & material. You can partner up with us for your implementations or hire our experts, and scale up and down as per your needs. While most companies prefer a Hybrid Agile approach, we can tailor our approach based on an evaluation.",
+        "a": "Our engagement models include fixed price as well as time & material. You can work with us on a defined implementation or through Forward-Deployed Engineering, and scale as your needs change. While most companies prefer a Hybrid Agile approach, we can tailor our approach based on an evaluation.",
         "category": "Engagement"
       },
       {
@@ -1777,7 +1708,7 @@
       },
       {
         "q": "How do your accelerators speed up implementation?",
-        "a": "Our integration frameworks, pre-built data models, data migration templates, and apex utilities provide a solid foundation so you don't start from scratch. Our flagship assets and accelerators are designed to help you deploy at 3X speed and at up to 60% lower costs.",
+        "a": "Our integration frameworks, pre-built data models, data migration templates, and apex utilities provide a solid foundation so you don't start from scratch.",
         "category": "Engagement"
       },
       {

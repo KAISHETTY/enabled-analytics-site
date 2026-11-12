@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og"
 import { join } from "node:path"
 import { readFile } from "node:fs/promises"
 
-export const alt = "Enabled Analytics — Complete Suite of Salesforce Solutions in One Place"
+export const alt = "Enabled Analytics — Engineering-led solutions for critical business workflows"
 export const size = { width: 1200, height: 630 }
 export const contentType = "image/png"
 
@@ -28,7 +28,7 @@ export default async function Image() {
         <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
           <div style={{ fontSize: 22, letterSpacing: 4, color: "#246696", textTransform: "uppercase" }}>Salesforce Consulting Partner</div>
           <div style={{ fontSize: 64, fontWeight: 800, color: "#0f1b26", lineHeight: 1.1, maxWidth: 960 }}>
-            Complete Suite of Salesforce Solutions in One Place
+            Engineering-led solutions for critical business workflows
           </div>
         </div>
         <div style={{ display: "flex", gap: 40, fontSize: 26, color: "#4a5866" }}>

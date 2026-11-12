@@ -43,12 +43,20 @@ const nextConfig: NextConfig = {
       { source: "/blogs", destination: "/blog", permanent: true },
       { source: "/post/:slug", destination: "/blog/:slug", permanent: true },
       { source: "/practice-area", destination: "/services", permanent: true },
-      { source: "/industry", destination: "/solutions/commercial", permanent: true },
+      { source: "/industry", destination: "/industries/commercial", permanent: true },
       // Removed for now per the 2026-10-30 feedback (pages kept in the repo so they can return).
-      { source: "/industries", destination: "/solutions/commercial", permanent: false },
       { source: "/get-a-quote", destination: "/contact", permanent: false },
       { source: "/health-check", destination: "/contact", permanent: false },
-      { source: "/solutions", destination: "/", permanent: false },
+      // Who We Serve retired for the Industries tab (12 Nov 2026 handoff).
+      { source: "/solutions", destination: "/industries", permanent: true },
+      { source: "/who-we-serve", destination: "/industries", permanent: true },
+      { source: "/solutions/public-sector", destination: "/industries/public-sector", permanent: true },
+      { source: "/solutions/telecom", destination: "/industries/telecommunications", permanent: true },
+      { source: "/solutions/manufacturing", destination: "/industries/commercial", permanent: true },
+      { source: "/solutions/commercial", destination: "/industries/commercial", permanent: true },
+      // Staff Augmentation replaced by Forward-Deployed Engineering.
+      { source: "/services/staff-augmentation", destination: "/services/forward-deployed-engineering", permanent: true },
+      { source: "/staff-augmentation", destination: "/services/forward-deployed-engineering", permanent: true },
       // Hidden until validated per the 2026-11-02 feedback (pages kept in the repo).
       { source: "/accelerators", destination: "/products", permanent: false },
       { source: "/privacy-policy", destination: "/privacy", permanent: true },

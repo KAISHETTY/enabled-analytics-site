@@ -5,7 +5,7 @@ export type TitledText = { title: string; text?: string }
 
 export type Service = {
   slug: string
-  category: "core" | "solution" | "practice"
+  category: "solution" | "practice"
   title: string
   icon: string
   tagline: string
@@ -49,8 +49,6 @@ export const faqs = data.faqs.items
 export const privacy = data.legal.privacy
 
 export const services = data.services as Service[]
-/** Implementation, Support and Staff Augmentation: the three core services on the homepage and Services tab. */
-export const coreServices = services.filter((s) => s.category === "core")
 export const solutions = services.filter((s) => s.category === "solution")
 export const practiceAreas = services.filter((s) => s.category === "practice")
 export const testimonials = data.testimonials as Testimonial[]

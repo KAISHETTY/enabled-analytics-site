@@ -7,7 +7,7 @@
 export type Dimension = "data" | "automation" | "performance" | "adoption" | "governance" | "ai"
 
 export const dimensions: Record<Dimension, { label: string; service: { title: string; href: string } }> = {
-  data: { label: "Data quality", service: { title: "Data Analytics & Data Cloud", href: "/services/data-analytics" } },
+  data: { label: "Data quality", service: { title: "Data Analytics & Data 360", href: "/services/data-analytics" } },
   automation: { label: "Automation & technical debt", service: { title: "Org Assessment", href: "/services/org-assessment" } },
   performance: { label: "Performance & code quality", service: { title: "Discover Cloud scorecards", href: "/products" } },
   adoption: { label: "User adoption", service: { title: "CoE Enablement", href: "/services/coe-enablement" } },

@@ -1,4 +1,4 @@
-import { coreServices } from "@/lib/content"
+import { howWeDeliver, industryLinks, offerings } from "@/lib/offerings"
 
 export const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.enabledanalytics.com").replace(/\/$/, "")
 
@@ -7,27 +7,22 @@ export type NavLink = { label: string; href: string; description?: string }
 export type NavFeature = { kicker: string; title: string; cta?: string; href?: string }
 export type NavItem = { label: string; href?: string; children?: NavLink[]; feature?: NavFeature }
 
-/** Top navigation per the 2026-11-02 homepage/menu feedback: Services | Who We Serve | Apps & Accelerators | Client Success | About (2026-11-03 order). "Contact Us" is the header's primary button. */
+/** Top navigation per the 12 Nov 2026 handoff: Services | Industries | Apps & Accelerators | Client Success | About. "Contact Us" is the header's primary button. */
 export const mainNav: NavItem[] = [
   {
     label: "Services",
     children: [
-      ...coreServices.map((s) => ({ label: s.title, href: `/services/${s.slug}`, description: s.summary })),
-      { label: "Salesforce Clouds & Data", href: "/expertise", description: "Every Salesforce Cloud, Data 360 and analytics." },
-      { label: "Agentforce & AI", href: "/agentforce", description: "AI agents grounded in your Salesforce data." },
-      { label: "How we deliver", href: "/services#how-we-deliver", description: "Our methodology, process and Shape Cycle." },
+      ...offerings.map((o) => ({ label: o.title, href: o.href, description: o.summary })),
+      { label: howWeDeliver.title, href: howWeDeliver.href, description: "One delivery model across every service." },
     ],
-    feature: { kicker: "Howdy, partner", title: "Let’s get Salesforce right the first time", cta: "Contact Us", href: "/contact" },
+    feature: { kicker: "Services", title: "Engineering-led services from idea through ongoing operations", cta: "All services", href: "/services" },
   },
   {
-    label: "Who We Serve",
+    label: "Industries",
     children: [
-      { label: "Public Sector", href: "/solutions/public-sector", description: "Grantmaking and Agentforce Public Sector for government and education." },
-      { label: "Telecom", href: "/solutions/telecom", description: "Salesforce for communications providers." },
-      { label: "Manufacturing", href: "/solutions/manufacturing", description: "Salesforce for manufacturers." },
-      { label: "Commercial", href: "/solutions/commercial", description: "Retail, services, financial services and more." },
+      ...industryLinks.map((l) => ({ label: l.title, href: l.href, description: l.text })),
     ],
-    feature: { kicker: "Who we serve", title: "Multiple industries, one standard of delivery" },
+    feature: { kicker: "Industries", title: "Industry expertise that strengthens delivery", cta: "Explore Our Industries", href: "/industries" },
   },
   {
     label: "Apps & Accelerators",

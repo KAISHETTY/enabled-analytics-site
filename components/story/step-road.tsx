@@ -17,14 +17,14 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: EASE } },
 }
 
-const COLS = { 3: "md:grid-cols-3", 4: "md:grid-cols-2 lg:grid-cols-4", 5: "md:grid-cols-3 lg:grid-cols-5" } as const
+const COLS = { 3: "md:grid-cols-3", 4: "md:grid-cols-2 lg:grid-cols-4", 5: "md:grid-cols-3 lg:grid-cols-5", 6: "md:grid-cols-3 lg:grid-cols-6" } as const
 
 /**
  * Numbered steps on a dotted road (the homepage "Core services" pattern): the
  * road draws itself with scroll, across the top on wide screens and down the
  * left on phones, and each stop lights up as its card rises in.
  */
-export function StepRoad({ steps, columns = 3, className }: { steps: RoadStep[]; columns?: 3 | 4 | 5; className?: string }) {
+export function StepRoad({ steps, columns = 3, className }: { steps: RoadStep[]; columns?: 3 | 4 | 5 | 6; className?: string }) {
   const ref = React.useRef<HTMLOListElement>(null)
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start 85%", "end 70%"] })
   const p = useSpring(scrollYProgress, { stiffness: 90, damping: 24 })

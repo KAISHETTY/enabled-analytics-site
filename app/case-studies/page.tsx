@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { caseStudiesBySector } from "@/lib/case-studies"
+import { groupByFocusArea, publicSectorFocusAreas } from "@/lib/case-studies"
 import { clients, home, testimonials } from "@/lib/content"
 import { PageHero } from "@/components/ea/hero"
 import { Section } from "@/components/ea/primitives"
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 }
 
 const groups = [
-  { id: "public-sector", sector: "Public Sector" as const, title: "Public Sector", lead: "Grantmaking and Agentforce Public Sector for state agencies, councils and school districts." },
+  { id: "public-sector", sector: "Public Sector" as const, title: "Public Sector", lead: "State and local government, organized by focus area." },
   { id: "commercial", sector: "Commercial" as const, title: "Commercial", lead: "Real engagements, in our clients’ own words." },
 ]
 
@@ -43,13 +43,21 @@ export default function ClientResultsPage() {
       {groups.map((g, i) => (
         <Section key={g.id} id={g.id} tone={i % 2 === 0 ? "tint" : "white"} className="scroll-mt-20">
           <SectionHeading index={String(i + 1).padStart(2, "0")} eyebrow="Case studies" title={g.title} lead={g.lead} />
-          <RevealGroup className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {caseStudiesBySector(g.sector).map((c) => (
-              <RevealItem key={c.slug}>
-                <CaseStudyCard c={c} />
-              </RevealItem>
-            ))}
-          </RevealGroup>
+          {groupByFocusArea(g.sector, g.sector === "Public Sector" ? publicSectorFocusAreas : []).map((area, _k, all) => (
+            <div key={area.title} className="mt-10 first:mt-0">
+              <h3 hidden={all.length === 1} className="mb-5 flex items-baseline gap-3 font-heading text-xl font-bold md:text-2xl">
+                {area.title}
+                <span className="font-mono text-sm font-medium text-brand-600">{area.items.length}</span>
+              </h3>
+              <RevealGroup className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                {area.items.map((c) => (
+                  <RevealItem key={c.slug}>
+                    <CaseStudyCard c={c} />
+                  </RevealItem>
+                ))}
+              </RevealGroup>
+            </div>
+          ))}
         </Section>
       ))}
 

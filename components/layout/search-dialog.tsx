@@ -44,11 +44,11 @@ export default function SearchDialog({ open, onOpenChange }: { open: boolean; on
         <D.Overlay className="fixed inset-0 z-[60] bg-ink/20 backdrop-blur-sm data-[state=open]:animate-in data-[state=open]:fade-in" />
         <D.Content className="fixed top-[12vh] left-1/2 z-[60] w-[calc(100%-2rem)] max-w-2xl -translate-x-1/2 overflow-hidden rounded-2xl border border-line bg-white shadow-lift data-[state=open]:animate-in data-[state=open]:fade-in data-[state=open]:zoom-in-95">
           <D.Title className="sr-only">Search Enabled Analytics</D.Title>
-          <D.Description className="sr-only">Type to search pages, services, insights, people and FAQs.</D.Description>
+          <D.Description className="sr-only">Type to search pages, services, people and FAQs.</D.Description>
           <Command label="Site search" className="flex flex-col" loop>
             <div className="flex items-center gap-3 border-b border-line px-5">
               <Search className="size-5 text-brand-600" aria-hidden="true" />
-              <Command.Input autoFocus placeholder="Search services, insights, people…" className="h-14 flex-1 bg-transparent text-base text-ink placeholder:text-ink-subtle focus:outline-none" />
+              <Command.Input autoFocus placeholder="Search services, industries, people…" className="h-14 flex-1 bg-transparent text-base text-ink placeholder:text-ink-subtle focus:outline-none" />
               <kbd className="rounded-md border border-line bg-surface px-1.5 py-0.5 font-mono text-[0.6875rem] text-ink-subtle">Esc</kbd>
             </div>
             <Command.List className="max-h-[60vh] overflow-y-auto overscroll-contain p-2">

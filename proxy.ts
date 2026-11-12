@@ -5,7 +5,8 @@ import { caseStudies } from "@/lib/case-studies"
 // Dynamic segments stream under Partial Prerendering, so notFound() inside the
 // page can no longer change the status code. Reject unknown slugs here instead.
 const known: Record<string, Set<string>> = {
-  services: new Set(data.services.map((s) => s.slug)),
+  // Practice pages from the content file plus the four offering pages and How We Deliver (static routes).
+  services: new Set([...data.services.map((s) => s.slug), "implementation", "support", "forward-deployed-engineering", "how-we-deliver"]),
   "case-studies": new Set(caseStudies.map((c) => c.slug)),
   blog: new Set([
     "choosing-between-salesforce-managed-services-vs-in-house-teams",

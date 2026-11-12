@@ -22,6 +22,8 @@ export type CaseStudy = {
   sector: Sector
   title: string
   industry: string
+  /** Solution area / focus area (e.g. Grants Management). Studies without one appear under "More client work". */
+  solutionArea?: string
   role: string
   clouds: string[]
   challenge: string
@@ -117,6 +119,7 @@ export const caseStudies: CaseStudy[] = [
   {
     sector: "Public Sector",
     slug: "state-developmental-disabilities-council-grants",
+    solutionArea: "Grants Management",
     title: "Enterprise grants management for a large state developmental disabilities council",
     industry: "State Government",
     role: "Large State Developmental Disabilities Council",
@@ -150,6 +153,7 @@ export const caseStudies: CaseStudy[] = [
   {
     sector: "Public Sector",
     slug: "state-emergency-communications-modernization",
+    solutionArea: "Grants Management",
     title: "Modernizing grants, vendor, and request management for a state emergency communications agency",
     industry: "Emergency Communications",
     role: "A large state emergency communications agency",
@@ -181,6 +185,7 @@ export const caseStudies: CaseStudy[] = [
   {
     sector: "Public Sector",
     slug: "state-land-natural-resources-grants",
+    solutionArea: "Grants Management",
     title: "A unified grants management platform for a large state land and natural resources agency",
     industry: "State Government",
     role: "A Large State Land and Natural Resources Agency",
@@ -214,6 +219,7 @@ export const caseStudies: CaseStudy[] = [
   {
     sector: "Public Sector",
     slug: "texas-school-district-grants-donations",
+    solutionArea: "Grants Management",
     title: "Centralizing grants and donations for a large urban school district in Texas",
     industry: "Education",
     role: "A large urban Texas school district serving over 60,000 students",
@@ -289,5 +295,20 @@ export function caseTestimonial(c: CaseStudy): Testimonial | undefined {
 
 export const sectors: Sector[] = ["Commercial", "Public Sector"]
 export const caseStudiesBySector = (sector: Sector) => caseStudies.filter((c) => c.sector === sector)
+
+/**
+ * Public Sector focus areas, in display order (Michael Malone, Nov 2026). A focus area is shown only once
+ * it has published case studies; Legislative Tracking and Health and Human Services follow with the rewritten studies.
+ */
+export const publicSectorFocusAreas = ["Grants Management", "Legislative Tracking", "Health and Human Services"]
+
+/** Group a sector's studies into its focus areas (in the given order) plus "More client work" for the rest. */
+export function groupByFocusArea(sector: Sector, order: string[] = []) {
+  const studies = caseStudiesBySector(sector)
+  const areas = Array.from(new Set([...order, ...studies.map((c) => c.solutionArea).filter((a): a is string => !!a)]))
+  const groups = areas.map((title) => ({ title, items: studies.filter((c) => c.solutionArea === title) })).filter((g) => g.items.length > 0)
+  const rest = studies.filter((c) => !c.solutionArea)
+  return rest.length ? [...groups, { title: "More client work", items: rest }] : groups
+}
 
 export const caseIndustries = Array.from(new Set(caseStudies.map((c) => c.industry)))

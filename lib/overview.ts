@@ -22,7 +22,7 @@ export const cloudGroups: { title: string; clouds: string[] }[] = [
   { title: "Core clouds", clouds: ["Sales Cloud", "Service Cloud", "Marketing Cloud", "Experience Cloud", "Field Service", "Platform"] },
   { title: "Revenue & commerce", clouds: ["Revenue Cloud", "Salesforce Billing", "Contract Lifecycle Management (CLM)", "B2B Commerce", "B2C Commerce", "Commerce / Order Management (OMS)"] },
   { title: "Industry clouds", clouds: ["Industry Clouds", "Public Sector Solutions", "Communications Cloud", "Manufacturing Cloud", "Financial Services Cloud", "Nonprofit Cloud", "Education Cloud"] },
-  { title: "Data, AI & integration", clouds: ["Agentforce", "Data Cloud", "CRM Analytics (CRMA)", "MuleSoft", "Apps"] },
+  { title: "Data, AI & integration", clouds: ["Agentforce", "Data 360", "CRM Analytics (CRMA)", "MuleSoft", "Apps"] },
 ]
 
 export type Industry = { slug: string; title: string; icon: string; points: string[] }
@@ -232,7 +232,7 @@ export const thinkubator = {
     { title: "MVP (start small)", text: "Prioritize which business lines to start with and finalize the first use cases." },
     { title: "Design for industrialization", text: "Adopt EA’s industrialized data models, data ingestion framework, data catalogue, business glossary and rules, data quality and profiling, and reference and master data management." },
     { title: "Run and monitor", text: "Define the operating model to sustain and enhance, with value measurement and adoption strategies." },
-    { title: "Scale", text: "Execute the roadmap to roll out use cases across the enterprise and stand up a Data Cloud Center of Excellence." },
+    { title: "Scale", text: "Execute the roadmap to roll out use cases across the enterprise and stand up a Data 360 Center of Excellence." },
   ],
 }
 
@@ -246,7 +246,7 @@ export const accelerators: Accelerator[] = [
     kind: "Implementation accelerator",
     icon: "rocket",
     text: "Prebuilt configuration and patterns our teams use to configure and customize Salesforce from a solid foundation instead of from scratch.",
-    points: ["Used through every development sprint", "Integration frameworks and pre-built data models", "Deploy at up to 3X speed"],
+    points: ["Used through every development sprint", "Integration frameworks and pre-built data models", "A stronger starting point for every sprint"],
   },
   {
     id: "crp",
@@ -274,10 +274,10 @@ export const accelerators: Accelerator[] = [
   },
   {
     id: "data-cloud-framework",
-    title: "Industrialized Data Cloud Framework",
+    title: "Industrialized Data 360 Framework",
     kind: "Data & AI accelerator",
     icon: "layers",
-    text: "EA’s industrialized data models, ingestion framework, catalogue, business glossary and data-quality rules to jump-start Data Cloud and AI.",
+    text: "EA’s industrialized data models, ingestion framework, catalogue, business glossary and data-quality rules to jump-start Data 360 and AI.",
     points: ["Data ingestion framework", "Data catalogue and business glossary", "Reference & master data management"],
   },
   {
