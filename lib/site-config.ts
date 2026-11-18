@@ -11,6 +11,7 @@ export type NavItem = { label: string; href?: string; children?: NavLink[]; feat
 export const mainNav: NavItem[] = [
   {
     label: "Services",
+    href: "/services",
     children: [
       ...offerings.map((o) => ({ label: o.title, href: o.href, description: o.summary })),
       { label: howWeDeliver.title, href: howWeDeliver.href, description: "One delivery model across every service." },
@@ -19,6 +20,7 @@ export const mainNav: NavItem[] = [
   },
   {
     label: "Industries",
+    href: "/industries",
     children: [
       ...industryLinks.map((l) => ({ label: l.title, href: l.href, description: l.text })),
     ],
@@ -26,6 +28,7 @@ export const mainNav: NavItem[] = [
   },
   {
     label: "Apps & Accelerators",
+    href: "/products",
     children: [
       { label: "Discover Cloud", href: "/products", description: "Our AppExchange product: prebuilt code-quality scorecards." },
     ],
@@ -33,6 +36,7 @@ export const mainNav: NavItem[] = [
   },
   {
     label: "Client Success",
+    href: "/clients",
     children: [
       { label: "Clients", href: "/clients", description: "Organizations that trust Enabled Analytics." },
       { label: "Case Studies", href: "/case-studies", description: "Challenge → Solution → Result stories." },
@@ -42,6 +46,7 @@ export const mainNav: NavItem[] = [
   },
   {
     label: "About",
+    href: "/about",
     children: [
       { label: "Company", href: "/about", description: "Our story, history and locations." },
       { label: "Leadership", href: "/team", description: "Co-Founders and Executive Team." },

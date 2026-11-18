@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
   return (
     <>
-      <PageHero eyebrow="Services" title={v.heroTitle} lead={v.heroLead} crumbs={[{ label: "Services" }]}>
+      <PageHero eyebrow="Services" title={v.heroTitle} lead={v.heroLead} crumbs={[{ label: "Services" }]} image={{ src: "/images/photos/services-collage.webp", alt: "Solution architecture planning, platform monitoring and an engineering team at work" }}>
         <Button href="/contact" size="lg">
           Contact Us <ArrowIcon />
         </Button>

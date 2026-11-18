@@ -9,7 +9,6 @@ import { FeatureGrid } from "@/components/ea/feature-grid"
 import { TeamCard } from "@/components/ea/team-card"
 import { CTABanner } from "@/components/ea/cta-banner"
 import { GrowthSection } from "@/components/story/growth-section"
-import { HorizontalPin } from "@/components/motion/horizontal-pin"
 import { CloudMark, CloudSeam } from "@/components/motion/sky-scene"
 import { journey } from "@/lib/trust"
 import { differentiators, orchestrator, overview } from "@/lib/overview"
@@ -128,34 +127,30 @@ export default function AboutPage() {
       {/* History: the company timeline, moved here from the homepage. */}
       <div id="history" className="relative scroll-mt-20 bg-sky">
         <CloudSeam fill="white" flip className="absolute top-0" />
-        <HorizontalPin
-          labels={journey.map((j) => j.tag)}
-          heading={
-            <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-              <div>
-                <p className="eyebrow flex items-center gap-3">
-                  <CloudMark /> 05 · Our history
-                </p>
-                <h2 className="mt-4 text-[clamp(2rem,4.2vw,3.75rem)] leading-[1.02] font-extrabold">
-                  From one mission to <span className="accent-serif text-brand-600">four regions</span>
-                </h2>
-              </div>
-              <p className="max-w-sm text-lg">Keep scrolling: our story moves sideways.</p>
-            </div>
-          }
-        >
-          {journey.map((j, i) => (
-            <article key={j.title} className="relative flex h-[340px] flex-col rounded-[2rem] border border-white bg-white/85 p-6 shadow-lift backdrop-blur sm:h-[400px] sm:p-8">
-              <span className="font-mono text-xs tracking-[0.14em] text-brand-600 uppercase">{j.tag}</span>
-              <span aria-hidden="true" className="mt-4 font-heading text-[clamp(3rem,15vw,5.5rem)] leading-none font-extrabold whitespace-nowrap text-brand-100 sm:mt-6">
-                {j.when?.split(" ").pop() ?? String(i + 1).padStart(2, "0")}
-              </span>
-              <h3 className="mt-auto text-xl font-bold sm:text-2xl">{j.title}</h3>
-              <p className="mt-3 line-clamp-4 leading-relaxed">{j.text}</p>
-              {j.when && <span className="absolute top-6 right-6 rounded-full sm:top-8 sm:right-8 bg-brand-600 px-3 py-1 text-xs font-semibold text-white">{j.when}</span>}
-            </article>
-          ))}
-        </HorizontalPin>
+        <div className="container-page py-20 md:py-28">
+          <div className="mb-10 md:mb-14">
+            <p className="eyebrow flex items-center gap-3">
+              <CloudMark /> 05 · Our history
+            </p>
+            <h2 className="mt-4 text-[clamp(2rem,4.2vw,3.75rem)] leading-[1.02] font-extrabold">
+              From one mission to <span className="accent-serif text-brand-600">four regions</span>
+            </h2>
+          </div>
+          <RevealGroup as="ol" className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {journey.map((j, i) => (
+              <RevealItem as="li" key={j.title} className="h-full">
+                <article className="relative flex h-full flex-col rounded-[1.75rem] border border-white bg-white/85 p-6 shadow-lift backdrop-blur">
+                  <span className="font-mono text-xs tracking-[0.14em] text-brand-600 uppercase">
+                    {String(i + 1).padStart(2, "0")} · {j.tag}
+                  </span>
+                  {j.when && <span className="mt-4 font-heading text-4xl leading-none font-extrabold text-brand-200">{j.when}</span>}
+                  <h3 className="mt-4 text-xl font-bold">{j.title}</h3>
+                  <p className="mt-3 leading-relaxed">{j.text}</p>
+                </article>
+              </RevealItem>
+            ))}
+          </RevealGroup>
+        </div>
       </div>
 
       <div id="locations" className="scroll-mt-20">

@@ -21,7 +21,7 @@ const TONES = ["dark", "navy", "light"] as const
 export default function IndustriesPage() {
   return (
     <>
-      <PageHero eyebrow="Industries" title={l.heroTitle} lead={l.heroLead} crumbs={[{ label: "Industries" }]}>
+      <PageHero eyebrow="Industries" title={l.heroTitle} lead={l.heroLead} crumbs={[{ label: "Industries" }]} image={{ src: "/images/photos/industries-collage.webp", alt: "Public sector, telecommunications and commercial teams reviewing their work" }}>
         <Button href="#industries" size="lg">
           Explore Our Industries <ArrowIcon />
         </Button>

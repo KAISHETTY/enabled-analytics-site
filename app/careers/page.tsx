@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 export default function CareersPage() {
   return (
     <>
-      <PageHero eyebrow="Careers" title="Join the most dynamic Salesforce team" crumbs={[{ label: "About", href: "/about" }, { label: "Careers" }]} />
+      <PageHero title="Careers" crumbs={[{ label: "About", href: "/about" }, { label: "Careers" }]} />
 
       <Section className="pt-6 md:pt-10">
         <Reveal className="mx-auto flex max-w-2xl flex-col items-center gap-5 rounded-[2rem] border border-line bg-white p-10 text-center shadow-soft md:p-14">

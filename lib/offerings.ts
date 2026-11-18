@@ -133,7 +133,7 @@ export const offerings: Offering[] = [
     href: "/agentforce",
     title: "Agentforce & Applied AI",
     icon: "sparkles",
-    image: "/images/photos/implementation-architecture.webp",
+    image: "/images/photos/applied-ai.webp",
     summary: "Turn practical AI use cases into governed, production-ready workflows connected to enterprise data and systems.",
     overviewText: "Identify useful AI opportunities and deliver trusted, governed agents and automations within real enterprise processes.",
     metaDescription: "Agentforce & Applied AI from Enabled Analytics: trusted, governed AI agents and automations designed into real business workflows.",

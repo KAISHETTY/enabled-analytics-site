@@ -127,7 +127,17 @@ export default function HomePage() {
       <section className="relative overflow-hidden bg-gradient-to-b from-white via-brand-50 to-white py-20 md:py-28" aria-labelledby="industries-title">
         <TrailPath className="hidden opacity-80 md:block" d="M540 0 C 500 120, 530 260, 440 360 S 250 430, 280 600 S 110 900, 60 1100" />
         <div className="container-page relative">
-          <SectionHeading index="03" eyebrow="Industries" title={<span id="industries-title">{homeCopy.industriesTitle}</span>} lead={homeCopy.industriesLead} />
+          <SectionHeading
+            index="03"
+            eyebrow="Industries"
+            title={<span id="industries-title">{homeCopy.industriesTitle}</span>}
+            lead={homeCopy.industriesLead}
+            actions={
+              <Button href="/industries" variant="secondary">
+                Explore Our Industries <ArrowIcon />
+              </Button>
+            }
+          />
           <SectorCards sectors={INDUSTRIES} />
         </div>
       </section>

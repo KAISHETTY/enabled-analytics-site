@@ -1,6 +1,5 @@
 import type { Metadata } from "next"
 import { Check } from "lucide-react"
-import { testimonials } from "@/lib/content"
 import { caseStudiesBySector } from "@/lib/case-studies"
 import { industryExpertise } from "@/lib/overview"
 import { PageHero } from "@/components/ea/hero"
@@ -8,7 +7,6 @@ import { Section } from "@/components/ea/primitives"
 import { SectionHeading } from "@/components/ea/section-heading"
 import { FeatureGrid } from "@/components/ea/feature-grid"
 import { DynamicIcon } from "@/components/ea/icon"
-import { TestimonialSlider } from "@/components/ea/testimonial-slider"
 import { CTABanner } from "@/components/ea/cta-banner"
 import { RevealGroup, RevealItem, SwingIn } from "@/components/ea/reveal"
 import { ArrowIcon, Button } from "@/components/ea/button"
@@ -45,9 +43,6 @@ export default function CommercialPage() {
       >
         <Button href="/contact" size="lg">
           Contact Us <ArrowIcon />
-        </Button>
-        <Button href="#customer-proof" size="lg" variant="secondary">
-          See customer proof
         </Button>
       </PageHero>
 
@@ -94,8 +89,8 @@ export default function CommercialPage() {
         <ImageBand src="/images/photos/commercial-office.webp" alt="Teams collaborating around analytics dashboards in a modern open-plan office" kicker="Commercial" caption="Sales, service and data working as one" />
       </Section>
 
-      <Section id="customer-proof" tone="tint" className="scroll-mt-20">
-        <SectionHeading index="04" eyebrow="Customer proof" title="Commercial case studies" />
+      <Section id="experience" tone="tint" className="scroll-mt-20">
+        <SectionHeading index="04" eyebrow="Experience" title="Commercial Case Studies" />
         <RevealGroup className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {STUDIES.map((c) => (
             <RevealItem key={c.slug} className="h-full">
@@ -103,11 +98,6 @@ export default function CommercialPage() {
             </RevealItem>
           ))}
         </RevealGroup>
-      </Section>
-
-      <Section>
-        <SectionHeading index="05" eyebrow="Testimonials" title="What our clients say" />
-        <TestimonialSlider items={testimonials} />
       </Section>
 
       <CTABanner title="Start a conversation" lead="Tell us about your project in brief and we’ll connect you to one of our specialists." primary={{ label: "Contact Us", href: "/contact" }} />

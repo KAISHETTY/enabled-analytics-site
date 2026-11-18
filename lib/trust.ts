@@ -41,21 +41,24 @@ export type Milestone = { when?: string; title: string; text: string; tag: strin
 
 export const journey: Milestone[] = [
   {
+    when: "August 2020",
     tag: "Origin",
     title: "Enabled Analytics is formed",
     text: "With a mission of helping businesses thrive by harnessing the power of Salesforce, and a vision of delivering world-class services and implementations.",
   },
   {
     tag: "Method",
-    title: "Centre of Excellence teams",
+    title: "Center of Excellence Teams",
     text: "Seasoned solution, technical and design architects come together as CoE teams that steer every implementation.",
   },
   {
+    when: "January 2024",
     tag: "Product",
     title: "Discover Cloud launches",
     text: "Our own product: prebuilt data analytics scorecards that measure, benchmark and sustain the highest quality code.",
   },
   {
+    when: "2025",
     tag: "Partnership",
     title: "Summit Partner & ISV Partner",
     text: "A Salesforce Summit Partner and an ISV partner, rated 4.95/5 on AppExchange, with 500+ Salesforce certifications.",

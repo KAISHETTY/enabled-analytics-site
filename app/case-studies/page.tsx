@@ -1,11 +1,8 @@
 import type { Metadata } from "next"
 import { groupByFocusArea, publicSectorFocusAreas } from "@/lib/case-studies"
-import { clients, home, testimonials } from "@/lib/content"
 import { PageHero } from "@/components/ea/hero"
 import { Section } from "@/components/ea/primitives"
 import { SectionHeading } from "@/components/ea/section-heading"
-import { LogoGrid } from "@/components/ea/logo-marquee"
-import { TestimonialSlider } from "@/components/ea/testimonial-slider"
 import { CTABanner } from "@/components/ea/cta-banner"
 import { Reveal, RevealGroup, RevealItem } from "@/components/ea/reveal"
 import { ArrowIcon, Button } from "@/components/ea/button"
@@ -14,7 +11,7 @@ import { CaseStudyCard } from "@/components/story/case-study-card"
 
 export const metadata: Metadata = {
   title: "Case Studies: Public Sector, Telecom & Commercial",
-  description: "Enabled Analytics client results: Public Sector and Commercial Salesforce case studies in Challenge → Solution → Result format, client testimonials and logos.",
+  description: "Enabled Analytics client results: Public Sector, Telecommunications and Commercial Salesforce case studies in Challenge → Solution → Result format.",
   alternates: { canonical: "/case-studies" },
 }
 
@@ -60,25 +57,6 @@ export default function ClientResultsPage() {
           ))}
         </Section>
       ))}
-
-      <Section tone="tint">
-        <SectionHeading
-          index="03"
-          eyebrow="Testimonials"
-          title={home.testimonialsTitle}
-          actions={
-            <Button href="/testimonials" variant="secondary">
-              Read all <ArrowIcon />
-            </Button>
-          }
-        />
-        <TestimonialSlider items={testimonials} />
-      </Section>
-
-      <Section id="clients" className="scroll-mt-20">
-        <SectionHeading index="04" eyebrow="Clients" title={home.clientsTitle} align="center" />
-        <LogoGrid logos={clients} />
-      </Section>
 
       <CTABanner title="Ready to be our next success story?" lead="Tell us about your project in brief and we’ll connect you to one of our Salesforce experts." primary={{ label: "Contact Us", href: "/contact" }} />
     </>

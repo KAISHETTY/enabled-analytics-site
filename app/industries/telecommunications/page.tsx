@@ -67,7 +67,7 @@ export default function TelecommunicationsPage() {
       </Section>
 
       <Section>
-        <SectionHeading index="03" eyebrow="Experience" title="Telecom client success" />
+        <SectionHeading index="03" eyebrow="Experience" title="Telecommunications Case Studies" />
         <RevealGroup className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {STUDIES.map((c) => (
             <RevealItem key={c.slug} className="h-full">

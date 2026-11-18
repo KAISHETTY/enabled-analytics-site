@@ -15,8 +15,8 @@ import { Cloud } from "@/components/motion/sky-scene"
 import { HeroMascot } from "@/components/story/hero-mascot"
 
 function isActive(pathname: string, item: NavItem) {
-  if (item.href) return item.href === "/" ? pathname === "/" : pathname.startsWith(item.href)
-  return item.children?.some((c) => pathname.startsWith(c.href)) ?? false
+  if (item.href && (item.href === "/" ? pathname === "/" : pathname.startsWith(item.href))) return true
+  return item.children?.some((c) => pathname.startsWith(c.href.split("#")[0])) ?? false
 }
 
 /** Stacked-alpha longhorn clip; menus start straight in his waving loop. */
@@ -100,9 +100,12 @@ function DesktopNav({ pathname }: { pathname: string }) {
           const feature = item.feature ?? DEFAULT_FEATURE
           return (
             <NM.Item key={item.label}>
-              <NM.Trigger className={cn(base, "group")}>
-                {item.label}
-                <ChevronDown aria-hidden="true" className="size-4 transition-transform duration-200 group-data-[state=open]:rotate-180" />
+              {/* Hover opens the menu; clicking the label goes to the section's main page (11.17 feedback). */}
+              <NM.Trigger asChild>
+                <Link href={item.href ?? "#"} className={cn(base, "group")} aria-current={active ? "page" : undefined}>
+                  {item.label}
+                  <ChevronDown aria-hidden="true" className="size-4 transition-transform duration-200 group-data-[state=open]:rotate-180" />
+                </Link>
               </NM.Trigger>
               <NM.Content className="absolute top-full left-1/2 mt-3 -translate-x-1/2 data-[motion=from-end]:animate-in data-[motion=from-end]:fade-in data-[motion=from-start]:animate-in data-[motion=from-start]:fade-in data-[state=open]:animate-in data-[state=open]:fade-in data-[state=open]:slide-in-from-top-1">
                 <div className={cn("grid gap-3 rounded-[1.5rem] border border-line bg-white p-3 shadow-lift", wide ? "w-[760px] grid-cols-[1fr_250px]" : "w-[540px] grid-cols-[1fr_240px]")}>
@@ -201,6 +204,13 @@ function MobileNav({ pathname }: { pathname: string }) {
                     </button>
                     {expanded === item.label && (
                       <ul className="mb-2 ml-3 border-l border-brand-100 pl-3">
+                        {item.href && (
+                          <li>
+                            <Link href={item.href} aria-current={pathname === item.href ? "page" : undefined} className="flex min-h-11 items-center rounded-lg px-3 font-semibold text-ink hover:bg-brand-50 hover:text-brand-700 aria-[current=page]:text-brand-700">
+                              {item.label} overview
+                            </Link>
+                          </li>
+                        )}
                         {item.children.map((c) => (
                           <li key={c.href + c.label}>
                             <Link href={c.href} aria-current={pathname === c.href ? "page" : undefined} className="flex min-h-11 items-center rounded-lg px-3 text-ink-muted hover:bg-brand-50 hover:text-brand-700 aria-[current=page]:text-brand-700">

@@ -9,7 +9,7 @@ export const agentforce = {
   title: "Agentforce Implementation",
   eyebrow: "Agentforce & AI",
   headline: ["The future of Salesforce", "is agentic."],
-  lead: "We design, ground and launch Agentforce AI agents that work alongside your teams across sales, service and field operations, built on your Salesforce data and governed by our Centre of Excellence.",
+  lead: "We design, ground and launch Agentforce AI agents that work alongside your teams across sales, service and field operations, built on your Salesforce data and governed by our Center of Excellence.",
   why: {
     title: "Why Agentforce, why now",
     body: [

@@ -50,9 +50,9 @@ export function RelatedServices({ current }: { current?: string }) {
 }
 
 /**
- * One service-offering page from the 12 Nov 2026 handoff: top section, overview,
- * process, capability cards, reasons to choose EA, related services and contact.
- * `children` renders extra content (e.g. the illustrative agent demos) before Related Services.
+ * One service-offering page from the 12 Nov 2026 handoff: top section, overview, process,
+ * capability cards and contact ("Why EA" and "Related services" removed per the 11.17 feedback).
+ * `children` renders extra content (e.g. the illustrative agent demos) before the contact banner.
  */
 export function OfferingPage({ o, children }: { o: Offering; children?: React.ReactNode }) {
   const cols = Math.min(Math.max(o.process.length, 3), 6) as 3 | 4 | 5 | 6
@@ -102,19 +102,7 @@ export function OfferingPage({ o, children }: { o: Offering; children?: React.Re
         </Section>
       ))}
 
-      <Section>
-        <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
-          <SectionHeading index={idx()} eyebrow="Why Enabled Analytics" title="What makes it different" className="mb-0 md:mb-0" />
-          <ChipRow items={o.why} />
-        </div>
-      </Section>
-
       {children}
-
-      <Section tone="tint">
-        <SectionHeading index={idx()} eyebrow="Related services" title="Connected capabilities" />
-        <RelatedServices current={o.slug} />
-      </Section>
 
       <CTABanner title={o.ctaHeading} lead="Tell us about your project in brief and we’ll connect you to one of our specialists." primary={{ label: "Contact Us", href: "/contact" }} />
     </>

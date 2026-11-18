@@ -92,7 +92,7 @@ export default function ExpertisePage() {
 
       {/* CoE advisory */}
       <Section>
-        <SectionHeading index="04" eyebrow="Advisory & CoE" title="Centre of Excellence teams and org assessments" />
+        <SectionHeading index="04" eyebrow="Advisory & CoE" title="Center of Excellence Teams and org assessments" />
         <RevealGroup className="grid gap-6 md:grid-cols-3">
           {advisory.map((s, i) => (
             <RevealItem key={s.slug}>
